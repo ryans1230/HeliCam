@@ -1,0 +1,2284 @@
+{
+  "Los Santos Freeway": [
+    {
+      "X": 493.9325,
+      "Y": -456.117554,
+      "Z": 29.0701351,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 667.313538,
+      "Y": -208.761032,
+      "Z": 44.4551849,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 812.5364,
+      "Y": 54.7611542,
+      "Z": 66.23622,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1004.04248,
+      "Y": 288.883,
+      "Z": 82.48732,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1215.6781,
+      "Y": 505.004425,
+      "Z": 80.98275,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1425.80383,
+      "Y": 719.263367,
+      "Z": 77.7526245,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1575.46338,
+      "Y": 981.072754,
+      "Z": 78.297226,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1666.41809,
+      "Y": 1270.95374,
+      "Z": 85.3501053,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1721.16089,
+      "Y": 1568.55835,
+      "Z": 84.21329,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1780.87439,
+      "Y": 1863.56738,
+      "Z": 79.38679,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1832.98682,
+      "Y": 2159.3667,
+      "Z": 67.67948,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1923.97937,
+      "Y": 2448.80957,
+      "Z": 54.2904053,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Senora Fwy": [
+    {
+      "X": 2124.15259,
+      "Y": 2675.78418,
+      "Z": 49.85742,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2363.43677,
+      "Y": 2862.01245,
+      "Z": 40.1993866,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2589.33618,
+      "Y": 3059.75513,
+      "Z": 45.16656,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2759.174,
+      "Y": 3309.52783,
+      "Z": 55.7725754,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2873.50684,
+      "Y": 3587.47559,
+      "Z": 52.77828,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2936.3064,
+      "Y": 3882.1272,
+      "Z": 52.04026,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2876.98047,
+      "Y": 4178.411,
+      "Z": 49.88591,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2787.09937,
+      "Y": 4464.991,
+      "Z": 47.54693,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2714.87329,
+      "Y": 4756.831,
+      "Z": 44.181797,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2648.70239,
+      "Y": 5051.796,
+      "Z": 44.5427933,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2570.38135,
+      "Y": 5341.86475,
+      "Z": 44.3038979,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2471.557,
+      "Y": 5626.93,
+      "Z": 44.67819,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2324.92822,
+      "Y": 5893.445,
+      "Z": 47.6642532,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2098.581,
+      "Y": 6091.862,
+      "Z": 50.5976334,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1915.28528,
+      "Y": 6331.372,
+      "Z": 42.5708046,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1620.77954,
+      "Y": 6399.42041,
+      "Z": 27.6958942,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Great Ocean Hwy": [
+    {
+      "X": 1332.67639,
+      "Y": 6488.738,
+      "Z": 19.6744671,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1029.22253,
+      "Y": 6488.00439,
+      "Z": 20.72442,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 728.9815,
+      "Y": 6507.873,
+      "Z": 26.7567158,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 434.566,
+      "Y": 6567.42773,
+      "Z": 26.83135,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 137.88884,
+      "Y": 6514.34033,
+      "Z": 31.2954788,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -75.6989746,
+      "Y": 6300.086,
+      "Z": 31.041832,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -290.543182,
+      "Y": 6090.25342,
+      "Z": 31.31556,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -485.8396,
+      "Y": 5858.46533,
+      "Z": 33.4649963,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -628.001831,
+      "Y": 5593.53125,
+      "Z": 38.78206,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -885.0351,
+      "Y": 5433.27734,
+      "Z": 35.35099,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1148.59937,
+      "Y": 5284.68,
+      "Z": 52.7894249,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1384.12427,
+      "Y": 5095.23,
+      "Z": 60.8892059,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1606.92273,
+      "Y": 4890.15332,
+      "Z": 60.8986778,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1829.51672,
+      "Y": 4688.428,
+      "Z": 56.7461548,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2045.12244,
+      "Y": 4478.09766,
+      "Z": 57.1046143,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2249.99268,
+      "Y": 4256.745,
+      "Z": 44.96719,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2373.27173,
+      "Y": 3982.35132,
+      "Z": 25.1556263,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2471.6853,
+      "Y": 3698.54053,
+      "Z": 14.3430166,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2555.52344,
+      "Y": 3409.626,
+      "Z": 12.9679022,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2595.17822,
+      "Y": 3109.68579,
+      "Z": 14.8903856,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2633.25537,
+      "Y": 2809.93823,
+      "Z": 16.4195118,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2675.648,
+      "Y": 2511.956,
+      "Z": 16.4196453,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2758.93262,
+      "Y": 2237.996,
+      "Z": 22.90678,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2984.41113,
+      "Y": 2038.50647,
+      "Z": 36.7537575,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -3040.54883,
+      "Y": 1743.65186,
+      "Z": 36.41799,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -3020.805,
+      "Y": 1443.50854,
+      "Z": 26.1540966,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -3108.47876,
+      "Y": 1154.96423,
+      "Z": 20.2374935,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -3137.19,
+      "Y": 855.144836,
+      "Z": 15.5395155,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2995.23926,
+      "Y": 588.472656,
+      "Z": 18.8550415,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -3016.882,
+      "Y": 289.22168,
+      "Z": 15.0705395,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2831.10083,
+      "Y": 52.17699,
+      "Z": 14.433135,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2600.502,
+      "Y": -141.1721,
+      "Z": 21.0912666,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2341.91333,
+      "Y": -294.943878,
+      "Z": 13.7903919,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Route 68": [
+    {
+      "X": -2469.06787,
+      "Y": 2294.16064,
+      "Z": 30.8607235,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2168.4834,
+      "Y": 2308.564,
+      "Z": 34.5195045,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1874.75073,
+      "Y": 2381.33618,
+      "Z": 33.78291,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1574.65112,
+      "Y": 2405.50562,
+      "Z": 25.685976,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1287.59619,
+      "Y": 2500.06567,
+      "Z": 20.8845081,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1066.86731,
+      "Y": 2706.35645,
+      "Z": 21.1183167,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -773.4023,
+      "Y": 2778.32861,
+      "Z": 24.2568455,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -479.3989,
+      "Y": 2845.78857,
+      "Z": 33.57079,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -179.857178,
+      "Y": 2865.721,
+      "Z": 47.7847,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 83.82291,
+      "Y": 2717.557,
+      "Z": 54.66853,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 379.654572,
+      "Y": 2662.61938,
+      "Z": 44.3840866,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 679.5877,
+      "Y": 2700.84741,
+      "Z": 40.36753,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 982.1154,
+      "Y": 2692.4165,
+      "Z": 39.6723442,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1282.01,
+      "Y": 2681.72388,
+      "Z": 37.35875,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1562.70178,
+      "Y": 2790.13867,
+      "Z": 38.03287,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1825.50684,
+      "Y": 2939.933,
+      "Z": 45.51118,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2118.47046,
+      "Y": 3004.73975,
+      "Z": 44.9155655,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2405.558,
+      "Y": 2915.99829,
+      "Z": 49.04959,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Senora Way": [
+    {
+      "X": 2562.20361,
+      "Y": 2659.64478,
+      "Z": 38.889122,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2595.9397,
+      "Y": 2360.77661,
+      "Z": 21.007164,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2540.42847,
+      "Y": 2063.316,
+      "Z": 19.5649872,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2539.139,
+      "Y": 1761.524,
+      "Z": 24.7384758,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2533.51025,
+      "Y": 1459.167,
+      "Z": 32.9221725,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "East Joshua Road": [
+    {
+      "X": 2737.23047,
+      "Y": 4391.95361,
+      "Z": 48.4658051,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2532.33472,
+      "Y": 4170.578,
+      "Z": 39.2554359,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2375.70947,
+      "Y": 3910.87427,
+      "Z": 35.4535561,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2118.02954,
+      "Y": 3752.27979,
+      "Z": 32.80765,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1857.839,
+      "Y": 3602.38477,
+      "Z": 34.47395,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Joshua Rd": [
+    {
+      "X": 1582.20361,
+      "Y": 3481.157,
+      "Z": 36.3746872,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 983.0063,
+      "Y": 3536.34863,
+      "Z": 33.69775,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 680.42334,
+      "Y": 3522.9187,
+      "Z": 33.9397125,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 384.3837,
+      "Y": 3469.93286,
+      "Z": 34.7876244,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 214.5367,
+      "Y": 3221.64282,
+      "Z": 42.2371826,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 235.2471,
+      "Y": 2920.901,
+      "Z": 42.91943,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1317.76477,
+      "Y": 3527.79785,
+      "Z": 35.1704826,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Senora Rd": [
+    {
+      "X": 289.238678,
+      "Y": 2622.71948,
+      "Z": 44.3957,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 493.41806,
+      "Y": 2401.87231,
+      "Z": 47.335537,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 761.747131,
+      "Y": 2265.24316,
+      "Z": 48.974617,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1018.65729,
+      "Y": 2108.06763,
+      "Z": 49.3165665,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1146.36523,
+      "Y": 1834.54492,
+      "Z": 71.64116,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1288.45728,
+      "Y": 1568.32166,
+      "Z": 94.48247,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1292.57056,
+      "Y": 1266.95642,
+      "Z": 108.380562,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1305.73035,
+      "Y": 965.0175,
+      "Z": 105.689896,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1219.028,
+      "Y": 674.0771,
+      "Z": 100.112312,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Elgin Ave": [
+    {
+      "X": 1005.69312,
+      "Y": 463.131561,
+      "Z": 95.55966,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 833.7603,
+      "Y": 216.556931,
+      "Z": 81.84084,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Chianski Passage": [
+    {
+      "X": 2912.4314,
+      "Y": 4430.97754,
+      "Z": 48.121666,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 3021.931,
+      "Y": 4149.429,
+      "Z": 58.941082,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 3083.3833,
+      "Y": 3854.916,
+      "Z": 75.48442,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 3004.62842,
+      "Y": 3562.719,
+      "Z": 70.99575,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 3298.96875,
+      "Y": 3630.75,
+      "Z": 51.0139656,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 3120.007,
+      "Y": 3418.86426,
+      "Z": 78.07516,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Union Rd": [
+    {
+      "X": 2841.08276,
+      "Y": 4422.04,
+      "Z": 48.8067856,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2960.02612,
+      "Y": 4697.762,
+      "Z": 51.0678177,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2815.74341,
+      "Y": 4880.48975,
+      "Z": 40.0449829,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2571.54858,
+      "Y": 5097.369,
+      "Z": 44.46167,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2283.017,
+      "Y": 5179.95,
+      "Z": 59.7370377,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1984.66125,
+      "Y": 5148.059,
+      "Z": 44.1869736,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2677.62085,
+      "Y": 5124.43359,
+      "Z": 44.5911865,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2981.90625,
+      "Y": 4520.972,
+      "Z": 48.69354,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Catfish View": [
+    {
+      "X": 3469.57,
+      "Y": 4757.734,
+      "Z": 43.75739,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 3282.57764,
+      "Y": 4995.22461,
+      "Z": 23.4157772,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2984.90039,
+      "Y": 5044.7373,
+      "Z": 28.2587757,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Grapeseed Ave": [
+    {
+      "X": 2729.215,
+      "Y": 4884.41162,
+      "Z": 33.42836,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2516.02368,
+      "Y": 4671.746,
+      "Z": 33.4318047,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Seaview Rd": [
+    {
+      "X": 2493.60986,
+      "Y": 4141.94873,
+      "Z": 37.92953,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2486.91479,
+      "Y": 4442.311,
+      "Z": 35.2876778,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2338.17017,
+      "Y": 4705.3125,
+      "Z": 35.8638458,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2040.13086,
+      "Y": 4661.31543,
+      "Z": 40.9456673,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1763.13745,
+      "Y": 4573.329,
+      "Z": 38.0289421,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Grapeseed Main St": [
+    {
+      "X": 1666.88721,
+      "Y": 4874.49365,
+      "Z": 41.82395,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1864.8175,
+      "Y": 5100.91846,
+      "Z": 51.0437431,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1710.043,
+      "Y": 4622.588,
+      "Z": 42.81997,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Joad Ln": [
+    {
+      "X": 2128.18384,
+      "Y": 4953.20654,
+      "Z": 40.7886467,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2185.48584,
+      "Y": 4768.89,
+      "Z": 41.36451,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "O'Neil Way": [
+    {
+      "X": 2388.78271,
+      "Y": 5134.95557,
+      "Z": 47.1575966,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2179.41943,
+      "Y": 4919.85645,
+      "Z": 40.56392,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Panorama Dr": [
+    {
+      "X": 1555.70166,
+      "Y": 3742.96973,
+      "Z": 34.2784,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1710.28992,
+      "Y": 3484.78247,
+      "Z": 37.08487,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1864.55554,
+      "Y": 3227.27856,
+      "Z": 44.92768,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2107.13477,
+      "Y": 3047.31738,
+      "Z": 45.3635864,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Marina Dr": [
+    {
+      "X": 2048.661,
+      "Y": 3745.9856,
+      "Z": 32.3797836,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 412.3311,
+      "Y": 3511.91187,
+      "Z": 34.2693367,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1952.22534,
+      "Y": 3910.91577,
+      "Z": 32.2285,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1655.50171,
+      "Y": 3851.479,
+      "Z": 34.6460838,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1402.6676,
+      "Y": 3687.1875,
+      "Z": 33.5923424,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1108.0658,
+      "Y": 3625.784,
+      "Z": 33.6584663,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1571.35217,
+      "Y": 3776.72119,
+      "Z": 34.4623146,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Smoke Tree Rd": [
+    {
+      "X": 1893.37451,
+      "Y": 3236.61816,
+      "Z": 45.1179733,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2195.23853,
+      "Y": 3248.23657,
+      "Z": 47.5007629,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cholla Rd": [
+    {
+      "X": 1838.8623,
+      "Y": 3299.73145,
+      "Z": 43.0476837,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cat-Claw Ave": [
+    {
+      "X": 2243.76074,
+      "Y": 3224.38843,
+      "Z": 47.9646225,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Algonquin Blvd": [
+    {
+      "X": 1302.9137,
+      "Y": 3550.38257,
+      "Z": 34.93687,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1934.14111,
+      "Y": 3867.60962,
+      "Z": 32.10685,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1673.6405,
+      "Y": 3717.06348,
+      "Z": 33.7863846,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Calafia Rd": [
+    {
+      "X": 250.683075,
+      "Y": 3398.35669,
+      "Z": 37.81299,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 28.033205,
+      "Y": 3599.86646,
+      "Z": 39.5367165,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -223.1943,
+      "Y": 3956.01343,
+      "Z": 37.2753868,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -160.755859,
+      "Y": 3661.51636,
+      "Z": 45.5355721,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Procopio Promenade": [
+    {
+      "X": -784.9281,
+      "Y": 5523.592,
+      "Z": 34.0565529,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -707.3349,
+      "Y": 5815.555,
+      "Z": 17.0307159,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -605.3478,
+      "Y": 6097.76,
+      "Z": 7.65678263,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -458.094879,
+      "Y": 6360.2627,
+      "Z": 12.0947609,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -210.223923,
+      "Y": 6530.066,
+      "Z": 10.8370008,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Paleto Blvd": [
+    {
+      "X": -398.2487,
+      "Y": 6024.921,
+      "Z": 31.1989155,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -246.995682,
+      "Y": 6285.55566,
+      "Z": 31.2108116,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -34.58501,
+      "Y": 6499.08838,
+      "Z": 31.1661243,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 57.5808,
+      "Y": 6592.66748,
+      "Z": 31.20705,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Duluoz Ave": [
+    {
+      "X": -241.429688,
+      "Y": 6167.9043,
+      "Z": 31.3048782,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -349.670837,
+      "Y": 6276.79834,
+      "Z": 30.9193153,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Procopio Dr": [
+    {
+      "X": -399.276337,
+      "Y": 6182.245,
+      "Z": 31.39247,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 130.013916,
+      "Y": 6551.935,
+      "Z": 31.4091225,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -164.625214,
+      "Y": 6493.387,
+      "Z": 29.5379353,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -389.64032,
+      "Y": 6292.336,
+      "Z": 29.372263,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -45.57847,
+      "Y": 6608.776,
+      "Z": 29.7701874,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Zancudo Ave": [
+    {
+      "X": 1667.779,
+      "Y": 3618.10083,
+      "Z": 35.2884636,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1834.10461,
+      "Y": 3715.06,
+      "Z": 33.15198,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Niland Ave": [
+    {
+      "X": 1946.03064,
+      "Y": 3737.67651,
+      "Z": 32.13141,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cholla Springs Ave": [
+    {
+      "X": 1604.476,
+      "Y": 3737.62842,
+      "Z": 34.4686127,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1860.15259,
+      "Y": 3894.67358,
+      "Z": 32.8411369,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Meringue Ln": [
+    {
+      "X": 1322.56042,
+      "Y": 3608.98926,
+      "Z": 33.8131027,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Lesbos Ln": [
+    {
+      "X": 1458.18372,
+      "Y": 3650.2832,
+      "Z": 34.3837929,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Nowhere Rd": [
+    {
+      "X": 2053.10767,
+      "Y": 3351.88721,
+      "Z": 44.99762,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Route 68 Approach": [
+    {
+      "X": 72.61642,
+      "Y": 2851.99683,
+      "Z": 53.06716,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Pyrite Ave": [
+    {
+      "X": -145.788223,
+      "Y": 6331.16357,
+      "Z": 31.39802,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "North Calafia Way": [
+    {
+      "X": 1673.4386,
+      "Y": 4570.516,
+      "Z": 42.24884,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1381.84827,
+      "Y": 4497.772,
+      "Z": 53.9980354,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1087.28662,
+      "Y": 4436.75928,
+      "Z": 60.9430275,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 861.7526,
+      "Y": 4238.71,
+      "Z": 50.0965271,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 560.8329,
+      "Y": 4246.22266,
+      "Z": 53.1820145,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 361.5126,
+      "Y": 4471.29443,
+      "Z": 62.4171448,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 62.0460548,
+      "Y": 4451.658,
+      "Z": 63.7601242,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -162.4636,
+      "Y": 4250.568,
+      "Z": 44.6755867,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cascabel Ave": [
+    {
+      "X": -145.732635,
+      "Y": 6453.304,
+      "Z": 31.2829971,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mountain View Dr": [
+    {
+      "X": 1751.10278,
+      "Y": 3745.68042,
+      "Z": 33.673996,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Zancudo Barranca": [
+    {
+      "X": -819.126465,
+      "Y": 1844.34619,
+      "Z": 165.2027,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -972.878235,
+      "Y": 2103.84326,
+      "Z": 111.605011,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1266.25671,
+      "Y": 2170.16333,
+      "Z": 59.73709,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Zancudo Rd": [
+    {
+      "X": -1549.44739,
+      "Y": 2271.37427,
+      "Z": 53.1345978,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cassidy Trail": [
+    {
+      "X": -227.664566,
+      "Y": 4224.90771,
+      "Z": 44.59668,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -499.079437,
+      "Y": 4354.559,
+      "Z": 66.58508,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -795.4032,
+      "Y": 4405.652,
+      "Z": 18.2244759,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1094.18518,
+      "Y": 4375.95752,
+      "Z": 12.61575,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1384.92944,
+      "Y": 4299.93945,
+      "Z": 3.55610228,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1651.15869,
+      "Y": 4439.59668,
+      "Z": 2.77769947,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Armadillo Ave": [
+    {
+      "X": 1799.30237,
+      "Y": 3823.68433,
+      "Z": 33.5673332,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Banham Canyon Dr": [
+    {
+      "X": -3062.24341,
+      "Y": 1192.37488,
+      "Z": 22.0538731,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2790.74976,
+      "Y": 1320.91272,
+      "Z": 75.1468353,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2598.74634,
+      "Y": 1090.044,
+      "Z": 169.763412,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2303.96777,
+      "Y": 1032.83167,
+      "Z": 195.623352,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2024.83765,
+      "Y": 922.569336,
+      "Z": 176.613052,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1829.34912,
+      "Y": 818.37915,
+      "Z": 139.142944,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Buen Vino Rd": [
+    {
+      "X": -2644.21387,
+      "Y": 1529.8999,
+      "Z": 118.746033,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2464.10718,
+      "Y": 1770.5592,
+      "Z": 158.950989,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2205.59644,
+      "Y": 1924.70752,
+      "Z": 188.321259,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1954.9541,
+      "Y": 1759.736,
+      "Z": 175.924133,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1833.7677,
+      "Y": 2034.40076,
+      "Z": 133.366882,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2010.12891,
+      "Y": 2277.76147,
+      "Z": 48.0119362,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1700.04077,
+      "Y": 2236.79932,
+      "Z": 83.46749,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "North Rockford Dr": [
+    {
+      "X": -1733.21582,
+      "Y": 831.087463,
+      "Z": 143.438019,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1862.033,
+      "Y": 724.309448,
+      "Z": 130.730209,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1979.74219,
+      "Y": 447.6064,
+      "Z": 100.872795,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1884.16174,
+      "Y": 161.95401,
+      "Z": 81.0449448,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1660.91992,
+      "Y": -39.84233,
+      "Z": 60.6592751,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Tongva Dr": [
+    {
+      "X": -1622.12793,
+      "Y": 1110.37439,
+      "Z": 151.730469,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1553.05847,
+      "Y": 1403.17883,
+      "Z": 125.110153,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1508.56384,
+      "Y": 1701.47156,
+      "Z": 96.08566,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1462.57422,
+      "Y": 1998.57593,
+      "Z": 67.50379,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Marlowe Dr": [
+    {
+      "X": -1603.22681,
+      "Y": 976.862,
+      "Z": 154.55426,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1402.59656,
+      "Y": 752.3298,
+      "Z": 182.6912,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1172.68359,
+      "Y": 946.311157,
+      "Z": 197.473816,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -977.036,
+      "Y": 1174.15088,
+      "Z": 218.237457,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -750.2963,
+      "Y": 977.14386,
+      "Z": 237.60791,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -460.372467,
+      "Y": 897.759338,
+      "Z": 238.543533,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -199.580048,
+      "Y": 1046.8468,
+      "Z": 233.58046,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 98.29268,
+      "Y": 1004.27911,
+      "Z": 214.382217,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 393.816528,
+      "Y": 952.583862,
+      "Z": 204.199921,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 642.0849,
+      "Y": 782.973938,
+      "Z": 204.82515,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 865.445251,
+      "Y": 984.8106,
+      "Z": 240.748611,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 927.755859,
+      "Y": 690.9647,
+      "Z": 178.383286,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1128.757,
+      "Y": 643.912,
+      "Z": 117.363174,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Zancudo Grande Valley": [
+    {
+      "X": -475.57,
+      "Y": 2791.35278,
+      "Z": 39.31874,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -568.076,
+      "Y": 2504.41382,
+      "Z": 50.9938545,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -784.218262,
+      "Y": 2295.875,
+      "Z": 76.59465,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -770.7254,
+      "Y": 1995.94141,
+      "Z": 128.597733,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mt Vinewood Dr": [
+    {
+      "X": -898.257935,
+      "Y": 1723.96082,
+      "Z": 182.4153,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -804.0424,
+      "Y": 1438.87659,
+      "Z": 239.9268,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -731.589,
+      "Y": 1147.01514,
+      "Z": 262.466919,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Galileo Rd": [
+    {
+      "X": -755.6746,
+      "Y": 1699.226,
+      "Z": 201.090042,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -549.0998,
+      "Y": 1918.27551,
+      "Z": 207.794327,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -262.407257,
+      "Y": 1828.60278,
+      "Z": 198.492355,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "West Galileo Ave": [
+    {
+      "X": -680.046265,
+      "Y": 1204.457,
+      "Z": 267.511353,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "East Galileo Ave": [
+    {
+      "X": -444.174652,
+      "Y": 1391.4939,
+      "Z": 296.074921,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -165.433441,
+      "Y": 1505.42224,
+      "Z": 288.780243,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 112.730919,
+      "Y": 1391.8822,
+      "Z": 257.505646,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -180.55397,
+      "Y": 1333.08911,
+      "Z": 300.8681,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Galileo Park": [
+    {
+      "X": -457.4826,
+      "Y": 1288.73352,
+      "Z": 313.173248,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -501.585175,
+      "Y": 1204.12659,
+      "Z": 323.6908,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Baytree Canyon Rd": [
+    {
+      "X": 694.837646,
+      "Y": 2188.8313,
+      "Z": 60.44859,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 404.236877,
+      "Y": 2111.38062,
+      "Z": 93.95177,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 104.465179,
+      "Y": 2098.66455,
+      "Z": 140.618561,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -156.440643,
+      "Y": 1948.95178,
+      "Z": 194.3922,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 37.3169823,
+      "Y": 1719.28467,
+      "Z": 223.9621,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 179.621124,
+      "Y": 1453.87952,
+      "Z": 239.737549,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 263.9914,
+      "Y": 1165.17944,
+      "Z": 224.085648,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mt Haan Rd": [
+    {
+      "X": 186.17,
+      "Y": 1668.09265,
+      "Z": 230.192017,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 460.4898,
+      "Y": 1791.23645,
+      "Z": 229.752563,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 748.659058,
+      "Y": 1707.34131,
+      "Z": 179.690811,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1048.66113,
+      "Y": 1692.57458,
+      "Z": 162.53093,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1144.578,
+      "Y": 1408.07178,
+      "Z": 160.090256,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1151.35681,
+      "Y": 1107.358,
+      "Z": 171.484863,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1132.03967,
+      "Y": 870.300354,
+      "Z": 152.073883,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mt Haan Dr": [
+    {
+      "X": 480.605621,
+      "Y": 946.683167,
+      "Z": 201.416138,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 411.351624,
+      "Y": 1238.71326,
+      "Z": 256.2525,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 687.0706,
+      "Y": 1357.83081,
+      "Z": 329.495728,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Palomino Fwy": [
+    {
+      "X": 2132.90747,
+      "Y": 1337.76917,
+      "Z": 75.31329,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2482.85034,
+      "Y": 849.4585,
+      "Z": 92.47407,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2535.4917,
+      "Y": 553.8098,
+      "Z": 111.4651,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2532.66162,
+      "Y": 252.916458,
+      "Z": 106.781189,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2483.63135,
+      "Y": -43.06022,
+      "Z": 92.7075043,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2360.95313,
+      "Y": -317.388336,
+      "Z": 84.90411,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2161.408,
+      "Y": -544.8679,
+      "Z": 94.2227249,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1928.01782,
+      "Y": -736.880249,
+      "Z": 86.46726,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1685.1554,
+      "Y": -913.3741,
+      "Z": 66.49524,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1424.88965,
+      "Y": -1062.81311,
+      "Z": 54.2209129,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2298.12134,
+      "Y": 1135.34644,
+      "Z": 78.37098,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Sustancia Rd": [
+    {
+      "X": 2443.17529,
+      "Y": -485.713074,
+      "Z": 70.5113144,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2255.20215,
+      "Y": -721.1943,
+      "Z": 65.960144,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2013.3877,
+      "Y": -898.7604,
+      "Z": 79.02962,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1815.90881,
+      "Y": -1126.898,
+      "Z": 81.46918,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1622.71033,
+      "Y": -1357.39807,
+      "Z": 82.15723,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1399.17017,
+      "Y": -1558.884,
+      "Z": 56.41893,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "El Burro Blvd": [
+    {
+      "X": 2003.42041,
+      "Y": -976.352051,
+      "Z": 81.2625656,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1901.76831,
+      "Y": -1258.62451,
+      "Z": 125.818443,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1799.9646,
+      "Y": -1541.82556,
+      "Z": 113.504875,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1716.31531,
+      "Y": -1830.02466,
+      "Z": 112.149376,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1676.19873,
+      "Y": -2127.437,
+      "Z": 107.343643,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1629.02319,
+      "Y": -2423.86621,
+      "Z": 91.58438,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1369.32971,
+      "Y": -2576.00342,
+      "Z": 48.751297,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Kortz Dr": [
+    {
+      "X": -2302.7688,
+      "Y": 471.112518,
+      "Z": 174.2694,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2089.11426,
+      "Y": 259.244751,
+      "Z": 125.198006,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1903.74,
+      "Y": 87.0527344,
+      "Z": 85.48483,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Ace Jones Dr": [
+    {
+      "X": -1453.18835,
+      "Y": 525.6403,
+      "Z": 118.333771,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1751.39587,
+      "Y": 487.90097,
+      "Z": 129.85585,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1948.61914,
+      "Y": 518.418,
+      "Z": 109.142189,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Richman St": [
+    {
+      "X": -1823.26929,
+      "Y": 155.127655,
+      "Z": 77.30583,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1535.263,
+      "Y": 240.502716,
+      "Z": 61.0713921,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ]
+}

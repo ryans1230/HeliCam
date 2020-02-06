@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="rotate.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        #content {
+            display: none;
+        }
+
+        .aircraft {
+            position: absolute;
+            left: 80px;
+            top: 110px;
+            width: 75px;
+            height: 75px;
+        }
+
+        #heading {
+            position: absolute;
+            left: 70px;
+            top: 30px;
+            transform-origin: bottom !important;
+        }
+
+        .text {
+            display: none;
+            position: absolute;
+            color: white;
+            background-color: rgba(0,0,0, 0.6);
+            padding: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #instructions {
+            text-align: right;
+            right: 20px;
+            top: 15%;
+        }
+
+        #control {
+            color: green;
+            text-shadow: none;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 0px 5px;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .alert {
+            left: 50%;
+            position: absolute;
+            bottom: 10%;
+            transform: translate(-50%, -50%);
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <img src="heli.png" id="heli" class="aircraft" />
+        <img src="plane.png" id="plane" class="aircraft" />
+        <img src="heading.png" id="heading" class="rotate-90" />
+    </div>
+    <div class="text" id="instructions">
+        <p>Press <span id="control">G</span> to place markers</p>
+        <p>Press <span id="control">H</span> to remove last marker</p>
+        <p>Press <span id="control">TAB</span> to toggle speed calculation</p>
+        <p>Press <span id="control">E</span> to toggle camera</p>
+        <p>Press <span id="control">V</span> to toggle road overlay</p>
+        <p>Press <span id="control">Q</span> to reset camera position</p>
+    </div>
+    <div class="alert text">
+        <p id="alert-text"></p>
+    </div>
+
+    <script>
+        var drawingAlerts = false;
+        var pendingAlerts = [];
+        $(function() {
+            window.addEventListener('message', e => {
+                var item = e.data;
+                //console.log('message ' + JSON.stringify(item));
+
+                if (item.shown === true) {
+                    $('#content').show();
+                    $('#instructions').fadeIn();
+                    setTimeout(() => {
+                        $('#instructions').fadeOut();
+                    }, 7500);
+                } else if (item.shown === false) {
+                    $('#content').hide();
+                    $('#instructions').hide();
+                    return;
+                }
+
+                if (item.heli === true) {
+                    $('#heli').fadeIn();
+                    $('#plane').fadeOut();
+                }
+                else if (item.plane === true) {
+                    $('#plane').fadeIn();
+                    $('#heli').fadeOut();
+                }
+                else if (item.hasOwnProperty('rotation')) {
+                    $('#heading').removeClass().addClass('rotate-' + item.rotation);
+                }
+                else if (item.hasOwnProperty('pitch')) {
+                    pitchGague.option('value', item.pitch);
+                }
+                else if (item.hasOwnProperty('roll')) {
+                    rollGague.option('value', item.roll);
+                }
+
+                if (item.type == 'alert') {
+                    pendingAlerts.push(item.message);
+                    if (!drawingAlerts) {
+                        showAlerts();
+                    }
+                }
+            });
+        });
+
+        function showAlerts() {
+            drawingAlerts = true;
+            let msg = pendingAlerts.shift();
+            $('#alert-text').text(msg);
+            $('.alert').fadeIn();
+            setTimeout(() => {
+                $('.alert').fadeOut();
+                setTimeout(() => {
+                    $('#alert-text').text('');
+                    if (pendingAlerts.length > 0) {
+                        showAlerts();
+                    } 
+                    else {
+                        drawingAlerts = false;
+                    }
+                }, 750);
+                
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
