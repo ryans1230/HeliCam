@@ -43,13 +43,22 @@
             top: 15%;
         }
 
-        #control {
+        #key {
             color: green;
             text-shadow: none;
             font-weight: bolder;
             font-size: 20px;
             padding: 0px 5px;
-            -webkit-text-stroke: 1px black;
+            -webkit-text-stroke: 1px green;
+        }
+
+        #xbox {
+            color: lightblue;
+            text-shadow: none;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 0px 5px;
+            -webkit-text-stroke: 1px lightblue;
         }
 
         .alert {
@@ -58,6 +67,13 @@
             bottom: 10%;
             transform: translate(-50%, -50%);
             color: orangered;
+        }
+        .info {
+            left: 50%;
+            position: absolute;
+            bottom: 10%;
+            transform: translate(-50%, -50%);
+            color: white;
         }
     </style>
 </head>
@@ -68,20 +84,29 @@
         <img src="heading.png" id="heading" class="rotate-90" />
     </div>
     <div class="text" id="instructions">
-        <p>Press <span id="control">G</span> to place markers</p>
-        <p>Press <span id="control">H</span> to remove last marker</p>
-        <p>Press <span id="control">TAB</span> to toggle speed calculation</p>
-        <p>Press <span id="control">E</span> to toggle camera</p>
-        <p>Press <span id="control">V</span> to toggle road overlay</p>
-        <p>Press <span id="control">Q</span> to reset camera position</p>
+        <p>Press <span id="key">E</span> or <span id="xbox">Dpad Right</span> to toggle camera</p>
+        <p>Press <span id="key">RMB</span> or <span id="xbox">B</span> to cycle camera modes</p>
+        <p>Press <span id="key">Q</span> or <span id="xbox">Dpad Left</span> to reset camera position</p>
+        <p>Press <span id="key">G</span> or <span id="xbox">L3</span> to place markers</p>
+        <p>Press <span id="key">H</span> or <span id="xbox">R3</span> to remove last marker</p>
+        <p>Press <span id="key">TAB</span> or <span id="xbox">X</span> to toggle speed calculation</p>
+        <p>Press <span id="key">V</span> or <span id="xbox">Back</span> to toggle road overlay</p>
+        <p>Press <span id="key">F</span> or <span id="xbox">Y</span> to toggle spotlight</p>
+        <p>Press <span id="key">Num9</span> or <span id="xbox">RB</span> to increase spotlight size</p>
+        <p>Press <span id="key">Num7</span> or <span id="xbox">LB</span> to decresase spotlight size</p>
     </div>
     <div class="alert text">
         <p id="alert-text"></p>
     </div>
+    <div class="info text">
+        <p id="info-text"></p>
+    </div>
 
     <script>
         var drawingAlerts = false;
+        var drawingInfos = false;
         var pendingAlerts = [];
+        var pendingInfos = [];
         $(function() {
             window.addEventListener('message', e => {
                 var item = e.data;
@@ -93,7 +118,8 @@
                     setTimeout(() => {
                         $('#instructions').fadeOut();
                     }, 7500);
-                } else if (item.shown === false) {
+                }
+                else if (item.shown === false) {
                     $('#content').hide();
                     $('#instructions').hide();
                     return;
@@ -110,17 +136,17 @@
                 else if (item.hasOwnProperty('rotation')) {
                     $('#heading').removeClass().addClass('rotate-' + item.rotation);
                 }
-                else if (item.hasOwnProperty('pitch')) {
-                    pitchGague.option('value', item.pitch);
-                }
-                else if (item.hasOwnProperty('roll')) {
-                    rollGague.option('value', item.roll);
-                }
 
                 if (item.type == 'alert') {
                     pendingAlerts.push(item.message);
                     if (!drawingAlerts) {
                         showAlerts();
+                    }
+                }
+                else if (item.type == 'info') {
+                    pendingInfos.push(item.message);
+                    if (!drawingInfos) {
+                        showInfos();
                     }
                 }
             });
@@ -137,12 +163,30 @@
                     $('#alert-text').text('');
                     if (pendingAlerts.length > 0) {
                         showAlerts();
-                    } 
+                    }
                     else {
                         drawingAlerts = false;
                     }
                 }, 750);
-                
+            }, 3000);
+        }
+
+        function showInfos() {
+            drawingInfos = true;
+            let msg = pendingInfos.shift();
+            $('#info-text').text(msg);
+            $('.info').fadeIn();
+            setTimeout(() => {
+                $('.info').fadeOut();
+                setTimeout(() => {
+                    $('#info-text').text('');
+                    if (pendingInfos.length > 0) {
+                        showInfos();
+                    }
+                    else {
+                        drawingInfos = false;
+                    }
+                }, 750);
             }, 3000);
         }
     </script>

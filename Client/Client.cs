@@ -38,6 +38,22 @@ namespace HeliCam
         }
     }
 
+    internal class Spotlight
+    {
+        public int VehicleId { get; set; }
+        public Vector3 Start { get; set; }
+        public Vector3 End { get; set; }
+        public float Radius { get; set; }
+
+        internal Spotlight(int veh, Vector3 start, Vector3 end, float size)
+        {
+            VehicleId = veh;
+            Start = start;
+            End = end;
+            Radius = size;
+        }
+    }
+
     public class Client : BaseScript
     {
         #region Variables
@@ -45,15 +61,18 @@ namespace HeliCam
         private const Control VISION_TOGGLE = Control.ScriptRRight;
         private const Control REPEL = Control.ParachuteSmoke;
         private const Control TOGGLE_ENTITY_LOCK = Control.CreatorAccept;
+        private const Control TOGGLE_SPOTLIGHT = Control.VehicleExit;
         private readonly HashSet<Blip> markers = new HashSet<Blip>();
         private readonly Config config;
 
-        private bool _helicam, _calculateSpeed, _roadOverlay;
+        private bool _helicam, _calculateSpeed, _roadOverlay, _spotlightActive;
         private float _fov = 80f;
         private float _safeZone;
+        private float _spotlightSize = 5f;
         private int _visionState = 0; // 0 normal, 1 nightmode, 2 thermal
         private Minimap _playerMap;
         private readonly Dictionary<string, List<Vector3>> _streetOverlay;
+        private readonly Dictionary<int, Spotlight> _drawnSpotlights = new Dictionary<int, Spotlight>();
         private double _lastCamHeading = 0;
         private Tuple<int, Vector3> _speedMarker;
         #endregion
@@ -91,6 +110,23 @@ namespace HeliCam
 
         #region Ticks
         [Tick]
+        internal async Task EveryTick()
+        {
+            foreach (Spotlight spotlight in _drawnSpotlights.Values)
+            {
+                if (DistanceTo(Game.PlayerPed.Position, spotlight.Start) < 1000f)
+                {
+                    DrawSpotLightWithShadow(spotlight.Start.X, spotlight.Start.Y, spotlight.Start.Z, spotlight.End.X, spotlight.End.Y, spotlight.End.Z, 255, 175, 110, 1000f, 10f, 0f, spotlight.Radius, 1f, spotlight.VehicleId);
+                }
+            }
+
+            foreach (Blip b in markers)
+            {
+                World.DrawMarker(MarkerType.HorizontalCircleSkinny, b.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
+            }
+        }
+
+        [Tick]
         internal async Task UpdateCache()
         {
             _playerMap = MinimapAnchor.GetMinimapAnchor();
@@ -103,16 +139,11 @@ namespace HeliCam
         {
             Ped player = Game.PlayerPed;
 
-            foreach (Blip b in markers)
-            {
-                World.DrawMarker(MarkerType.HorizontalCircleSkinny, b.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
-            }
-
             if (IsPlayerInHeli())
             {
                 Vehicle heli = player.CurrentVehicle;
 
-                if (IsHeliHighEnough(heli))
+                if (heli.HeightAboveGround > 1.5f)
                 {
                     if (Game.IsControlJustPressed(0, CAM_TOGGLE))
                     {
@@ -140,8 +171,8 @@ namespace HeliCam
             {
                 SetTimecycleModifier("heliGunCam");
                 SetTimecycleModifierStrength(0.3f);
-                int scaleform = RequestScaleformMovie("HELI_CAM");
-                while (!HasScaleformMovieLoaded(scaleform))
+                Scaleform scaleform = new Scaleform("HELI_CAM");
+                while (!scaleform.IsLoaded)
                 {
                     await Delay(1);
                 }
@@ -168,18 +199,14 @@ namespace HeliCam
                 Blip speedBlip = null;
                 SetNetworkIdExistsOnAllMachines(heli.NetworkId, true);
 
-                while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli && IsHeliHighEnough(heli))
+                while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli)
                 {
                     Game.DisableControlThisFrame(0, Control.NextCamera);
                     Game.DisableControlThisFrame(0, Control.VehicleSelectNextWeapon);
                     Game.DisableControlThisFrame(0, Control.VehicleCinCam);
                     Game.DisableControlThisFrame(0, Control.VehicleHeadlight);
                     Game.DisableControlThisFrame(0, REPEL);
-
-                    foreach (Blip b in markers)
-                    {
-                        World.DrawMarker(MarkerType.HorizontalCircleSkinny, b.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
-                    }
+                    Game.DisableControlThisFrame(0, TOGGLE_SPOTLIGHT);
 
                     if (Game.IsControlJustPressed(0, CAM_TOGGLE))
                     {
@@ -212,9 +239,9 @@ namespace HeliCam
                             {
                                 lastLosTime = Game.GameTime;
                             }
-                            
+
                             RenderInfo(lockedEntity);
-                            hitPos = lockedEntity.Position;
+                            hitPos = endPos = lockedEntity.Position;
                             RenderText(0.45f, 0.4f, "~g~Locked");
 
                             if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
@@ -278,7 +305,10 @@ namespace HeliCam
                             }
                             else
                             {
-                                speedBlip.Delete();
+                                if (speedBlip != null)
+                                {
+                                    speedBlip.Delete();
+                                }
                                 speedBlip = null;
                                 _speedMarker = null;
                             }
@@ -295,15 +325,60 @@ namespace HeliCam
                         RenderStreetNames(hitPos == Vector3.Zero ? heli.Position : hitPos);
                     }
 
-                    PushScaleformMovieFunction(scaleform, "SET_ALT_FOV_HEADING");
-                    PushScaleformMovieFunctionParameterFloat(heli.Position.Z);
-                    PushScaleformMovieFunctionParameterFloat(zoomValue);
-                    PushScaleformMovieFunctionParameterFloat(cam.Rotation.Z);
-                    PopScaleformMovieFunctionVoid();
-                    DrawScaleformMovieFullscreen(scaleform, 255, 255, 255, 255, 0);
+                    if (Game.IsDisabledControlJustPressed(0, TOGGLE_SPOTLIGHT))
+                    {
+                        _spotlightActive = !_spotlightActive;
+
+                        if (!_spotlightActive)
+                        {
+                            TriggerServerEvent("helicam:spotlight:kill");
+                        }
+                        else
+                        {
+                            SendNuiMessage(JsonConvert.SerializeObject(new
+                            {
+                                type = "info",
+                                message = $"Spotlight turned on"
+                            }));
+                        }
+                    }
+
+                    if (_spotlightActive)
+                    {
+                        Game.DisableControlThisFrame(0, Control.VehicleFlyYawLeft);
+                        Game.DisableControlThisFrame(0, Control.VehicleFlyYawRight);
+                        if (Game.IsControlJustPressed(0, Control.VehicleFlySelectTargetRight) && _spotlightSize < 10)
+                        {
+                            _spotlightSize += 1f;
+                        }
+                        else if (Game.IsControlJustPressed(0, Control.VehicleFlySelectTargetLeft) && _spotlightSize > 1)
+                        {
+                            _spotlightSize -= 1f;
+                        }
+                        Vector3 dest;
+                        if (Entity.Exists(lockedEntity))
+                        {
+                            dest = lockedEntity.Position - cam.Position;
+                        }
+                        else
+                        {
+                            dest = endPos - cam.Position;
+                        }
+                        dest.Normalize();
+                        TriggerServerEvent("helicam:spotlight:draw", heli.NetworkId, cam.Position, dest, _spotlightSize);
+                    }
+
+                    scaleform.CallFunction("SET_ALT_FOV_HEADING", heli.Position.Z, zoomValue, cam.Rotation.Z);
+                    scaleform.Render2D();
+
                     hitPos = Vector3.Zero;
                     await Delay(0);
                 }
+
+                // No longer in cam
+
+                _spotlightActive = false;
+                TriggerServerEvent("helicam:spotlight:kill");
 
                 SendNuiMessage(JsonConvert.SerializeObject(new
                 {
@@ -316,7 +391,7 @@ namespace HeliCam
                 ClearTimecycleModifier();
                 _fov = (config.FovMax + config.FovMin) * 0.5f; // Reset to default zoom level
                 RenderScriptCams(false, false, 0, true, false);
-                SetScaleformMovieAsNoLongerNeeded(ref scaleform);
+                scaleform.Dispose();
                 cam.Delete();
                 Game.Nightvision = false;
                 Game.ThermalVision = false;
@@ -391,6 +466,43 @@ namespace HeliCam
                 Rotation = 0
             };
             markers.Add(b);
+        }
+
+        [EventHandler("helicam:drawSpotlight")]
+        internal void RenderSpotlight(int src, int vehId, Vector3 start, Vector3 end, float size)
+        {
+            if (_drawnSpotlights.Count > 0)
+            {
+                foreach (KeyValuePair<int, Spotlight> spotlight in _drawnSpotlights)
+                {
+                    if (src != spotlight.Key && vehId == spotlight.Value.VehicleId)
+                    {
+                        Debug.WriteLine("spotlight already drawn!");
+                        _spotlightActive = false;
+                        return;
+                    }
+                }
+            }
+            start.Z -= 5f;
+            _drawnSpotlights[src] = new Spotlight(vehId, start, end, size);
+        }
+
+        [EventHandler("helicam:killSpotlight")]
+        internal void RemoveSpotlight(int src)
+        {
+            if (_drawnSpotlights.ContainsKey(src))
+            {
+                _drawnSpotlights.Remove(src);
+            }
+
+            if (src == Game.Player.ServerId)
+            {
+                SendNuiMessage(JsonConvert.SerializeObject(new
+                {
+                    type = "info",
+                    message = $"Spotlight turned off"
+                }));
+            }
         }
         #endregion
 
@@ -689,11 +801,6 @@ namespace HeliCam
             Vehicle heli = Game.PlayerPed.CurrentVehicle;
 
             return Entity.Exists(heli) && (Game.PlayerPed.IsInHeli || config.AircraftHashes.Contains(heli.DisplayName.ToLower()) || config.HelicopterHashes.Contains(heli.DisplayName.ToLower()));
-        }
-
-        private bool IsHeliHighEnough(Vehicle heli)
-        {
-            return heli.HeightAboveGround > 2f;
         }
 
         private double DistanceTo(Vector3 origin, Vector3 target)

@@ -21,5 +21,17 @@ namespace HeliCam
         {
             TriggerClientEvent("helicam:deleteAllMarkers", player.Handle, vehId);
         }
+
+        [EventHandler("helicam:spotlight:draw")]
+        internal void DrawSpotlight([FromSource] Player player, int vehId, Vector3 start, Vector3 end, float size)
+        {
+            TriggerClientEvent("helicam:drawSpotlight", player.Handle, vehId, start, end, size);
+        }
+
+        [EventHandler("helicam:spotlight:kill")]
+        internal void KillSpotlight([FromSource] Player player)
+        {
+            TriggerClientEvent("helicam:killSpotlight", player.Handle);
+        }
     }
 }
