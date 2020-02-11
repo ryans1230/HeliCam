@@ -13,7 +13,7 @@
 
         .aircraft {
             position: absolute;
-            left: 80px;
+            left: 50px;
             top: 110px;
             width: 75px;
             height: 75px;
@@ -21,9 +21,25 @@
 
         #heading {
             position: absolute;
-            left: 70px;
+            left: 35px;
             top: 30px;
             transform-origin: bottom !important;
+        }
+
+        #tilt {
+            position: absolute;
+            left: 220px;
+            top: 80px;
+            width: 25px;
+            height: 80px;
+            transform-origin: bottom !important;
+        }
+
+        #cam {
+            position: absolute;
+            width: 75px;
+            left: 195px;
+            top: 110px;
         }
 
         .text {
@@ -82,6 +98,9 @@
         <img src="heli.png" id="heli" class="aircraft" />
         <img src="plane.png" id="plane" class="aircraft" />
         <img src="heading.png" id="heading" class="rotate-90" />
+
+        <img src="heading.png" id="tilt" class="rotate-90" />
+        <img src="cam.png" id="cam" />
     </div>
     <div class="text" id="instructions">
         <p>Press <span id="key">E</span> or <span id="xbox">Dpad Right</span> to toggle camera</p>
@@ -135,6 +154,9 @@
                 }
                 else if (item.hasOwnProperty('rotation')) {
                     $('#heading').removeClass().addClass('rotate-' + item.rotation);
+                }
+                else if (item.hasOwnProperty('camtilt')) {
+                    $('#tilt').removeClass().addClass('rotate-' + item.camtilt)
                 }
 
                 if (item.type == 'alert') {

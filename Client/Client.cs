@@ -73,7 +73,7 @@ namespace HeliCam
         private Minimap _playerMap;
         private readonly Dictionary<string, List<Vector3>> _streetOverlay;
         private readonly Dictionary<int, Spotlight> _drawnSpotlights = new Dictionary<int, Spotlight>();
-        private double _lastCamHeading = 0;
+        private double _lastCamHeading, _lastCamTilt;
         private Tuple<int, Vector3> _speedMarker;
         #endregion
 
@@ -197,6 +197,7 @@ namespace HeliCam
                 Vector3 hitPos = Vector3.Zero;
                 Vector3 endPos = Vector3.Zero;
                 Blip speedBlip = null;
+                int lockedTime = 0;
                 SetNetworkIdExistsOnAllMachines(heli.NetworkId, true);
 
                 while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli)
@@ -242,12 +243,15 @@ namespace HeliCam
 
                             RenderInfo(lockedEntity);
                             hitPos = endPos = lockedEntity.Position;
-                            RenderText(0.45f, 0.4f, "~g~Locked");
+                            TimeSpan timeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
+                            string answer = string.Format("{0:D1}m:{1:D2}s", timeDiff.Minutes, timeDiff.Seconds);
+                            RenderText(0.45f, 0.4f, $"~g~Locked ~w~{answer}");
 
                             if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
                             {
                                 Debug.WriteLine($"LOS: {(Game.GameTime - lastLosTime) > 5000}");
                                 lockedEntity = null;
+                                lockedTime = 0;
                                 cam.StopPointing();
                                 Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
                             }
@@ -269,6 +273,7 @@ namespace HeliCam
                             {
                                 Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                                 lockedEntity = detected.Item1;
+                                lockedTime = Game.GameTime;
                                 cam.PointAt(lockedEntity);
                                 lastLosTime = Game.GameTime;
                             }
@@ -318,7 +323,7 @@ namespace HeliCam
                     HandleZoom(cam);
                     RenderTargetPosInfo(hitPos);
                     HandleMarkers(hitPos);
-                    RenderRotation(heli, endPos);
+                    RenderRotation(heli, endPos, cam.Rotation);
 
                     if (_roadOverlay && _streetOverlay.Count > 0)
                     {
@@ -565,7 +570,7 @@ namespace HeliCam
 
         private void HandleMarkers(Vector3 cam)
         {
-            RenderText(_playerMap.RightX + 0.025f, config.TextY, $"Markers:\n      {markers.Count}");
+            RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.1f, $"Markers:  {markers.Count}", 0.3f);
             if (Game.IsControlJustPressed(0, Control.ReplayHidehud))
             {
                 if (markers.Count > 0)
@@ -676,7 +681,7 @@ namespace HeliCam
             }
         }
 
-        private void RenderRotation(Vehicle veh, Vector3 target)
+        private void RenderRotation(Vehicle veh, Vector3 target, Vector3 camRotation)
         {
             double n = 270 - (Math.Atan2(veh.Position.Y - target.Y, veh.Position.X - target.X)) * 180 / Math.PI;
             double heading = Math.Round(n % 360, 0);
@@ -695,6 +700,16 @@ namespace HeliCam
                     rotation = heading
                 }));
                 _lastCamHeading = heading;
+            }
+
+            double tilt = Math.Round(-camRotation.X + 90f, 0);
+            if (_lastCamTilt != tilt)
+            {
+                _lastCamTilt = tilt;
+                SendNuiMessage(JsonConvert.SerializeObject(new
+                {
+                    camtilt = tilt
+                }));
             }
         }
 
@@ -724,13 +739,13 @@ namespace HeliCam
 
                 estSpeed *= 2.236936;
 
-                if (double.IsInfinity(estSpeed))
+                if (double.IsInfinity(estSpeed) || double.IsNaN(estSpeed))
                 {
-                    RenderText(0.6f, config.TextY, $"Est. Speed: Measuring\nTime: {timeDiff}s");
+                    RenderText(0.6f, config.TextY, $"Est. Speed: Measuring\nTime: {timeDiff}s", 0.4f);
                 }
                 else
                 {
-                    RenderText(0.6f, config.TextY, $"Est. Speed: {Math.Round(estSpeed, 0)}mph\nTime: {timeDiff}s");
+                    RenderText(0.6f, config.TextY, $"Est. Speed: {Math.Round(estSpeed, 0)}mph\nTime: {timeDiff}s", 0.4f);
                 }
 
                 World.DrawMarker(MarkerType.HorizontalCircleSkinny, _speedMarker.Item2, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(109, 184, 215));
@@ -738,13 +753,13 @@ namespace HeliCam
             }
         }
 
-        private void RenderText(float x, float y, string text)
+        private void RenderText(float x, float y, string text, float scale = 0.5f)
         {
             float safeZoneSizeX = (1 / _safeZone / 3.0f) - 0.358f;
 
             SetTextFont(0);
             SetTextProportional(false);
-            SetTextScale(0f, 0.5f);
+            SetTextScale(0f, scale);
             SetTextColour(255, 255, 255, 255);
             SetTextDropshadow(0, 0, 0, 0, 255);
             SetTextEdge(1, 0, 0, 0, 255);
