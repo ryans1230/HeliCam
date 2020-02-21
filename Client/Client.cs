@@ -124,6 +124,7 @@ namespace HeliCam
             {
                 World.DrawMarker(MarkerType.HorizontalCircleSkinny, b.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
             }
+            await Task.FromResult(0);
         }
 
         [Tick]
@@ -208,6 +209,7 @@ namespace HeliCam
                     Game.DisableControlThisFrame(0, Control.VehicleHeadlight);
                     Game.DisableControlThisFrame(0, REPEL);
                     Game.DisableControlThisFrame(0, TOGGLE_SPOTLIGHT);
+                    Game.DisableControlThisFrame(0, Control.Phone);
 
                     if (Game.IsControlJustPressed(0, CAM_TOGGLE))
                     {
@@ -348,6 +350,9 @@ namespace HeliCam
                         }
                     }
 
+                    SeethroughSetHeatscale(2, 0.5f);
+                    SeethroughSetHiLightIntensity(-1f);
+
                     if (_spotlightActive)
                     {
                         Game.DisableControlThisFrame(0, Control.VehicleFlyYawLeft);
@@ -381,9 +386,11 @@ namespace HeliCam
                 }
 
                 // No longer in cam
-
-                _spotlightActive = false;
-                TriggerServerEvent("helicam:spotlight:kill");
+                if (_spotlightActive)
+                {
+                    _spotlightActive = false;
+                    TriggerServerEvent("helicam:spotlight:kill");
+                }
 
                 SendNuiMessage(JsonConvert.SerializeObject(new
                 {
