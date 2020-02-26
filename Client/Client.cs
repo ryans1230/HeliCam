@@ -199,6 +199,7 @@ namespace HeliCam
                 Vector3 endPos = Vector3.Zero;
                 Blip speedBlip = null;
                 int lockedTime = 0;
+                int enterTime = Game.GameTime;
                 SetNetworkIdExistsOnAllMachines(heli.NetworkId, true);
 
                 while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli)
@@ -321,6 +322,12 @@ namespace HeliCam
                             }
                         }
                     }
+
+                    int timeInCam = (Game.GameTime - enterTime) / 1000;
+                    TimeSpan time = TimeSpan.FromSeconds(timeInCam);
+                    string str = time.ToString(@"hh\:mm\:ss\:fff");
+                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.5f, time.ToString(@"hh\:mm\:ss"), 0.3f);
+
 
                     HandleZoom(cam);
                     RenderTargetPosInfo(hitPos);
@@ -594,7 +601,7 @@ namespace HeliCam
                     TriggerServerEvent("helicam:removeAllMarkers", Game.PlayerPed.CurrentVehicle.NetworkId);
                 }
             }
-            if (Game.IsControlJustPressed(0, Control.VehicleFlyUnderCarriage) && !cam.IsZero)
+            if (Game.IsControlJustPressed(0, Control.VehicleFlyUnderCarriage))
             {
                 if (markers.Count > 9)
                 {
@@ -605,6 +612,17 @@ namespace HeliCam
                     }));
                     return;
                 }
+
+                if (cam.IsZero)
+                {
+                    SendNuiMessage(JsonConvert.SerializeObject(new
+                    {
+                        type = "alert",
+                        message = "You are not aiming at a road!"
+                    }));
+                    return;
+                }
+
                 string name = $"Marker #{markers.Count} - {DateTime.Now.ToString("H:mm")}";
                 Blip b = new Blip(AddBlipForCoord(cam.X, cam.Y, cam.Z + 0.1f))
                 {
