@@ -325,7 +325,6 @@ namespace HeliCam
 
                     int timeInCam = (Game.GameTime - enterTime) / 1000;
                     TimeSpan time = TimeSpan.FromSeconds(timeInCam);
-                    string str = time.ToString(@"hh\:mm\:ss\:fff");
                     RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.5f, time.ToString(@"hh\:mm\:ss"), 0.3f);
 
 
@@ -419,6 +418,18 @@ namespace HeliCam
         #endregion
 
         #region Event Handlers
+        [EventHandler("onResourceStop")]
+        internal void ResourceStopped(string resourceName)
+        {
+            // Treat it like we are exiting the cam, basically cleanup everything
+            if (resourceName == GetCurrentResourceName())
+            {
+                ClearTimecycleModifier();
+                Game.Nightvision = false;
+                Game.ThermalVision = false;
+            }
+        }
+
         [EventHandler("helicam:deleteMarker")]
         internal void DeleteMarker(int src, Vector3 pos)
         {
