@@ -13,7 +13,8 @@ files {
 	'nui/heli.png',
 	'nui/plane.png',
 	'nui/heading.png',
-	'nui/cam.png'
+	'nui/cam.png',
+	'nui/arrow.png'
 }
 
 client_script 'HeliCam.Client.net.dll'

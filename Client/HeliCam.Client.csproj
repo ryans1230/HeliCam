@@ -71,6 +71,9 @@
     <Content Include="Newtonsoft.Json.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="nui\arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="nui\cam.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

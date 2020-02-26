@@ -718,6 +718,21 @@ namespace HeliCam
                     camtilt = tilt
                 }));
             }
+
+            double t = 270 - (Math.Atan2(veh.Position.Y - 7000f, 0f)) * 180 / Math.PI;
+            double north = Math.Round(t % 360, 0);
+
+            north += Math.Round(veh.Heading, 0);
+
+            if (north > 360)
+            {
+                north -= 360;
+            }
+
+            SendNuiMessage(JsonConvert.SerializeObject(new
+            {
+                northheading = north
+            }));
         }
 
         private void RenderTargetPosInfo(Vector3 pos)

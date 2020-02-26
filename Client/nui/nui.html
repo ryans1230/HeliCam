@@ -21,7 +21,7 @@
 
         #heading {
             position: absolute;
-            left: 35px;
+            left: 37px;
             top: 30px;
             transform-origin: bottom !important;
         }
@@ -84,6 +84,7 @@
             transform: translate(-50%, -50%);
             color: orangered;
         }
+        
         .info {
             left: 50%;
             position: absolute;
@@ -91,20 +92,61 @@
             transform: translate(-50%, -50%);
             color: white;
         }
+
+        #headingNum {
+            position: absolute;
+            left: 77px;
+            top: 125px;
+            z-index: 5;
+            color: white;
+            text-align: center;
+        }
+
+        #tiltNum {
+            position: absolute;
+            left: 223px;
+            top: 150px;
+            z-index: 5;
+            color: white;
+            text-align: center;
+        }
+
+        #arrow {
+            width: 30px;
+            position: absolute;
+            left: 219px;
+            top: 50px;
+            transform-origin: center !important;
+        }
+
+        #hdg {
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            font-size: 1.5em;
+            left: 226px;
+            top: 63px;
+        }
     </style>
 </head>
 <body>
     <div id="content">
         <img src="heli.png" id="heli" class="aircraft" />
         <img src="plane.png" id="plane" class="aircraft" />
-        <img src="heading.png" id="heading" class="rotate-90" />
+        <img src="heading.png" id="heading" class="rotate-0" />
+        <span id="headingNum"></span>
 
         <img src="heading.png" id="tilt" class="rotate-90" />
         <img src="cam.png" id="cam" />
+        <span id="tiltNum"></span>
+
+        <img src="arrow.png" id="arrow" class="rotate-0" />
+        <span id="hdg">N</span>
     </div>
     <div class="text" id="instructions">
         <p>Press <span id="key">E</span> or <span id="xbox">Dpad Right</span> to toggle camera</p>
         <p>Press <span id="key">RMB</span> or <span id="xbox">B</span> to cycle camera modes</p>
+        <p>Press <span id="key">SPACE</span> or <span id="xbox">A</span> to lock on current entity</p>
         <p>Press <span id="key">Q</span> or <span id="xbox">Dpad Left</span> to reset camera position</p>
         <p>Press <span id="key">G</span> or <span id="xbox">L3</span> to place markers</p>
         <p>Press <span id="key">H</span> or <span id="xbox">R3</span> to remove last marker</p>
@@ -154,9 +196,21 @@
                 }
                 else if (item.hasOwnProperty('rotation')) {
                     $('#heading').removeClass().addClass('rotate-' + item.rotation);
+                    var text = '' + item.rotation;
+                    text = '00' + text;
+                    $('#headingNum').text(text.slice(text.length - 3));
                 }
                 else if (item.hasOwnProperty('camtilt')) {
-                    $('#tilt').removeClass().addClass('rotate-' + item.camtilt)
+                    $('#tilt').removeClass().addClass('rotate-' + item.camtilt);
+                    let text;
+                    if (item.camtilt < 91) {
+                        $('#tiltNum').text((item.camtilt - 90));
+                    } else {
+                        text = '00' + (item.camtilt - 90);
+                        $('#tiltNum').text(text.slice(text.length - 3));
+                    }
+                } else if (item.hasOwnProperty('northheading')) {
+                    $('#arrow').removeClass().addClass('rotate-' + item.northheading);
                 }
 
                 if (item.type == 'alert') {
