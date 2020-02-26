@@ -15,11 +15,15 @@ HeliCam is an advanced ariel support camera for FiveM servers. It aims to create
 - `G` - set a marker at the current crosshair position (limit 10)
 - `H` - remove most recent marker
 - `Space` - lock on the current entity (vehicle or ped)
-- `V` - Toggle speed calculation from current crosshair position
+- `V` - toggle street overlay
 - `Scroll Up` - zoom camera in
 - `Scroll Down` - zoom camera out
-- `RMB` - change view
-
+- `RMB` - change camera mode
+- `Q` - reset camera position
+- `TAB` - toggle speed calcuations
+- `F` - toggle spotlight
+- `Num9` - increase spotlight size
+- `Num7` - decrease spotlight size
 
 ### Work In Progress Features
 - Street names overlay.

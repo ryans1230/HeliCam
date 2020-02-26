@@ -86,7 +86,7 @@ namespace HeliCam
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Unable to read file: {ex.Message}");
+                Debug.WriteLine($"Unable to read streets file: {ex.Message}");
                 Debug.WriteLine(ex.StackTrace);
                 Debug.WriteLine("Disabling map overlay");
                 _streetOverlay = new Dictionary<string, List<Vector3>>();
@@ -635,14 +635,14 @@ namespace HeliCam
 
                 foreach (KeyValuePair<Vector3, double> dot in myList)
                 {
-                    if (dot.Value < 500)
+                    if (dot.Value < 300)
                     {
                         RenderText3D(dot.Key, st.Key);
                         count++;
                         continue;
                     }
 
-                    if (count == 0 && myList.First().Value < 1000f)
+                    if (count == 0 && myList.First().Value < 300f)
                     {
                         RenderText3D(myList.First().Key, st.Key);
                     }
@@ -783,7 +783,7 @@ namespace HeliCam
             World3dToScreen2d(pos.X, pos.Y, pos.Z, ref screenX, ref screenY);
 
             SetTextFont(0);
-            SetTextScale(0.35f, 0.35f);
+            SetTextScale(0.25f, 0.25f);
             SetTextProportional(false);
             SetTextColour(255, 255, 255, 255);
             SetTextDropshadow(10, 0, 0, 0, 255);

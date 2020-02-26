@@ -1,5 +1,5 @@
 {
-  "Los Santos Freeway": [
+  "Los Santos Fwy": [
     {
       "X": 493.9325,
       "Y": -456.117554,
@@ -762,6 +762,83 @@
       "X": 833.7603,
       "Y": 216.556931,
       "Z": 81.84084,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 70.64465,
+      "Y": -1302.35437,
+      "Z": 29.3176041,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 61.7522163,
+      "Y": -1151.284,
+      "Z": 29.1863384,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 103.472572,
+      "Y": -1006.26721,
+      "Z": 29.2461872,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 157.14241,
+      "Y": -864.271667,
+      "Z": 30.6912975,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 207.866562,
+      "Y": -722.8193,
+      "Z": 34.4282341,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 262.2937,
+      "Y": -580.7962,
+      "Z": 43.268425,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 307.924072,
+      "Y": -437.499634,
+      "Z": 44.181015,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 754.2366,
+      "Y": 98.9422455,
+      "Z": 79.55901,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 667.4566,
+      "Y": -23.5551624,
+      "Z": 82.8358459,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 536.4086,
+      "Y": -98.53106,
+      "Z": 65.05376,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 518.139,
+      "Y": -247.742142,
+      "Z": 48.6364021,
       "IsNormalized": false,
       "IsZero": false
     }
@@ -1664,6 +1741,34 @@
       "Z": 60.6592751,
       "IsNormalized": false,
       "IsZero": false
+    },
+    {
+      "X": -1124.813,
+      "Y": -705.8032,
+      "Z": 20.8450451,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1302.75549,
+      "Y": -502.4349,
+      "Z": 33.03952,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1428.46143,
+      "Y": -336.1458,
+      "Z": 44.0133247,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1545.18542,
+      "Y": -203.284424,
+      "Z": 55.152565,
+      "IsNormalized": false,
+      "IsZero": false
     }
   ],
   "Tongva Dr": [
@@ -1785,6 +1890,13 @@
       "X": 1128.757,
       "Y": 643.912,
       "Z": 117.363174,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -312.0424,
+      "Y": 1022.16431,
+      "Z": 233.695679,
       "IsNormalized": false,
       "IsZero": false
     }
@@ -2217,6 +2329,13 @@
       "Z": 48.751297,
       "IsNormalized": false,
       "IsZero": false
+    },
+    {
+      "X": 1188.08069,
+      "Y": -2583.62842,
+      "Z": 36.9543762,
+      "IsNormalized": false,
+      "IsZero": false
     }
   ],
   "Kortz Dr": [
@@ -2277,6 +2396,5379 @@
       "X": -1535.263,
       "Y": 240.502716,
       "Z": 61.0713921,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Vinewood Park Dr": [
+    {
+      "X": 1156.66663,
+      "Y": 358.734863,
+      "Z": 91.4976349,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 955.8129,
+      "Y": 135.01413,
+      "Z": 80.81271,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 824.2836,
+      "Y": -14.9660149,
+      "Z": 80.49838,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1077.20593,
+      "Y": 441.025452,
+      "Z": 91.68836,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 950.3825,
+      "Y": 521.5625,
+      "Z": 112.582726,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mirror Park Blvd": [
+    {
+      "X": 965.8943,
+      "Y": -164.951569,
+      "Z": 73.66946,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1215.65833,
+      "Y": -331.466217,
+      "Z": 69.00392,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1181.254,
+      "Y": -630.6675,
+      "Z": 62.831768,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "El Rancho Blvd": [
+    {
+      "X": 1157.33337,
+      "Y": -929.776062,
+      "Z": 49.8177719,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1240.85889,
+      "Y": -1219.0061,
+      "Z": 35.7599754,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1281.32361,
+      "Y": -1517.14624,
+      "Z": 42.4937057,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1416.20728,
+      "Y": -1785.644,
+      "Z": 66.72914,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1262.8175,
+      "Y": -2043.83154,
+      "Z": 44.23822,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1084.17,
+      "Y": -2075.46387,
+      "Z": 35.20404,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 933.4195,
+      "Y": -2080.30615,
+      "Z": 30.3597775,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 783.4851,
+      "Y": -2063.53247,
+      "Z": 29.2337151,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 633.5382,
+      "Y": -2049.65674,
+      "Z": 29.27054,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Fudge Ln": [
+    {
+      "X": 1428.33691,
+      "Y": -1512.6925,
+      "Z": 61.23767,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1326.62488,
+      "Y": -1543.07642,
+      "Z": 51.18325,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1173.9563,
+      "Y": -1659.89319,
+      "Z": 37.2370834,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "East Mirror Dr": [
+    {
+      "X": 1226.57617,
+      "Y": -758.3182,
+      "Z": 59.27441,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1285.48633,
+      "Y": -464.088379,
+      "Z": 68.9821243,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1290.77136,
+      "Y": -644.3461,
+      "Z": 68.2676544,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "West Mirror Drive": [
+    {
+      "X": 985.241455,
+      "Y": -467.119751,
+      "Z": 62.71963,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1061.53088,
+      "Y": -757.718933,
+      "Z": 57.6672935,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1165.64551,
+      "Y": -361.7611,
+      "Z": 67.75611,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 938.253662,
+      "Y": -614.041931,
+      "Z": 57.84414,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Nikola Pl": [
+    {
+      "X": 1307.8252,
+      "Y": -554.2492,
+      "Z": 71.35808,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Nikola Ave": [
+    {
+      "X": 946.1205,
+      "Y": -577.248657,
+      "Z": 58.1736374,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1244.11316,
+      "Y": -542.0992,
+      "Z": 68.39753,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1132.45569,
+      "Y": -513.200867,
+      "Z": 64.20564,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Glory Way": [
+    {
+      "X": 1005.50714,
+      "Y": -224.4902,
+      "Z": 69.83727,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 736.873352,
+      "Y": -360.036072,
+      "Z": 43.89962,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Utopia Gardens": [
+    {
+      "X": 1325.40747,
+      "Y": -726.819,
+      "Z": 65.74284,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mirror Pl": [
+    {
+      "X": 1012.24084,
+      "Y": -645.2912,
+      "Z": 58.34434,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "York St": [
+    {
+      "X": 840.5649,
+      "Y": -153.186722,
+      "Z": 76.1406,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Bridge St": [
+    {
+      "X": 1071.70483,
+      "Y": -488.8112,
+      "Z": 63.4308434,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 899.898438,
+      "Y": -241.961319,
+      "Z": 69.4079056,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 644.7517,
+      "Y": -84.1342239,
+      "Z": 74.66463,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1078.58923,
+      "Y": -362.315765,
+      "Z": 67.52141,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Amarillo Vista": [
+    {
+      "X": 1363.3125,
+      "Y": -1703.22864,
+      "Z": 61.4439125,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1198.7146,
+      "Y": -1755.133,
+      "Z": 38.74757,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Labor Pl": [
+    {
+      "X": 1372.22864,
+      "Y": -1769.46533,
+      "Z": 63.75964,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1148.56519,
+      "Y": -1848.414,
+      "Z": 37.2239227,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 986.1177,
+      "Y": -1885.91443,
+      "Z": 30.8347244,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Tangerine St": [
+    {
+      "X": 920.434143,
+      "Y": -193.2849,
+      "Z": 73.27742,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "San Andreas Ave": [
+    {
+      "X": 1117.278,
+      "Y": -839.61084,
+      "Z": 53.06397,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 815.904236,
+      "Y": -848.318542,
+      "Z": 43.4160461,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 514.4711,
+      "Y": -850.7736,
+      "Z": 39.79855,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 346.72287,
+      "Y": -851.689636,
+      "Z": 29.197197,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 197.935471,
+      "Y": -824.274841,
+      "Z": 30.8936882,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 56.38952,
+      "Y": -772.725,
+      "Z": 31.6508675,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -85.6335449,
+      "Y": -720.5253,
+      "Z": 34.4392548,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -228.025574,
+      "Y": -671.807251,
+      "Z": 33.3380852,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -369.564636,
+      "Y": -657.849,
+      "Z": 31.1804123,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -495.852,
+      "Y": -657.805237,
+      "Z": 32.9055519,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -646.6896,
+      "Y": -658.7061,
+      "Z": 31.580822,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -796.7329,
+      "Y": -657.3484,
+      "Z": 28.88572,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -946.6427,
+      "Y": -666.4807,
+      "Z": 25.92456,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1070.025,
+      "Y": -753.33844,
+      "Z": 19.2409077,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1187.351,
+      "Y": -848.6903,
+      "Z": 14.0253506,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1261.2782,
+      "Y": -901.447144,
+      "Z": 11.2628641,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Sinner St": [
+    {
+      "X": 405.3386,
+      "Y": -701.7592,
+      "Z": 29.1861172,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 399.357117,
+      "Y": -1002.59406,
+      "Z": 29.3182564,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 398.852783,
+      "Y": -1115.86133,
+      "Z": 29.3540688,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Little Bighorn Ave": [
+    {
+      "X": 505.959381,
+      "Y": -719.195435,
+      "Z": 24.78163,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 500.510834,
+      "Y": -1019.77765,
+      "Z": 27.9653,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 514.4153,
+      "Y": -1319.87585,
+      "Z": 29.1925869,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 604.2984,
+      "Y": -1606.70544,
+      "Z": 25.8366489,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 524.6777,
+      "Y": -1896.69263,
+      "Z": 25.39277,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Vespucci Blvd": [
+    {
+      "X": 1128.13086,
+      "Y": -952.9234,
+      "Z": 47.90389,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 831.675537,
+      "Y": -1004.05328,
+      "Z": 26.6403332,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 532.5262,
+      "Y": -1033.86853,
+      "Z": 37.45215,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 340.2441,
+      "Y": -1049.03235,
+      "Z": 29.2184353,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 191.358521,
+      "Y": -1029.05859,
+      "Z": 29.2228241,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 49.90377,
+      "Y": -976.403442,
+      "Z": 29.2619724,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -92.1953049,
+      "Y": -925.247742,
+      "Z": 29.193121,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -235.981873,
+      "Y": -874.3734,
+      "Z": 30.25671,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -533.185364,
+      "Y": -835.5287,
+      "Z": 29.7216988,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -685.0625,
+      "Y": -833.8051,
+      "Z": 23.93945,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -835.433655,
+      "Y": -835.618347,
+      "Z": 19.3159256,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -938.502,
+      "Y": -832.3152,
+      "Z": 15.35062,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1012.61096,
+      "Y": -850.7714,
+      "Z": 11.8902082,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1136.5376,
+      "Y": -936.487,
+      "Z": 2.54657173,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1280.03735,
+      "Y": -985.195557,
+      "Z": 1.630097,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1383.436,
+      "Y": -1019.27277,
+      "Z": 5.625378,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Atlee St": [
+    {
+      "X": 448.984955,
+      "Y": -954.5479,
+      "Z": 28.5856972,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Sinners Passage": [
+    {
+      "X": 451.923584,
+      "Y": -824.6171,
+      "Z": 27.81834,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Adam's Apple Blvd": [
+    {
+      "X": 455.042969,
+      "Y": -1131.56628,
+      "Z": 29.343647,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 296.8687,
+      "Y": -1131.9021,
+      "Z": 29.31321,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 146.378754,
+      "Y": -1129.09521,
+      "Z": 29.1907349,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -6.071901,
+      "Y": -1133.85034,
+      "Z": 27.6998768,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -158.290146,
+      "Y": -1139.37268,
+      "Z": 23.604187,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -309.745728,
+      "Y": -1135.16272,
+      "Z": 23.6651287,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -457.081238,
+      "Y": -1105.57581,
+      "Z": 28.56207,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Crusade Rd": [
+    {
+      "X": 461.083374,
+      "Y": -1257.78,
+      "Z": 29.7863674,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 298.182739,
+      "Y": -1376.63916,
+      "Z": 31.741684,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 357.331268,
+      "Y": -1305.60583,
+      "Z": 32.2869644,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Capital Blvd": [
+    {
+      "X": 1195.04785,
+      "Y": -1435.0752,
+      "Z": 35.154274,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 894.7835,
+      "Y": -1434.90247,
+      "Z": 30.5286236,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 593.836731,
+      "Y": -1436.30481,
+      "Z": 29.9062061,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 439.389679,
+      "Y": -1406.6,
+      "Z": 29.20797,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 321.6691,
+      "Y": -1313.28247,
+      "Z": 31.850153,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Jamestown St": [
+    {
+      "X": 557.9075,
+      "Y": -1662.46912,
+      "Z": 28.4657764,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 494.3716,
+      "Y": -1757.27234,
+      "Z": 28.45682,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 415.968048,
+      "Y": -1877.396,
+      "Z": 26.3561478,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 284.720459,
+      "Y": -2016.04773,
+      "Z": 19.6923733,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Carson Ave": [
+    {
+      "X": 484.041,
+      "Y": -2063.19873,
+      "Z": 24.703249,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 384.96286,
+      "Y": -1952.05347,
+      "Z": 24.42614,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 155.813782,
+      "Y": -1756.886,
+      "Z": 29.0247326,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 39.0235634,
+      "Y": -1662.50122,
+      "Z": 29.1656513,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -75.68575,
+      "Y": -1565.322,
+      "Z": 31.2945423,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -191.07608,
+      "Y": -1469.36145,
+      "Z": 31.51119,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "South Shambles St": [
+    {
+      "X": 1062.26208,
+      "Y": -2118.309,
+      "Z": 32.6253357,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1048.10461,
+      "Y": -2269.09985,
+      "Z": 30.3417759,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1035.43091,
+      "Y": -2418.62744,
+      "Z": 29.0313187,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hanger Way": [
+    {
+      "X": 889.940063,
+      "Y": -2457.6145,
+      "Z": 28.4592876,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Orchardville Ave": [
+    {
+      "X": 955.0223,
+      "Y": -1798.32727,
+      "Z": 31.14044,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 943.896545,
+      "Y": -1948.42957,
+      "Z": 30.6314259,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 930.46106,
+      "Y": -2098.88062,
+      "Z": 30.2190323,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 916.545166,
+      "Y": -2250.66187,
+      "Z": 30.4255123,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 903.6514,
+      "Y": -2401.65942,
+      "Z": 29.61099,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Popular St": [
+    {
+      "X": 753.0535,
+      "Y": -2413.47144,
+      "Z": 20.0926247,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 766.3057,
+      "Y": -2263.80933,
+      "Z": 29.0229816,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 778.9474,
+      "Y": -2114.32056,
+      "Z": 28.9858875,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 796.4656,
+      "Y": -1964.98389,
+      "Z": 29.0502,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 826.7158,
+      "Y": -1817.85217,
+      "Z": 28.9816666,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 839.2006,
+      "Y": -1667.06226,
+      "Z": 29.37929,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 819.4623,
+      "Y": -1518.28076,
+      "Z": 28.6694164,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 798.3092,
+      "Y": -1368.93457,
+      "Z": 26.5432663,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 789.1954,
+      "Y": -1067.93445,
+      "Z": 28.1777744,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 778.899841,
+      "Y": -917.0589,
+      "Z": 25.2662163,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 775.9279,
+      "Y": -766.0314,
+      "Z": 26.4363461,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 778.2826,
+      "Y": -615.7181,
+      "Z": 28.7508736,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 746.0071,
+      "Y": -468.26535,
+      "Z": 36.7365837,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 624.9864,
+      "Y": -379.560059,
+      "Z": 43.23926,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hawick Ave": [
+    {
+      "X": 488.1083,
+      "Y": -317.5813,
+      "Z": 45.8015671,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -41.7756844,
+      "Y": -121.085449,
+      "Z": 57.51549,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 99.6178741,
+      "Y": -175.515411,
+      "Z": 54.8042641,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 241.678833,
+      "Y": -229.156815,
+      "Z": 53.8836365,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 382.814178,
+      "Y": -283.0217,
+      "Z": 53.44474,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -118.497055,
+      "Y": -93.15334,
+      "Z": 56.6968651,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -261.652222,
+      "Y": -44.5752258,
+      "Z": 49.420742,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -404.96344,
+      "Y": 0.536785662,
+      "Z": 46.7457,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Supply St": [
+    {
+      "X": 809.582764,
+      "Y": -703.0068,
+      "Z": 29.13903,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 908.6318,
+      "Y": -815.931152,
+      "Z": 43.4158936,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 978.597,
+      "Y": -949.9192,
+      "Z": 42.2436829,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 914.802856,
+      "Y": -1085.83472,
+      "Z": 33.15222,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 819.2642,
+      "Y": -1085.074,
+      "Z": 28.3889236,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Buccaneer Way": [
+    {
+      "X": 1030.957,
+      "Y": -3326.835,
+      "Z": 5.806544,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 880.947754,
+      "Y": -3326.74658,
+      "Z": 10.1991253,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 737.033142,
+      "Y": -3282.80273,
+      "Z": 18.6740017,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 716.004,
+      "Y": -3133.32031,
+      "Z": 18.1575279,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 727.1853,
+      "Y": -2981.40063,
+      "Z": 7.41951561,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 730.7054,
+      "Y": -2830.48364,
+      "Z": 6.08617735,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 733.8457,
+      "Y": -2680.219,
+      "Z": 9.933059,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 733.743164,
+      "Y": -2528.877,
+      "Z": 19.8578777,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Plaice Pl": [
+    {
+      "X": -377.990021,
+      "Y": -2761.60449,
+      "Z": 5.896433,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -289.107147,
+      "Y": -2640.70435,
+      "Z": 5.911216,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -138.6537,
+      "Y": -2623.62524,
+      "Z": 5.86305,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 12.9194584,
+      "Y": -2618.89429,
+      "Z": 5.863268,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 158.83139,
+      "Y": -2582.70239,
+      "Z": 5.88042164,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Chum St": [
+    {
+      "X": 295.824036,
+      "Y": -2520.33569,
+      "Z": 5.76000261,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 445.387482,
+      "Y": -2504.55664,
+      "Z": 14.5001926,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 595.645935,
+      "Y": -2503.337,
+      "Z": 16.8382416,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Abattoir Ave": [
+    {
+      "X": 579.11145,
+      "Y": -3015.21045,
+      "Z": 5.916409,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 671.12146,
+      "Y": -2896.212,
+      "Z": 6.07887459,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 661.6947,
+      "Y": -2746.395,
+      "Z": 6.086167,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 601.8734,
+      "Y": -2607.244,
+      "Z": 5.96182,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Signal St": [
+    {
+      "X": 334.359772,
+      "Y": -2481.37476,
+      "Z": 5.47739935,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 351.814362,
+      "Y": -2332.067,
+      "Z": 10.0797224,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Chupacabra St": [
+    {
+      "X": -194.668,
+      "Y": -2597.57251,
+      "Z": 5.899881,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Dutch London St": [
+    {
+      "X": 374.360931,
+      "Y": -2183.53149,
+      "Z": 14.1467733,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 223.009064,
+      "Y": -2065.87842,
+      "Z": 18.15537,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 74.50653,
+      "Y": -2038.29382,
+      "Z": 18.2982578,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -74.51589,
+      "Y": -2061.69629,
+      "Z": 22.49036,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -214.3346,
+      "Y": -2120.34766,
+      "Z": 23.0714035,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -361.559723,
+      "Y": -2085.50415,
+      "Z": 24.8411732,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -500.299438,
+      "Y": -2027.18384,
+      "Z": 27.0475121,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -626.765869,
+      "Y": -1945.41443,
+      "Z": 27.0398884,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -732.739136,
+      "Y": -1838.14624,
+      "Z": 27.1601028,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -761.553,
+      "Y": -1690.68408,
+      "Z": 29.2460537,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -682.9156,
+      "Y": -1562.507,
+      "Z": 16.7179871,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -649.8806,
+      "Y": -1414.84863,
+      "Z": 10.5323544,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -609.031738,
+      "Y": -1265.26,
+      "Z": 11.1113663,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Macdonald St": [
+    {
+      "X": 499.10376,
+      "Y": -1873.60315,
+      "Z": 26.2121944,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 392.500183,
+      "Y": -1767.25525,
+      "Z": 29.2517548,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 154.973969,
+      "Y": -1582.29358,
+      "Z": 29.203474,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Brouge Ave": [
+    {
+      "X": 277.1075,
+      "Y": -1671.238,
+      "Z": 29.202589,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 150.3017,
+      "Y": -1797.25623,
+      "Z": 28.6441174,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Forum Dr": [
+    {
+      "X": 39.6475945,
+      "Y": -1485.97131,
+      "Z": 29.2107372,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -108.321205,
+      "Y": -1514.74622,
+      "Z": 33.7183876,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -184.306854,
+      "Y": -1644.49243,
+      "Z": 33.39886,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Grove St": [
+    {
+      "X": -99.3594742,
+      "Y": -1769.11731,
+      "Z": 29.55994,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 16.1961441,
+      "Y": -1866.50623,
+      "Z": 23.39833,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Covenant Ave": [
+    {
+      "X": 149.34967,
+      "Y": -1883.52393,
+      "Z": 23.48982,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Innocence Blvd": [
+    {
+      "X": 1111.07751,
+      "Y": -1732.77112,
+      "Z": 35.6151276,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 962.4513,
+      "Y": -1762.33569,
+      "Z": 31.154026,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 813.255859,
+      "Y": -1746.56824,
+      "Z": 29.2552052,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 662.0597,
+      "Y": -1730.80261,
+      "Z": 29.2098579,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 520.4231,
+      "Y": -1677.56274,
+      "Z": 29.3697872,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 403.961456,
+      "Y": -1579.9342,
+      "Z": 29.2077751,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 287.569427,
+      "Y": -1482.811,
+      "Z": 29.2062244,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 162.942169,
+      "Y": -1398.42957,
+      "Z": 29.1849251,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 16.0190926,
+      "Y": -1366.22314,
+      "Z": 29.2330647,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -134.94751,
+      "Y": -1376.999,
+      "Z": 29.4116611,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -507.678864,
+      "Y": -1293.48621,
+      "Z": 27.2296677,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -519.982666,
+      "Y": -1143.4657,
+      "Z": 19.8253479,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -370.2437,
+      "Y": -1431.35376,
+      "Z": 29.2675,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Davis Ave": [
+    {
+      "X": 441.948364,
+      "Y": -1443.76184,
+      "Z": 29.4009476,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 311.067078,
+      "Y": -1519.57825,
+      "Z": 29.1201439,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 178.401566,
+      "Y": -1592.577,
+      "Z": 29.2094326,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -89.75154,
+      "Y": -1731.844,
+      "Z": 29.2190819,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -221.171326,
+      "Y": -1805.93494,
+      "Z": 29.7161,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -369.646118,
+      "Y": -1827.51538,
+      "Z": 22.1768036,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -497.065735,
+      "Y": -1906.7345,
+      "Z": 17.1345539,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -604.159668,
+      "Y": -2013.5531,
+      "Z": 17.0926571,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -588.5959,
+      "Y": -2042.74268,
+      "Z": 6.17099333,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "New Empire Way": [
+    {
+      "X": -812.4771,
+      "Y": -2232.64087,
+      "Z": 17.2079086,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -895.618042,
+      "Y": -2359.08154,
+      "Z": 14.3788576,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -995.3948,
+      "Y": -2473.467,
+      "Z": 13.67884,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1070.05518,
+      "Y": -2604.509,
+      "Z": 13.6740952,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -987.2585,
+      "Y": -2730.815,
+      "Z": 13.6777983,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -875.0368,
+      "Y": -2629.84546,
+      "Z": 13.6620922,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -812.443054,
+      "Y": -2493.39526,
+      "Z": 13.6629829,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -792.0178,
+      "Y": -2509.01416,
+      "Z": 13.8838806,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Exceptionalists Way": [
+    {
+      "X": -514.0138,
+      "Y": -2154.478,
+      "Z": 8.490419,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -612.857544,
+      "Y": -2268.47144,
+      "Z": 5.87445164,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -711.3031,
+      "Y": -2382.54346,
+      "Z": 14.6600685,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Greenwich Pkwy": [
+    {
+      "X": -746.8668,
+      "Y": -2365.9458,
+      "Z": 14.7733412,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -853.4527,
+      "Y": -2259.40283,
+      "Z": 7.140108,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -961.623962,
+      "Y": -2152.89038,
+      "Z": 8.823091,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1067.89319,
+      "Y": -2045.65735,
+      "Z": 12.8787527,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1035.91736,
+      "Y": -1897.53223,
+      "Z": 13.4222507,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -928.822632,
+      "Y": -1791.17078,
+      "Z": 19.6293888,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -823.6979,
+      "Y": -1681.03992,
+      "Z": 17.81853,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -725.759644,
+      "Y": -1566.66858,
+      "Z": 14.2043982,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -682.621643,
+      "Y": -1472.51453,
+      "Z": 10.4493933,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Autopia Pkwy": [
+    {
+      "X": -936.4496,
+      "Y": -2128.745,
+      "Z": 9.220178,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -702.5529,
+      "Y": -1943.66333,
+      "Z": 7.298988,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -480.0105,
+      "Y": -2146.736,
+      "Z": 9.148905,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -328.735077,
+      "Y": -2151.72729,
+      "Z": 10.2167044,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -182.872177,
+      "Y": -2187.00732,
+      "Z": 10.2080946,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -41.159523,
+      "Y": -2137.80273,
+      "Z": 10.214179,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -22.9441,
+      "Y": -1988.65527,
+      "Z": 13.6032314,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -156.73555,
+      "Y": -1917.74927,
+      "Z": 24.72356,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -236.90033,
+      "Y": -1852.33069,
+      "Z": 28.9952965,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Alta St": [
+    {
+      "X": -402.433929,
+      "Y": -1776.214,
+      "Z": 20.9967976,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -346.169,
+      "Y": -1636.26709,
+      "Z": 19.03616,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -280.613953,
+      "Y": -1500.38538,
+      "Z": 29.6976566,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -273.624847,
+      "Y": -1349.169,
+      "Z": 31.2093925,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -272.370819,
+      "Y": -1160.42627,
+      "Z": 22.9800167,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -242.665909,
+      "Y": -1049.40417,
+      "Z": 27.266552,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -189.81839,
+      "Y": -907.6129,
+      "Z": 29.2089634,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -138.245071,
+      "Y": -766.652466,
+      "Z": 33.1836243,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -85.29868,
+      "Y": -624.6621,
+      "Z": 36.16354,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -33.7153625,
+      "Y": -461.408936,
+      "Z": 40.4068069,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 15.4933805,
+      "Y": -318.9848,
+      "Z": 45.23214,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 69.2994843,
+      "Y": -178.735153,
+      "Z": 55.16653,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 122.654762,
+      "Y": -36.33873,
+      "Z": 68.81557,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 173.765671,
+      "Y": 104.767967,
+      "Z": 91.71136,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 224.423431,
+      "Y": 247.926758,
+      "Z": 105.465546,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mutiny Rd": [
+    {
+      "X": -678.610168,
+      "Y": -1679.74634,
+      "Z": 25.1035824,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -604.7181,
+      "Y": -1811.85291,
+      "Z": 23.2027683,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -507.303223,
+      "Y": -1797.37744,
+      "Z": 21.96862,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "South Arsenal St": [
+    {
+      "X": -692.2123,
+      "Y": -1629.65454,
+      "Z": 23.7729721,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -434.697754,
+      "Y": -1771.45288,
+      "Z": 20.4171619,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -577.3617,
+      "Y": -1731.7677,
+      "Z": 22.4971275,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Strawberry Ave": [
+    {
+      "X": -109.356682,
+      "Y": -1704.8999,
+      "Z": 29.3219662,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -8.532024,
+      "Y": -1592.29626,
+      "Z": 29.2085152,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 88.9266739,
+      "Y": -1477.42847,
+      "Z": 29.2104721,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 183.672684,
+      "Y": -1360.46179,
+      "Z": 29.3076019,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 226.3945,
+      "Y": -1241.73047,
+      "Z": 29.2188263,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 214.05098,
+      "Y": -1071.30542,
+      "Z": 29.2235222,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 265.27005,
+      "Y": -929.0554,
+      "Z": 29.1072845,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 315.717377,
+      "Y": -786.232,
+      "Z": 29.189146,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 368.338837,
+      "Y": -644.330444,
+      "Z": 29.1474457,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Roy Lowenstein Blvd": [
+    {
+      "X": 158.7151,
+      "Y": -2020.69165,
+      "Z": 18.1050014,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 252.722351,
+      "Y": -1902.68054,
+      "Z": 25.8028469,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 348.148224,
+      "Y": -1786.57886,
+      "Z": 28.6882038,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 445.3206,
+      "Y": -1670.32788,
+      "Z": 29.0774879,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 542.042542,
+      "Y": -1554.65442,
+      "Z": 29.0440216,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Peaceful St": [
+    {
+      "X": -234.462189,
+      "Y": -711.183044,
+      "Z": 33.50343,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -280.8707,
+      "Y": -836.124451,
+      "Z": 31.634182,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Power St": [
+    {
+      "X": -102.826874,
+      "Y": -1314.34717,
+      "Z": 29.24406,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -104.184891,
+      "Y": -1163.63965,
+      "Z": 25.6437149,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -57.82926,
+      "Y": -1020.73389,
+      "Z": 28.6297989,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 99.55254,
+      "Y": -597.0064,
+      "Z": 31.50397,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 116.313789,
+      "Y": -539.2781,
+      "Z": 43.09527,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 165.624069,
+      "Y": -395.6918,
+      "Z": 41.5058136,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 217.528244,
+      "Y": -253.968124,
+      "Z": 53.1506271,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 271.7422,
+      "Y": -113.290215,
+      "Z": 69.61095,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 322.70636,
+      "Y": 28.6357365,
+      "Z": 86.97304,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 374.155,
+      "Y": 170.6149,
+      "Z": 103.000114,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 426.884857,
+      "Y": 311.8815,
+      "Z": 102.893562,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 308.4442,
+      "Y": 404.974518,
+      "Z": 117.984779,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Low Power St": [
+    {
+      "X": -4.09545326,
+      "Y": -879.254944,
+      "Z": 30.0107365,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 52.1839447,
+      "Y": -739.381042,
+      "Z": 31.5031281,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Fantastic Pl": [
+    {
+      "X": 304.367676,
+      "Y": -1093.58545,
+      "Z": 29.3267612,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Integrity Way": [
+    {
+      "X": -19.7313614,
+      "Y": -546.9254,
+      "Z": 39.1003571,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 127.489906,
+      "Y": -576.4577,
+      "Z": 31.5039978,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 266.661774,
+      "Y": -633.760254,
+      "Z": 28.76227,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 410.5842,
+      "Y": -677.4168,
+      "Z": 29.164959,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 500.250671,
+      "Y": -679.1309,
+      "Z": 25.1584473,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Las Lagunas Blvd": [
+    {
+      "X": -243.205292,
+      "Y": -623.412,
+      "Z": 33.7341537,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -189.2163,
+      "Y": -470.593018,
+      "Z": 34.5423546,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -144.670883,
+      "Y": -338.7015,
+      "Z": 36.414917,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -96.8187943,
+      "Y": -195.080444,
+      "Z": 46.6727867,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -60.9654922,
+      "Y": -48.6945534,
+      "Z": 62.34057,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -21.7596588,
+      "Y": 97.26578,
+      "Z": 78.10099,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 28.2295914,
+      "Y": 239.470581,
+      "Z": 109.491272,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 91.64426,
+      "Y": 375.6115,
+      "Z": 114.444527,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 228.678177,
+      "Y": 437.5735,
+      "Z": 119.972374,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Occupation Ave": [
+    {
+      "X": -70.7068,
+      "Y": -244.699219,
+      "Z": 45.0808334,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 70.84664,
+      "Y": -297.638672,
+      "Z": 46.9476471,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 212.592316,
+      "Y": -349.948242,
+      "Z": 43.9713364,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Spanish Ave": [
+    {
+      "X": -18.236454,
+      "Y": 25.1014919,
+      "Z": 71.71865,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 264.73584,
+      "Y": -78.07038,
+      "Z": 69.95989,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 469.3462,
+      "Y": -151.524078,
+      "Z": 59.4546165,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 105.968895,
+      "Y": -19.3619518,
+      "Z": 67.84816,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -88.98733,
+      "Y": 56.89285,
+      "Z": 71.63461,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -375.434845,
+      "Y": 126.526283,
+      "Z": 65.82498,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -526.9976,
+      "Y": 130.005646,
+      "Z": 62.9496155,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -677.62915,
+      "Y": 126.529449,
+      "Z": 56.6597366,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -824.4547,
+      "Y": 89.2864456,
+      "Z": 52.85251,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -974.808,
+      "Y": 81.80633,
+      "Z": 51.845253,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Meteor St": [
+    {
+      "X": 404.606323,
+      "Y": -132.408539,
+      "Z": 64.66441,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 344.432,
+      "Y": -291.79834,
+      "Z": 54.2423477,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 392.993439,
+      "Y": -149.779327,
+      "Z": 64.473114,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 464.135925,
+      "Y": -16.0140457,
+      "Z": 82.60237,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 524.736938,
+      "Y": 121.57518,
+      "Z": 96.72727,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Vinewood Blvd": [
+    {
+      "X": 62.50733,
+      "Y": 245.381958,
+      "Z": 109.46756,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 203.9243,
+      "Y": 193.15654,
+      "Z": 105.432869,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 345.946655,
+      "Y": 140.15831,
+      "Z": 102.931038,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 488.740417,
+      "Y": 89.74186,
+      "Z": 96.6184158,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 631.282959,
+      "Y": 42.3352928,
+      "Z": 88.16526,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 759.752563,
+      "Y": -35.11951,
+      "Z": 81.4315948,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Clinton Ave": [
+    {
+      "X": 112.0149,
+      "Y": 348.2007,
+      "Z": 112.495232,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 263.1488,
+      "Y": 339.183,
+      "Z": 105.421562,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 409.946045,
+      "Y": 300.099945,
+      "Z": 102.8663,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 551.802551,
+      "Y": 248.1704,
+      "Z": 102.999237,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 695.074768,
+      "Y": 202.90271,
+      "Z": 91.1268539,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 782.5986,
+      "Y": 159.986282,
+      "Z": 81.0889359,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Fenwell Pl": [
+    {
+      "X": 579.082153,
+      "Y": 262.5745,
+      "Z": 103.03215,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 706.7473,
+      "Y": 342.78772,
+      "Z": 112.256256,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 855.017151,
+      "Y": 371.6979,
+      "Z": 118.0376,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 912.263,
+      "Y": 510.6425,
+      "Z": 120.688286,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 812.0498,
+      "Y": 579.7996,
+      "Z": 125.731873,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Calais Ave": [
+    {
+      "X": -546.429,
+      "Y": -689.934,
+      "Z": 33.1819038,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -501.0318,
+      "Y": -834.296936,
+      "Z": 30.3697262,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -541.209167,
+      "Y": -978.973,
+      "Z": 23.3274746,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -541.958,
+      "Y": -1130.35168,
+      "Z": 20.73136,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Palomino Ave": [
+    {
+      "X": -634.6649,
+      "Y": -607.4338,
+      "Z": 33.61863,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -638.282043,
+      "Y": -758.1832,
+      "Z": 25.9855042,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -636.4853,
+      "Y": -909.575745,
+      "Z": 24.31076,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -674.887939,
+      "Y": -1055.53613,
+      "Z": 16.14515,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -803.202148,
+      "Y": -1134.11523,
+      "Z": 9.807547,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -934.160645,
+      "Y": -1208.11267,
+      "Z": 5.04697,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1065.00391,
+      "Y": -1284.33215,
+      "Z": 5.9101634,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1196.14819,
+      "Y": -1358.24829,
+      "Z": 4.662458,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1281.05383,
+      "Y": -1393.33789,
+      "Z": 4.34369946,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -632.8367,
+      "Y": -444.842926,
+      "Z": 34.711586,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Ginger St": [
+    {
+      "X": -744.2095,
+      "Y": -686.2502,
+      "Z": 30.1995831,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -744.9998,
+      "Y": -859.00354,
+      "Z": 22.3947887,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -782.7094,
+      "Y": -984.1416,
+      "Z": 14.2589016,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -445.0193,
+      "Y": -617.8083,
+      "Z": 29.59241,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Decker St": [
+    {
+      "X": -859.665161,
+      "Y": -692.3406,
+      "Z": 27.66629,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -856.879,
+      "Y": -842.987,
+      "Z": 19.0801773,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -855.4316,
+      "Y": -923.6022,
+      "Z": 15.5785007,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Lindsay Circus": [
+    {
+      "X": -571.2978,
+      "Y": -958.516235,
+      "Z": 23.1843243,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -721.8141,
+      "Y": -958.972046,
+      "Z": 18.1990986,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Prosperity St": [
+    {
+      "X": -966.406067,
+      "Y": -1189.3811,
+      "Z": 4.04879665,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1040.85254,
+      "Y": -1058.82947,
+      "Z": 2.27564287,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1117.47534,
+      "Y": -929.8514,
+      "Z": 2.5484302,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1162.26514,
+      "Y": -858.817566,
+      "Z": 14.0879259,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1394.1189,
+      "Y": -537.69,
+      "Z": 30.64923,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1481.55261,
+      "Y": -414.884857,
+      "Z": 36.6551666,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1590.67993,
+      "Y": -311.570068,
+      "Z": 49.2975044,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "South Rockford Dr": [
+    {
+      "X": -664.5945,
+      "Y": -1289.65869,
+      "Z": 10.56589,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -741.3818,
+      "Y": -1160.46667,
+      "Z": 10.5143089,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -816.502441,
+      "Y": -1028.82532,
+      "Z": 13.1840172,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -893.855164,
+      "Y": -899.5249,
+      "Z": 15.8183165,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1013.47656,
+      "Y": -806.3485,
+      "Z": 16.28967,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Bay City Ave": [
+    {
+      "X": -1405.40051,
+      "Y": -781.9277,
+      "Z": 20.705946,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1299.91919,
+      "Y": -888.6118,
+      "Z": 11.2896023,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1260.13245,
+      "Y": -1034.13733,
+      "Z": 8.733759,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1214.85059,
+      "Y": -1178.61731,
+      "Z": 7.59402227,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1168.41443,
+      "Y": -1321.27991,
+      "Z": 4.8875246,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1012.20929,
+      "Y": -1578.49841,
+      "Z": 5.033167,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1068.19,
+      "Y": -1692.15,
+      "Z": 4.426614,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1514.383,
+      "Y": -691.359253,
+      "Z": 28.0918388,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1630.7616,
+      "Y": -596.06604,
+      "Z": 33.2899857,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1744.80872,
+      "Y": -497.215149,
+      "Z": 39.039547,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1702.15564,
+      "Y": -386.083954,
+      "Z": 47.22697,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Goma St": [
+    {
+      "X": -1097.90356,
+      "Y": -1453.79285,
+      "Z": 5.09281874,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1170.13147,
+      "Y": -1513.98828,
+      "Z": 4.3004775,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Magellan Ave": [
+    {
+      "X": -1523.43713,
+      "Y": -861.72406,
+      "Z": 10.0727406,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1392.80408,
+      "Y": -937.646667,
+      "Z": 10.55977,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1319.57312,
+      "Y": -1069.92041,
+      "Z": 6.85315466,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1285.62439,
+      "Y": -1217.26331,
+      "Z": 4.582663,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1233.24854,
+      "Y": -1358.88123,
+      "Z": 3.948825,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1153.15991,
+      "Y": -1486.157,
+      "Z": 4.27656364,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1066.35046,
+      "Y": -1609.09631,
+      "Z": 4.2965064,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Melanoma St": [
+    {
+      "X": -1076.68,
+      "Y": -1536.40649,
+      "Z": 4.68976355,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Aguja St": [
+    {
+      "X": -1104.52856,
+      "Y": -1377.34473,
+      "Z": 5.162645,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1204.261,
+      "Y": -1441.06067,
+      "Z": 4.32895327,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Vitus St": [
+    {
+      "X": -1223.68616,
+      "Y": -1257.78186,
+      "Z": 6.46677732,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1328.77124,
+      "Y": -1295.38379,
+      "Z": 4.74723864,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cortes St": [
+    {
+      "X": -1244.7937,
+      "Y": -1167.76025,
+      "Z": 7.49296951,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1342.83276,
+      "Y": -1204.53491,
+      "Z": 4.54808331,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Conquistador St": [
+    {
+      "X": -1270.86267,
+      "Y": -1073.369,
+      "Z": 8.038116,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1348.834,
+      "Y": -1112.6991,
+      "Z": 4.49509048,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Sandcastle Way": [
+    {
+      "X": -1366.85742,
+      "Y": -871.618347,
+      "Z": 15.1035652,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1457.54407,
+      "Y": -968.798645,
+      "Z": 7.062901,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Tackle St": [
+    {
+      "X": -718.9322,
+      "Y": -1256.31958,
+      "Z": 8.924599,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Shank St": [
+    {
+      "X": -686.191956,
+      "Y": -1363.76282,
+      "Z": 7.65452337,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Imagination Ct": [
+    {
+      "X": -1190.75354,
+      "Y": -1103.624,
+      "Z": 3.88161039,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Invention Ct": [
+    {
+      "X": -1173.15161,
+      "Y": -1203.51685,
+      "Z": 4.831466,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Dorset Dr": [
+    {
+      "X": -302.814,
+      "Y": -396.59668,
+      "Z": 30.0520325,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -451.944855,
+      "Y": -378.446045,
+      "Z": 33.5879936,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -601.9885,
+      "Y": -372.615448,
+      "Z": 34.7422371,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -747.0318,
+      "Y": -334.105835,
+      "Z": 36.073597,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -884.283447,
+      "Y": -270.550446,
+      "Z": 40.2918434,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1018.38031,
+      "Y": -201.610916,
+      "Z": 37.73059,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1152.34558,
+      "Y": -132.456619,
+      "Z": 39.3707466,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1286.78528,
+      "Y": -64.7359,
+      "Z": 46.583477,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1385.94531,
+      "Y": -62.96925,
+      "Z": 52.4841537,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Boulevard Del Perro": [
+    {
+      "X": -555.8446,
+      "Y": 5.044467,
+      "Z": 44.21872,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -703.855652,
+      "Y": -20.2727966,
+      "Z": 37.6975,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -837.9522,
+      "Y": -89.50183,
+      "Z": 37.7434044,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -972.1109,
+      "Y": -159.491867,
+      "Z": 37.75676,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1106.578,
+      "Y": -230.609421,
+      "Z": 37.7157745,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1236.34192,
+      "Y": -306.294861,
+      "Z": 37.4485474,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1147.46875,
+      "Y": -286.6397,
+      "Z": 37.9706345,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1430.3302,
+      "Y": -418.805725,
+      "Z": 36.0107346,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1548.74426,
+      "Y": -492.180969,
+      "Z": 35.6531334,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1621.337,
+      "Y": -549.199341,
+      "Z": 34.24032,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "San Vitus Blvd": [
+    {
+      "X": -224.545044,
+      "Y": 124.52166,
+      "Z": 69.5554047,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -270.411438,
+      "Y": -340.3239,
+      "Z": 29.9573517,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -279.4868,
+      "Y": -189.194016,
+      "Z": 39.10713,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -222.360748,
+      "Y": 236.929077,
+      "Z": 91.0941544,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Eclipse Blvd": [
+    {
+      "X": -1.76362741,
+      "Y": 263.45163,
+      "Z": 108.951569,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -152.538315,
+      "Y": 256.018982,
+      "Z": 94.251,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -303.6459,
+      "Y": 258.934723,
+      "Z": 87.98916,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -455.083,
+      "Y": 247.145981,
+      "Z": 83.3452,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -604.524231,
+      "Y": 262.599945,
+      "Z": 81.88812,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "West Eclipse Blvd": [
+    {
+      "X": -749.8829,
+      "Y": 224.828842,
+      "Z": 75.5541458,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -900.5366,
+      "Y": 237.277512,
+      "Z": 70.93777,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1048.10645,
+      "Y": 264.226349,
+      "Z": 64.22654,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1196.96436,
+      "Y": 243.026947,
+      "Z": 67.86035,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1344.485,
+      "Y": 214.6074,
+      "Z": 58.7271729,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1435.66382,
+      "Y": 95.26181,
+      "Z": 52.3189964,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1417.27063,
+      "Y": -53.6884,
+      "Z": 53.0100441,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1530.07629,
+      "Y": -152.96965,
+      "Z": 53.4109,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1617.6394,
+      "Y": -273.886566,
+      "Z": 52.74716,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1744.6936,
+      "Y": -353.891357,
+      "Z": 46.4501228,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1850.34106,
+      "Y": -247.177551,
+      "Z": 39.92142,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1979.38806,
+      "Y": -170.4174,
+      "Z": 31.0782986,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2119.11548,
+      "Y": -226.3501,
+      "Z": 18.2444229,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2164.802,
+      "Y": -320.9875,
+      "Z": 13.004302,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Abe Milton Pkwy": [
+    {
+      "X": -303.90976,
+      "Y": -313.7396,
+      "Z": 30.50026,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -419.035919,
+      "Y": -216.155,
+      "Z": 36.133976,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -500.521576,
+      "Y": -88.83641,
+      "Z": 38.71269,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -490.663147,
+      "Y": -175.924667,
+      "Z": 37.6199265,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "North Archer Ave": [
+    {
+      "X": -123.078865,
+      "Y": 105.634758,
+      "Z": 72.24296,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -108.120171,
+      "Y": 231.599411,
+      "Z": 97.50506,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "South Boulevard Del Perro": [
+    {
+      "X": -636.497437,
+      "Y": -53.1542168,
+      "Z": 41.1638336,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -909.5604,
+      "Y": -182.713,
+      "Z": 37.59786,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1043.1217,
+      "Y": -253.597122,
+      "Z": 37.70256,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Portola Dr": [
+    {
+      "X": -774.7989,
+      "Y": -113.72226,
+      "Z": 37.75487,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -660.0551,
+      "Y": -296.6676,
+      "Z": 35.42636,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -736.5599,
+      "Y": -167.595612,
+      "Z": 37.20902,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -807.1467,
+      "Y": -33.930397,
+      "Z": 37.76891,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -860.2574,
+      "Y": 106.705078,
+      "Z": 53.2934647,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -859.5677,
+      "Y": 193.855148,
+      "Z": 72.76533,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Carcer Way": [
+    {
+      "X": -326.2952,
+      "Y": -188.059631,
+      "Z": 38.84459,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -461.836334,
+      "Y": -253.093811,
+      "Z": 35.9278679,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -598.044556,
+      "Y": -318.2691,
+      "Z": 34.828907,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Eastbourne Way": [
+    {
+      "X": -391.581543,
+      "Y": 88.56976,
+      "Z": 63.16589,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -412.592438,
+      "Y": -60.66369,
+      "Z": 44.06229,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -537.799255,
+      "Y": -145.478989,
+      "Z": 38.294384,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -673.580566,
+      "Y": -209.681885,
+      "Z": 37.0814972,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -776.372131,
+      "Y": -259.06424,
+      "Z": 36.987545,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Edwood Way": [
+    {
+      "X": -769.7337,
+      "Y": 131.0692,
+      "Z": 59.12577,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -850.9901,
+      "Y": 132.087585,
+      "Z": 59.0197258,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Caesars Place": [
+    {
+      "X": -943.0366,
+      "Y": 65.13282,
+      "Z": 50.7083626,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -793.793762,
+      "Y": 47.4535332,
+      "Z": 48.8387947,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Steele Way": [
+    {
+      "X": -986.1686,
+      "Y": 238.067719,
+      "Z": 67.7632751,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Marathon Ave": [
+    {
+      "X": -904.3298,
+      "Y": -294.924255,
+      "Z": 39.7659721,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1038.57458,
+      "Y": -363.89505,
+      "Z": 37.6759453,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1181.85071,
+      "Y": -413.0697,
+      "Z": 34.5329437,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1426.39685,
+      "Y": -588.442749,
+      "Z": 30.5218239,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1522.528,
+      "Y": -653.817749,
+      "Z": 28.8540287,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Heritage Way": [
+    {
+      "X": -813.938843,
+      "Y": -343.664124,
+      "Z": 36.9621658,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -942.6129,
+      "Y": -421.9738,
+      "Z": 37.56823,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1081.64734,
+      "Y": -420.916351,
+      "Z": 36.5530357,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Dorset Pl": [
+    {
+      "X": -423.436249,
+      "Y": -331.387329,
+      "Z": 33.00512,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Milton Rd": [
+    {
+      "X": -542.2998,
+      "Y": 222.155609,
+      "Z": 80.8584442,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -549.051636,
+      "Y": 71.43656,
+      "Z": 54.46725,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -563.6839,
+      "Y": -40.3969727,
+      "Z": 42.5870056,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -533.5824,
+      "Y": 318.508,
+      "Z": 82.94566,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -549.272339,
+      "Y": 468.3839,
+      "Z": 102.637741,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -503.771027,
+      "Y": 611.416931,
+      "Z": 127.875984,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -470.963837,
+      "Y": 758.516052,
+      "Z": 169.033142,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -584.4747,
+      "Y": 857.59375,
+      "Z": 206.911331,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -677.7716,
+      "Y": 925.2857,
+      "Z": 232.099121,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Strangeways Dr": [
+    {
+      "X": -649.3928,
+      "Y": 233.150467,
+      "Z": 80.85585,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -652.0594,
+      "Y": 82.63568,
+      "Z": 51.442646,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Rockford Dr": [
+    {
+      "X": -536.697754,
+      "Y": -336.000122,
+      "Z": 35.06427,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -611.579956,
+      "Y": -205.925262,
+      "Z": 37.18477,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -686.5183,
+      "Y": -75.5803757,
+      "Z": 37.5213127,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -746.2326,
+      "Y": 62.09203,
+      "Z": 52.8193779,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -754.7397,
+      "Y": 190.545563,
+      "Z": 74.3665543,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mad Wayne Thunder Dr": [
+    {
+      "X": -788.548645,
+      "Y": -278.945435,
+      "Z": 36.92506,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -866.129944,
+      "Y": -150.305573,
+      "Z": 37.68315,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -939.15625,
+      "Y": -18.6900177,
+      "Z": 43.1115646,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1018.12152,
+      "Y": 110.563774,
+      "Z": 52.7295265,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1082.60413,
+      "Y": 246.244965,
+      "Z": 63.7022476,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1080.21179,
+      "Y": 302.171661,
+      "Z": 64.38784,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1091.47632,
+      "Y": 452.1776,
+      "Z": 76.69745,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1241.04382,
+      "Y": 467.256866,
+      "Z": 92.54228,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1391.42432,
+      "Y": 467.854065,
+      "Z": 105.871368,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Movie Star Way": [
+    {
+      "X": -873.552734,
+      "Y": -599.115967,
+      "Z": 29.2669182,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -943.41,
+      "Y": -464.77005,
+      "Z": 37.2850266,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1013.95239,
+      "Y": -330.7913,
+      "Z": 37.7769966,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Liberty St": [
+    {
+      "X": -1616.1698,
+      "Y": -473.558167,
+      "Z": 37.5737038,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Playa Vista": [
+    {
+      "X": -1808.685,
+      "Y": -445.695129,
+      "Z": 42.3693466,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1916.68176,
+      "Y": -245.3624,
+      "Z": 38.2932243,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Bay City Incline": [
+    {
+      "X": -1762.91931,
+      "Y": -549.5392,
+      "Z": 35.9417725,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -2017.53357,
+      "Y": -384.998322,
+      "Z": 10.9566975,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Sam Austin Dr": [
+    {
+      "X": -1458.27637,
+      "Y": 2.34091,
+      "Z": 53.1664276,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Americano Way": [
+    {
+      "X": -1667.40369,
+      "Y": 96.7891846,
+      "Z": 63.94923,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1524.71863,
+      "Y": 47.506443,
+      "Z": 55.7905426,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Picture Perfect Drive": [
+    {
+      "X": -1725.694,
+      "Y": 90.42594,
+      "Z": 66.4146652,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1591.5365,
+      "Y": 160.036728,
+      "Z": 59.03391,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1472.46606,
+      "Y": 251.629974,
+      "Z": 61.5431442,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1380.59265,
+      "Y": 371.418823,
+      "Z": 64.0377655,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1233.18262,
+      "Y": 402.181519,
+      "Z": 75.6583557,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1082.77771,
+      "Y": 399.45694,
+      "Z": 68.8227539,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -934.273254,
+      "Y": 424.1093,
+      "Z": 80.19276,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -785.4801,
+      "Y": 444.6451,
+      "Z": 94.28488,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -644.631653,
+      "Y": 499.728271,
+      "Z": 108.904114,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -569.2148,
+      "Y": 513.2681,
+      "Z": 105.73555,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Greenwich Pl": [
+    {
+      "X": -1145.30981,
+      "Y": 293.253,
+      "Z": 66.89196,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1190.45056,
+      "Y": 387.5616,
+      "Z": 73.87398,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hardy Way": [
+    {
+      "X": -1423.36365,
+      "Y": 241.894165,
+      "Z": 59.86891,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Perth St": [
+    {
+      "X": -1403.58289,
+      "Y": -294.124664,
+      "Z": 43.65791,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cougar Ave": [
+    {
+      "X": -1396.74524,
+      "Y": -104.828056,
+      "Z": 51.9188766,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1474.88965,
+      "Y": -234.153717,
+      "Z": 49.8115158,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1569.35522,
+      "Y": -351.423218,
+      "Z": 46.7751274,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1660.91858,
+      "Y": -470.772675,
+      "Z": 38.619854,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Red Desert Ave": [
+    {
+      "X": -1397.16577,
+      "Y": -719.087463,
+      "Z": 24.2155533,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1275.05066,
+      "Y": -629.5552,
+      "Z": 26.7884369,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "North Sheldon Ave": [
+    {
+      "X": -1406.26367,
+      "Y": 617.9021,
+      "Z": 130.895782,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1257.90259,
+      "Y": 647.3919,
+      "Z": 140.480179,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1156.20618,
+      "Y": 759.1686,
+      "Z": 156.0485,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1010.50629,
+      "Y": 796.5834,
+      "Z": 171.022171,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -860.1444,
+      "Y": 803.9507,
+      "Z": 192.652786,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -717.8996,
+      "Y": 852.08844,
+      "Z": 220.8304,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -706.514832,
+      "Y": 930.563232,
+      "Z": 234.354416,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hangman Ave": [
+    {
+      "X": -1402.63843,
+      "Y": 555.311768,
+      "Z": 124.392784,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1355.48376,
+      "Y": 604.879761,
+      "Z": 133.822922,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cockingend Dr": [
+    {
+      "X": -1055.55444,
+      "Y": 454.2281,
+      "Z": 75.1321,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -957.6354,
+      "Y": 448.219635,
+      "Z": 79.6855545,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Dunstable Dr": [
+    {
+      "X": -923.2718,
+      "Y": 283.067322,
+      "Z": 70.53463,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1016.03436,
+      "Y": 385.862274,
+      "Z": 71.3251648,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Dunstable Ln": [
+    {
+      "X": -907.8324,
+      "Y": 314.561218,
+      "Z": 72.90172,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -874.611633,
+      "Y": 403.7542,
+      "Z": 86.83414,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "South Mo Milton Dr": [
+    {
+      "X": -678.856445,
+      "Y": 287.740753,
+      "Z": 82.03758,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -829.637268,
+      "Y": 293.255768,
+      "Z": 86.25718,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -856.3786,
+      "Y": 417.235718,
+      "Z": 87.05436,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -854.417,
+      "Y": 467.172943,
+      "Z": 87.2581253,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -948.095154,
+      "Y": 584.417969,
+      "Z": 100.6597,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1098.42932,
+      "Y": 577.819946,
+      "Z": 102.820404,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1240.40515,
+      "Y": 528.1361,
+      "Z": 95.51458,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hillcrest Ridge Access Rd": [
+    {
+      "X": -1170.74011,
+      "Y": 694.441467,
+      "Z": 147.7845,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1028.38452,
+      "Y": 644.741,
+      "Z": 141.264328,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -878.0691,
+      "Y": 659.5927,
+      "Z": 133.123962,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -771.500854,
+      "Y": 553.723145,
+      "Z": 123.143974,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -701.595337,
+      "Y": 500.821,
+      "Z": 109.385551,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hillcrest Ave": [
+    {
+      "X": -1045.09375,
+      "Y": 765.4426,
+      "Z": 167.351639,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -907.520752,
+      "Y": 704.1321,
+      "Z": 150.994247,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -759.540161,
+      "Y": 678.165344,
+      "Z": 143.576736,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -680.0174,
+      "Y": 683.124,
+      "Z": 153.0544,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Normandy Dr": [
+    {
+      "X": -550.6621,
+      "Y": 671.563,
+      "Z": 144.316467,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -695.227661,
+      "Y": 714.0858,
+      "Z": 157.653244,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -744.271545,
+      "Y": 823.0825,
+      "Z": 213.769913,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -578.9751,
+      "Y": 752.9692,
+      "Z": 184.3477,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Cox Way": [
+    {
+      "X": -519.662659,
+      "Y": 424.993561,
+      "Z": 96.8301239,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -315.29715,
+      "Y": 441.928223,
+      "Z": 108.44281,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -425.100128,
+      "Y": 403.272247,
+      "Z": 106.70591,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Didion Dr": [
+    {
+      "X": -471.74353,
+      "Y": 374.2573,
+      "Z": 102.574821,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 52.08553,
+      "Y": 347.800781,
+      "Z": 112.50515,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -83.16466,
+      "Y": 415.696442,
+      "Z": 113.099335,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -136.419525,
+      "Y": 440.2854,
+      "Z": 113.134087,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -233.356857,
+      "Y": 415.6398,
+      "Z": 109.140274,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -360.694946,
+      "Y": 496.197052,
+      "Z": 115.945084,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -492.15274,
+      "Y": 567.4506,
+      "Z": 120.161,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -369.999878,
+      "Y": 363.661377,
+      "Z": 109.503876,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Gentry Lane": [
+    {
+      "X": -70.58629,
+      "Y": 290.399933,
+      "Z": 105.535072,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -119.078873,
+      "Y": 409.7276,
+      "Z": 113.015694,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Wild Oats Dr": [
+    {
+      "X": -323.230835,
+      "Y": 490.468719,
+      "Z": 113.580605,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -174.182632,
+      "Y": 510.8915,
+      "Z": 136.812469,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -25.11135,
+      "Y": 484.958527,
+      "Z": 145.2167,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 125.851105,
+      "Y": 487.5992,
+      "Z": 146.335922,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 254.900345,
+      "Y": 538.0954,
+      "Z": 140.502563,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Whispymound Dr": [
+    {
+      "X": -120.800125,
+      "Y": 531.2522,
+      "Z": 144.435074,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 26.93774,
+      "Y": 563.5553,
+      "Z": 178.468887,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 176.689911,
+      "Y": 581.099548,
+      "Z": 184.777817,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 246.385132,
+      "Y": 714.898865,
+      "Z": 187.1835,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "North Conker Ave": [
+    {
+      "X": 656.285645,
+      "Y": 357.577942,
+      "Z": 111.270058,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 508.1125,
+      "Y": 331.9999,
+      "Z": 132.732315,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 398.467133,
+      "Y": 435.193726,
+      "Z": 142.778122,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 324.118439,
+      "Y": 565.528137,
+      "Z": 154.41156,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Kimble Hill Dr": [
+    {
+      "X": -500.452759,
+      "Y": 661.576538,
+      "Z": 141.011627,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -350.376129,
+      "Y": 657.3865,
+      "Z": 169.756622,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -210.235046,
+      "Y": 602.6056,
+      "Z": 192.558212,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -123.024841,
+      "Y": 604.289246,
+      "Z": 206.519165,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Lake Vinewood Dr": [
+    {
+      "X": -59.38996,
+      "Y": 598.2902,
+      "Z": 207.267044,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 86.8226242,
+      "Y": 634.8206,
+      "Z": 207.233231,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 127.318428,
+      "Y": 779.9588,
+      "Z": 211.024231,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 270.392059,
+      "Y": 825.495544,
+      "Z": 192.4347,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 409.5863,
+      "Y": 881.63916,
+      "Z": 198.856918,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -137.789185,
+      "Y": 656.124451,
+      "Z": 208.432831,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -264.302155,
+      "Y": 738.3904,
+      "Z": 207.697327,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -399.0155,
+      "Y": 804.5362,
+      "Z": 222.983719,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -343.673584,
+      "Y": 944.131348,
+      "Z": 232.58577,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Lake Vinewood Est": [
+    {
+      "X": -156.071945,
+      "Y": 1025.50452,
+      "Z": 231.908554,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -89.94883,
+      "Y": 890.591248,
+      "Z": 236.189133,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Del Perro Fwy": [
+    {
+      "X": -2101.47974,
+      "Y": -373.008881,
+      "Z": 12.64765,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1864.55811,
+      "Y": -560.174133,
+      "Z": 11.49293,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1622.03809,
+      "Y": -738.5362,
+      "Z": 11.0946894,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1321.88428,
+      "Y": -742.203064,
+      "Z": 10.88081,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1053.62158,
+      "Y": -607.0146,
+      "Z": 17.9224186,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -765.665,
+      "Y": -515.637146,
+      "Z": 24.8594933,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -465.4779,
+      "Y": -516.009766,
+      "Z": 24.9983864,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -165.334808,
+      "Y": -514.6561,
+      "Z": 28.12745,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 134.66983,
+      "Y": -512.7292,
+      "Z": 33.7531738,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 435.4965,
+      "Y": -514.8558,
+      "Z": 35.6949463,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 718.5982,
+      "Y": -616.484741,
+      "Z": 35.7113342,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 955.013367,
+      "Y": -802.5086,
+      "Z": 36.16273,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1052.35718,
+      "Y": -1086.78748,
+      "Z": 25.605341,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Elysian Fields Fwy": [
+    {
+      "X": 1061.58728,
+      "Y": -1387.93567,
+      "Z": 29.315237,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1086.67676,
+      "Y": -1688.58459,
+      "Z": 29.271389,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1202.62634,
+      "Y": -1967.3811,
+      "Z": 41.0269,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1314.601,
+      "Y": -2246.44946,
+      "Z": 51.50669,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1228.12976,
+      "Y": -2533.86768,
+      "Z": 39.97301,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 934.493652,
+      "Y": -2600.321,
+      "Z": 48.21356,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 638.1318,
+      "Y": -2652.804,
+      "Z": 46.82858,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 336.8375,
+      "Y": -2669.413,
+      "Z": 19.83419,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 38.62601,
+      "Y": -2628.00464,
+      "Z": 24.2532043,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Miriam Turner Overpass": [
+    {
+      "X": -214.1285,
+      "Y": -2464.444,
+      "Z": 54.4939079,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -461.238617,
+      "Y": -2290.68066,
+      "Z": 62.7820129,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "La Puerta Fwy": [
+    {
+      "X": -922.4035,
+      "Y": -1909.88159,
+      "Z": 29.3072643,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -708.6493,
+      "Y": -2120.881,
+      "Z": 42.306736,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -681.713745,
+      "Y": -1729.133,
+      "Z": 37.1349,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -427.890045,
+      "Y": -1566.47913,
+      "Z": 38.80082,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -402.801331,
+      "Y": -1266.7594,
+      "Z": 36.9321136,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Olympic Fwy": [
+    {
+      "X": -401.5495,
+      "Y": -665.9051,
+      "Z": 37.0512466,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1167.8512,
+      "Y": -1176.79553,
+      "Z": 52.27395,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 866.5341,
+      "Y": -1189.68408,
+      "Z": 45.55252,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 566.5468,
+      "Y": -1201.06433,
+      "Z": 42.19659,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 265.935455,
+      "Y": -1195.06519,
+      "Z": 37.9654045,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -36.02363,
+      "Y": -1205.02014,
+      "Z": 36.8309975,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -336.115875,
+      "Y": -1207.29529,
+      "Z": 39.7815552,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Mirror Park Exit": [
+    {
+      "X": 901.1249,
+      "Y": -782.8044,
+      "Z": 42.19954,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Olympic Fwy Exit": [
+    {
+      "X": 1011.69196,
+      "Y": -1098.68811,
+      "Z": 38.217556,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -383.629517,
+      "Y": -1352.33936,
+      "Z": 37.06604,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1080.6803,
+      "Y": -1265.82922,
+      "Z": 38.0952034,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -428.37088,
+      "Y": -1040.19177,
+      "Z": 37.4030228,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Palomino Fwy Exit": [
+    {
+      "X": 1034.00476,
+      "Y": -1101.62732,
+      "Z": 38.0823326,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1131.828,
+      "Y": -1238.1344,
+      "Z": 39.3558159,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1702.24536,
+      "Y": 1340.801,
+      "Z": 86.5804,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1965.86548,
+      "Y": 2539.402,
+      "Z": 54.6248436,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Innocence Blvd Exit": [
+    {
+      "X": 1048.25415,
+      "Y": -1643.20508,
+      "Z": 29.5556049,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -397.076569,
+      "Y": -1546.14148,
+      "Z": 37.34635,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -409.864868,
+      "Y": -1298.481,
+      "Z": 21.5954533,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -445.5809,
+      "Y": -1255.87744,
+      "Z": 45.71197,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Dutch London Exit": [
+    {
+      "X": -839.8556,
+      "Y": -1778.77429,
+      "Z": 37.19974,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -624.2303,
+      "Y": -1698.39392,
+      "Z": 37.3507919,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Del Perro Fwy Bypass": [
+    {
+      "X": -482.518127,
+      "Y": -1677.34424,
+      "Z": 36.9970856,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "EB Del Perro Fwy Exit": [
+    {
+      "X": -381.35434,
+      "Y": -715.531555,
+      "Z": 37.18981,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1120.35229,
+      "Y": -1162.46228,
+      "Z": 43.90049,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 488.7352,
+      "Y": -437.171143,
+      "Z": 38.4020767,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Palomino Ave Exit": [
+    {
+      "X": -448.713531,
+      "Y": -473.686249,
+      "Z": 32.5540657,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -858.6997,
+      "Y": -558.8213,
+      "Z": 21.7195759,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "WB Del Perro Fwy Exit": [
+    {
+      "X": -422.975983,
+      "Y": -499.4146,
+      "Z": 33.4168854,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1150.97742,
+      "Y": -1141.05994,
+      "Z": 43.83058,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 479.265869,
+      "Y": -416.338257,
+      "Z": 38.1670265,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Equality Way": [
+    {
+      "X": -1406.22644,
+      "Y": -830.7821,
+      "Z": 18.5293388,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -1616.53186,
+      "Y": -772.408447,
+      "Z": 10.8042917,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Magellan Ave Exit": [
+    {
+      "X": -1625.63147,
+      "Y": -784.8702,
+      "Z": 10.3700151,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "La Puerta Fwy Exit": [
+    {
+      "X": -599.5933,
+      "Y": -546.3496,
+      "Z": 25.22949,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -236.131256,
+      "Y": -478.231476,
+      "Z": 25.7360725,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Elgin Ave Exit": [
+    {
+      "X": 68.0539,
+      "Y": -540.2122,
+      "Z": 33.73514,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 539.897644,
+      "Y": -501.06485,
+      "Z": 35.788208,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 235.334946,
+      "Y": -1169.1449,
+      "Z": 37.9771461,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -108.667686,
+      "Y": -1250.28247,
+      "Z": 36.98867,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 443.415131,
+      "Y": -453.1884,
+      "Z": 38.26318,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Labor Pl Exit": [
+    {
+      "X": 1222.63123,
+      "Y": -1944.337,
+      "Z": 39.6949577,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Popular St Exit": [
+    {
+      "X": 692.151,
+      "Y": -563.2355,
+      "Z": 38.22926,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 730.368042,
+      "Y": -1156.84717,
+      "Z": 44.7417564,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 611.264465,
+      "Y": -1234.53162,
+      "Z": 40.88375,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Los Santos Fwy Exit": [
+    {
+      "X": 616.014465,
+      "Y": -524.4762,
+      "Z": 35.62787,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1897.77466,
+      "Y": 2476.58838,
+      "Z": 54.4820366,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "North Rockford Dr Exit": [
+    {
+      "X": -995.6172,
+      "Y": -548.8234,
+      "Z": 18.2672138,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "La Puerta Fwy Bypass": [
+    {
+      "X": -422.170532,
+      "Y": -1318.40723,
+      "Z": 22.2026558,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": -430.2478,
+      "Y": -860.3742,
+      "Z": 38.5406342,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "South Port Exit": [
+    {
+      "X": 240.565491,
+      "Y": -2728.54541,
+      "Z": 17.7198544,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Del Perro Fwy Exit": [
+    {
+      "X": 1355.02625,
+      "Y": -1081.96338,
+      "Z": 52.28122,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 974.8512,
+      "Y": -1208.21948,
+      "Z": 43.15117,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "NB La Puerta Fwy Exit": [
+    {
+      "X": -281.2031,
+      "Y": -1184.90613,
+      "Z": 37.1815872,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "SB La Puerta Fwy Exit": [
+    {
+      "X": -390.5975,
+      "Y": -1203.83557,
+      "Z": 45.47698,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Elysian Fields Fwy Exit": [
+    {
+      "X": 966.771,
+      "Y": -1231.41931,
+      "Z": 42.29664,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Vinewood Park Dr Exit": [
+    {
+      "X": 1025.0238,
+      "Y": 282.5619,
+      "Z": 82.89616,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 1224.56262,
+      "Y": 544.2751,
+      "Z": 81.03846,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Senora Way Exit": [
+    {
+      "X": 2179.47974,
+      "Y": 1247.26465,
+      "Z": 75.9427261,
+      "IsNormalized": false,
+      "IsZero": false
+    },
+    {
+      "X": 2448.881,
+      "Y": 992.8123,
+      "Z": 85.77294,
+      "IsNormalized": false,
+      "IsZero": false
+    }
+  ],
+  "Hawick Ave Exit": [
+    {
+      "X": 673.7344,
+      "Y": -155.2171,
+      "Z": 49.0026245,
       "IsNormalized": false,
       "IsZero": false
     }
