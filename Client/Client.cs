@@ -1,4 +1,4 @@
-using CitizenFX.Core;
+﻿using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -327,7 +327,25 @@ namespace HeliCam
 
                     int timeInCam = (Game.GameTime - enterTime) / 1000;
                     TimeSpan time = TimeSpan.FromSeconds(timeInCam);
-                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.5f, time.ToString(@"hh\:mm\:ss"), 0.3f);
+                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.9f, time.ToString(@"hh\:mm\:ss"), 0.3f);
+                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.1f, DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ"), 0.3f);
+                    float ns = heli.Position.Y;
+                    float ew = heli.Position.X;
+                    string sn = "N";
+                    string we = "E";
+                    if (ns < 0f)
+                    {
+                        sn = "S";
+                        ns = Math.Abs(ns);
+                    }
+                    if (ew < 0f)
+                    {
+                        we = "W";
+                        ew = Math.Abs(ew);
+                    }
+                    RenderText(_playerMap.RightX + 0.1f, config.TextY - 0.5f, $"{sn}{Math.Round(ns, 2)}\n{we}{Math.Round(ew, 2)}", 0.3f);
+
+
 
 
                     HandleZoom(cam);
@@ -373,6 +391,7 @@ namespace HeliCam
                         {
                             _spotlightSize -= 1f;
                         }
+
                         Vector3 dest;
                         if (Entity.Exists(lockedEntity))
                         {
@@ -592,7 +611,7 @@ namespace HeliCam
 
         private void HandleMarkers(Vector3 cam)
         {
-            RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.1f, $"Markers:  {markers.Count}", 0.3f);
+            RenderText(_playerMap.RightX + 0.1f, config.TextY - 0.1f, $"Markers:  {markers.Count}", 0.3f);
             if (Game.IsControlJustPressed(0, Control.ReplayHidehud))
             {
                 if (markers.Count > 0)
