@@ -3,144 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="rotate.css" rel="stylesheet" type="text/css" />
-
-    <style>
-        #content {
-            display: none;
-        }
-
-        .aircraft {
-            position: absolute;
-            left: 50px;
-            top: 110px;
-            width: 75px;
-            height: 75px;
-        }
-
-        #heading {
-            position: absolute;
-            left: 37px;
-            top: 30px;
-            transform-origin: bottom !important;
-        }
-
-        #tilt {
-            position: absolute;
-            left: 220px;
-            top: 80px;
-            width: 25px;
-            height: 80px;
-            transform-origin: bottom !important;
-        }
-
-        #cam {
-            position: absolute;
-            width: 75px;
-            left: 195px;
-            top: 110px;
-        }
-
-        .text {
-            display: none;
-            position: absolute;
-            color: white;
-            background-color: rgba(0,0,0, 0.6);
-            padding: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        #instructions {
-            text-align: right;
-            right: 20px;
-            top: 15%;
-        }
-
-        #key {
-            color: green;
-            text-shadow: none;
-            font-weight: bolder;
-            font-size: 20px;
-            padding: 0px 5px;
-            -webkit-text-stroke: 1px green;
-        }
-
-        #xbox {
-            color: lightblue;
-            text-shadow: none;
-            font-weight: bolder;
-            font-size: 20px;
-            padding: 0px 5px;
-            -webkit-text-stroke: 1px lightblue;
-        }
-
-        .alert {
-            left: 50%;
-            position: absolute;
-            bottom: 10%;
-            transform: translate(-50%, -50%);
-            color: orangered;
-        }
-        
-        .info {
-            left: 50%;
-            position: absolute;
-            bottom: 10%;
-            transform: translate(-50%, -50%);
-            color: white;
-        }
-
-        #headingNum {
-            position: absolute;
-            left: 77px;
-            top: 125px;
-            z-index: 5;
-            color: white;
-            text-align: center;
-        }
-
-        #tiltNum {
-            position: absolute;
-            left: 223px;
-            top: 150px;
-            z-index: 5;
-            color: white;
-            text-align: center;
-        }
-
-        #arrow {
-            width: 30px;
-            position: absolute;
-            left: 219px;
-            top: 50px;
-            transform-origin: center !important;
-        }
-
-        #hdg {
-            font-weight: bold;
-            color: white;
-            position: absolute;
-            font-size: 1.5em;
-            left: 226px;
-            top: 63px;
-        }
-    </style>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
 </head>
+
 <body>
     <div id="content">
-        <img src="heading.png" id="heading" class="rotate-0" />
-        <img src="heli.png" id="heli" class="aircraft" />
-        <img src="plane.png" id="plane" class="aircraft" />
+        <img src="images/heading.png" id="heading" class="rotate-0" />
+        <img src="images/heli.png" id="heli" class="aircraft" />
+        <img src="images/plane.png" id="plane" class="aircraft" />
         <span id="headingNum"></span>
 
-        <img src="heading.png" id="tilt" class="rotate-90" />
-        <img src="cam.png" id="cam" />
+        <img src="images/heading.png" id="tilt" class="rotate-90" />
+        <img src="images/cam.png" id="cam" />
         <span id="tiltNum"></span>
 
-        <img src="arrow.png" id="arrow" class="rotate-0" />
+        <img src="images/arrow.png" id="arrow" class="rotate-0" />
         <span id="hdg">N</span>
     </div>
     <div class="text" id="instructions">
@@ -163,108 +42,6 @@
         <p id="info-text"></p>
     </div>
 
-    <script>
-        var drawingAlerts = false;
-        var drawingInfos = false;
-        var pendingAlerts = [];
-        var pendingInfos = [];
-        $(function() {
-            window.addEventListener('message', e => {
-                var item = e.data;
-                //console.log('message ' + JSON.stringify(item));
-
-                if (item.shown === true) {
-                    $('#content').show();
-                    $('#instructions').fadeIn();
-                    setTimeout(() => {
-                        $('#instructions').fadeOut();
-                    }, 7500);
-                }
-                else if (item.shown === false) {
-                    $('#content').hide();
-                    $('#instructions').hide();
-                    return;
-                }
-
-                if (item.heli === true) {
-                    $('#heli').fadeIn();
-                    $('#plane').fadeOut();
-                }
-                else if (item.plane === true) {
-                    $('#plane').fadeIn();
-                    $('#heli').fadeOut();
-                }
-                else if (item.hasOwnProperty('rotation')) {
-                    $('#heading').removeClass().addClass('rotate-' + item.rotation);
-                    var text = '' + item.rotation;
-                    text = '00' + text;
-                    $('#headingNum').text(text.slice(text.length - 3));
-                }
-                else if (item.hasOwnProperty('camtilt')) {
-                    $('#tilt').removeClass().addClass('rotate-' + item.camtilt);
-                    let text;
-                    if (item.camtilt < 91) {
-                        $('#tiltNum').text((item.camtilt - 90));
-                    } else {
-                        text = '00' + (item.camtilt - 90);
-                        $('#tiltNum').text(text.slice(text.length - 3));
-                    }
-                } else if (item.hasOwnProperty('northheading')) {
-                    $('#arrow').removeClass().addClass('rotate-' + item.northheading);
-                }
-
-                if (item.type == 'alert') {
-                    pendingAlerts.push(item.message);
-                    if (!drawingAlerts) {
-                        showAlerts();
-                    }
-                }
-                else if (item.type == 'info') {
-                    pendingInfos.push(item.message);
-                    if (!drawingInfos) {
-                        showInfos();
-                    }
-                }
-            });
-        });
-
-        function showAlerts() {
-            drawingAlerts = true;
-            let msg = pendingAlerts.shift();
-            $('#alert-text').text(msg);
-            $('.alert').fadeIn();
-            setTimeout(() => {
-                $('.alert').fadeOut();
-                setTimeout(() => {
-                    $('#alert-text').text('');
-                    if (pendingAlerts.length > 0) {
-                        showAlerts();
-                    }
-                    else {
-                        drawingAlerts = false;
-                    }
-                }, 750);
-            }, 2500);
-        }
-
-        function showInfos() {
-            drawingInfos = true;
-            let msg = pendingInfos.shift();
-            $('#info-text').text(msg);
-            $('.info').fadeIn();
-            setTimeout(() => {
-                $('.info').fadeOut();
-                setTimeout(() => {
-                    $('#info-text').text('');
-                    if (pendingInfos.length > 0) {
-                        showInfos();
-                    }
-                    else {
-                        drawingInfos = false;
-                    }
-                }, 750);
-            }, 2500);
-        }
-    </script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿using CitizenFX.Core;
+using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -93,7 +93,6 @@ namespace HeliCam
             }
 
             string cfg = LoadResourceFile(GetCurrentResourceName(), "config.json") ?? "[]";
-
             try
             {
                 config = JsonConvert.DeserializeObject<Config>(cfg);
@@ -132,7 +131,7 @@ namespace HeliCam
         {
             _playerMap = MinimapAnchor.GetMinimapAnchor();
             _safeZone = GetSafeZoneSize();
-            await Delay(1000);
+            await Delay(2500);
         }
 
         [Tick]
@@ -140,30 +139,27 @@ namespace HeliCam
         {
             Ped player = Game.PlayerPed;
 
-            if (IsPlayerInHeli())
+            if (IsPlayerInHeli() && player.CurrentVehicle.HeightAboveGround > 1.5f)
             {
                 Vehicle heli = player.CurrentVehicle;
 
-                if (heli.HeightAboveGround > 1.5f)
+                if (Game.IsControlJustPressed(0, CAM_TOGGLE))
                 {
-                    if (Game.IsControlJustPressed(0, CAM_TOGGLE))
+                    Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                    _helicam = true;
+                }
+
+                if (Game.IsControlJustPressed(0, REPEL))
+                {
+                    if (heli.GetPedOnSeat(VehicleSeat.LeftRear) == player || heli.GetPedOnSeat(VehicleSeat.RightRear) == player)
                     {
                         Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
-                        _helicam = true;
+                        TaskRappelFromHeli(player.Handle, 1);
                     }
-
-                    if (Game.IsControlJustPressed(0, REPEL))
+                    else
                     {
-                        if (heli.GetPedOnSeat(VehicleSeat.LeftRear) == player || heli.GetPedOnSeat(VehicleSeat.RightRear) == player)
-                        {
-                            Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
-                            TaskRappelFromHeli(player.Handle, 1);
-                        }
-                        else
-                        {
-                            Screen.ShowNotification("~r~Can't rappel from this seat!", true);
-                            Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
-                        }
+                        Screen.ShowNotification("~r~Can't rappel from this seat!", true);
+                        Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
                     }
                 }
             }
@@ -173,10 +169,8 @@ namespace HeliCam
                 SetTimecycleModifier("heliGunCam");
                 SetTimecycleModifierStrength(0.3f);
                 Scaleform scaleform = new Scaleform("HELI_CAM");
-                while (!scaleform.IsLoaded)
-                {
-                    await Delay(1);
-                }
+                while (!scaleform.IsLoaded) await Delay(1);
+                
                 Vehicle heli = player.CurrentVehicle;
                 Camera cam = new Camera(CreateCam("DEFAULT_SCRIPTED_FLY_CAMERA", true));
                 cam.AttachTo(heli, new Vector3(0f, 0f, -1.5f));
@@ -233,6 +227,14 @@ namespace HeliCam
                     if (Game.IsControlJustPressed(0, Control.NextCamera))
                     {
                         _roadOverlay = !_roadOverlay;
+                        if (_roadOverlay && _streetOverlay.Count == 0)
+                        {
+                            SendNuiMessage(JsonConvert.SerializeObject(new
+                            {
+                                type = "alert",
+                                message = "Street overlay failed to load. Contact the server owner(s)."
+                            }));
+                        }
                     }
 
                     if (lockedEntity != null)
@@ -478,12 +480,7 @@ namespace HeliCam
         [EventHandler("helicam:addMarker")]
         internal void AddMarker(int src, int vehId, Vector3 pos, string name)
         {
-            if (src == Game.Player.ServerId)
-            {
-                return;
-            }
-
-            if (!Game.PlayerPed.IsSittingInVehicle() || Game.PlayerPed.CurrentVehicle.NetworkId != vehId)
+            if (src == Game.Player.ServerId || !Game.PlayerPed.IsSittingInVehicle() || Game.PlayerPed.CurrentVehicle.NetworkId != vehId)
             {
                 return;
             }
@@ -657,24 +654,23 @@ namespace HeliCam
                 {
                     dists.Add(val, DistanceTo(pos, val));
                 }
-                List<KeyValuePair<Vector3, double>> myList = dists.ToList();
-                myList.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
+                List<KeyValuePair<Vector3, double>> marks = dists.ToList();
+                marks.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
 
                 int count = 0;
 
-                foreach (KeyValuePair<Vector3, double> dot in myList)
+                foreach (KeyValuePair<Vector3, double> dot in marks)
                 {
                     if (dot.Value < 300)
                     {
                         RenderText3D(dot.Key, st.Key);
                         count++;
-                        continue;
                     }
+                }
 
-                    if (count == 0 && myList.First().Value < 300f)
-                    {
-                        RenderText3D(myList.First().Key, st.Key);
-                    }
+                if (count == 0 && marks.First().Value < 500f)
+                {
+                    RenderText3D(marks.First().Key, st.Key);
                 }
             }
         }

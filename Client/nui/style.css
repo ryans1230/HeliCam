@@ -1,0 +1,120 @@
+﻿#content {
+    display: none;
+}
+
+.aircraft {
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    width: 75px;
+    height: 75px;
+}
+
+#heading {
+    position: absolute;
+    left: 37px;
+    top: 30px;
+    transform-origin: bottom !important;
+}
+
+#tilt {
+    position: absolute;
+    left: 220px;
+    top: 80px;
+    width: 25px;
+    height: 80px;
+    transform-origin: bottom !important;
+}
+
+#cam {
+    position: absolute;
+    width: 75px;
+    left: 195px;
+    top: 110px;
+}
+
+.text {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: rgba(0,0,0, 0.6);
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#instructions {
+    text-align: right;
+    right: 20px;
+    top: 15%;
+}
+
+#key {
+    color: green;
+    text-shadow: none;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 0px 5px;
+    -webkit-text-stroke: 1px green;
+}
+
+#xbox {
+    color: lightblue;
+    text-shadow: none;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 0px 5px;
+    -webkit-text-stroke: 1px lightblue;
+}
+
+.alert {
+    left: 50%;
+    position: absolute;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    color: orangered;
+}
+
+.info {
+    left: 50%;
+    position: absolute;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#headingNum {
+    position: absolute;
+    left: 77px;
+    top: 125px;
+    z-index: 5;
+    color: white;
+    text-align: center;
+}
+
+#tiltNum {
+    position: absolute;
+    left: 223px;
+    top: 150px;
+    z-index: 5;
+    color: white;
+    text-align: center;
+}
+
+#arrow {
+    width: 30px;
+    position: absolute;
+    left: 219px;
+    top: 50px;
+    transform-origin: center !important;
+}
+
+#hdg {
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    font-size: 1.5em;
+    left: 226px;
+    top: 63px;
+}

@@ -9,12 +9,15 @@ files {
 	'config.json',
 	-- nui
 	'nui/nui.html',
+	'nui/style.css',
+	'nui/style.css',
 	'nui/rotate.css',
-	'nui/heli.png',
-	'nui/plane.png',
-	'nui/heading.png',
-	'nui/cam.png',
-	'nui/arrow.png'
+	'nui/script.js',
+	'nui/images/heli.png',
+	'nui/images/plane.png',
+	'nui/images/heading.png',
+	'nui/images/cam.png',
+	'nui/images/arrow.png'
 }
 
 client_script 'HeliCam.Client.net.dll'
