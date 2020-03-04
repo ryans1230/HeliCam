@@ -107,6 +107,46 @@ namespace HeliCam
             }
         }
 
+        [Command("heli")]
+        internal void HeliCommand(int src, List<object> args, string raw)
+        {
+            if (args.Count == 0)
+            {
+                return;
+            }
+
+            string arg = args[0].ToString();
+            if (arg == "help")
+            {
+                SendNuiMessage(JsonConvert.SerializeObject(new
+                {
+                    type = "help"
+                }));
+            } else if (arg == "clear")
+            {
+                if (_calculateSpeed)
+                {
+                    Game.SetControlNormal(0, Control.ReplaySnapmaticPhoto, 200f);
+                }
+                if (markers.Count != 0)
+                {
+                    foreach(Blip blip in markers)
+                    {
+                        blip.Delete();
+                    }
+                    markers.Clear();
+                }
+                TriggerServerEvent("helicam:removeAllMarkers", Game.PlayerPed.IsSittingInVehicle() ? Game.PlayerPed.CurrentVehicle.NetworkId : 0);
+            } else if (arg == "reset")
+            {
+                if (_helicam)
+                {
+                    Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                }
+                _helicam = false;
+            }
+        }
+
         #region Ticks
         [Tick]
         internal async Task EveryTick()
@@ -252,7 +292,7 @@ namespace HeliCam
                             hitPos = endPos = lockedEntity.Position;
                             TimeSpan lockedTimeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
                             string lockedTimeString = string.Format("{0:D1}m:{1:D2}s", lockedTimeDiff.Minutes, lockedTimeDiff.Seconds);
-                            RenderText(0.45f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
+                            RenderText(0.35f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
 
                             if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
                             {
@@ -298,7 +338,7 @@ namespace HeliCam
                             SendNuiMessage(JsonConvert.SerializeObject(new
                             {
                                 type = "alert",
-                                message = "You are not aiming at a road!"
+                                message = "You are not aiming at anything!"
                             }));
                         }
                         else
@@ -426,6 +466,12 @@ namespace HeliCam
                 _helicam = false;
                 Screen.Hud.IsVisible = true;
                 Screen.Hud.IsRadarVisible = true;
+                if (speedBlip != null)
+                {
+                    speedBlip.Delete();
+                }
+                _speedMarker = null;
+                _calculateSpeed = false;
                 ClearTimecycleModifier();
                 _fov = (config.FovMax + config.FovMin) * 0.5f; // Reset to default zoom level
                 RenderScriptCams(false, false, 0, true, false);
@@ -477,7 +523,7 @@ namespace HeliCam
                 return;
             }
 
-            if (markers.Count > 0)
+            if (markers.Count == 0)
             {
                 Debug.WriteLine("ERROR: our marker list is different from the one who sent the event");
                 return;
@@ -638,7 +684,7 @@ namespace HeliCam
                     SendNuiMessage(JsonConvert.SerializeObject(new
                     {
                         type = "alert",
-                        message = "You are not aiming at a road!"
+                        message = "You are not aiming at anything!"
                     }));
                     return;
                 }
@@ -697,7 +743,7 @@ namespace HeliCam
                 string model = veh.LocalizedName;
                 string plate = veh.Mods.LicensePlate;
 
-                RenderText(0.45f, config.TextY, $"Model: {model}\nPlate: {plate}");
+                RenderText(0.35f, config.TextY, $"Model: {model}\nPlate: {plate}");
 
                 string heading;
                 if (veh.Heading < 45)
@@ -816,11 +862,11 @@ namespace HeliCam
 
                 if (double.IsInfinity(estSpeed) || double.IsNaN(estSpeed))
                 {
-                    RenderText(0.6f, config.TextY, $"Est. Speed: Measuring\nTime: {timeDiff}s", 0.4f);
+                    RenderText(0.59f, config.TextY, $"Est. Speed: Measuring\nTime: {timeDiff}s", 0.4f);
                 }
                 else
                 {
-                    RenderText(0.6f, config.TextY, $"Est. Speed: {Math.Round(estSpeed, 0)}mph\nTime: {timeDiff}s", 0.4f);
+                    RenderText(0.59f, config.TextY, $"Est. Speed: {Math.Round(estSpeed, 0)}mph\nTime: {timeDiff}s", 0.4f);
                 }
 
                 World.DrawMarker(MarkerType.HorizontalCircleSkinny, _speedMarker.Item2, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(109, 184, 215));

@@ -1,4 +1,4 @@
-var drawingAlerts = false;
+﻿var drawingAlerts = false;
 var drawingInfos = false;
 var pendingAlerts = [];
 var pendingInfos = [];
@@ -59,6 +59,12 @@ $(function() {
                 showInfos();
             }
         }
+		else if (item.type == "help") {
+			$('#instructions').fadeIn();
+            setTimeout(() => {
+                $('#instructions').fadeOut();
+            }, 7500);
+		}
     });
 });
 

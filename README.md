@@ -30,4 +30,10 @@ HeliCam is an advanced aerial support camera for FiveM servers. It aims to creat
 - `Num7` - decrease spotlight size
 
 
+### Commands
+- `/heli reset` - Triggers leaving the camera, if you are in it.
+- `/heli help` - Displays the help text.
+- `/heli clear` - Clears all markers, and the speed marker/calculation.
+
+
 ### PR's Welcome
