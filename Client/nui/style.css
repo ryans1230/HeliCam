@@ -120,3 +120,8 @@
     top: 63px;
     display: none;
 }
+
+#credit {
+    color: gray;
+    font-size: 12px;
+}
