@@ -31,4 +31,3 @@ HeliCam is an advanced aerial support camera for FiveM servers. It aims to creat
 
 
 ### PR's Welcome
-- Getting the camera's heading relative to true north.

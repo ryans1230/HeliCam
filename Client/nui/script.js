@@ -1,4 +1,4 @@
-﻿var drawingAlerts = false;
+var drawingAlerts = false;
 var drawingInfos = false;
 var pendingAlerts = [];
 var pendingInfos = [];
@@ -44,7 +44,7 @@ $(function() {
                 $('#tiltNum').text(text.slice(text.length - 3));
             }
         } else if (item.hasOwnProperty('northheading')) {
-            $('#arrow').removeClass().addClass('rotate-' + item.northheading);
+            $('#arrow').removeClass().addClass('rotate-' + (360 - item.northheading));
         }
 
         if (item.type == 'alert') {

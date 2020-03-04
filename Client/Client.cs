@@ -1,4 +1,4 @@
-﻿using CitizenFX.Core;
+using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -757,14 +757,19 @@ namespace HeliCam
                 }));
             }
 
-            /*double t = 450 - (Math.Atan2(target.Y, 0f - target.X)) * 180 / Math.PI;
-            double north = Math.Round(t % 360, 0);
+            double camHeading = Math.Round(camRotation.Z);
+            if (camHeading > 0) { 
+                camHeading = 180 + (180 - camHeading);
+            } else
+            {
+                camHeading = Math.Abs(camHeading);
+            }
 
             SendNuiMessage(JsonConvert.SerializeObject(new
             {
-                northheading = north
+                northheading = camHeading
             }));
-            */
+            
             float latPos = target.Y;
             float lonPos = target.X;
             string latText = "N";
