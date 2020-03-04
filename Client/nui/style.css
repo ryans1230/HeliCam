@@ -108,6 +108,7 @@
     left: 219px;
     top: 50px;
     transform-origin: center !important;
+    display: none;
 }
 
 #hdg {
@@ -117,4 +118,5 @@
     font-size: 1.5em;
     left: 226px;
     top: 63px;
+    display: none;
 }

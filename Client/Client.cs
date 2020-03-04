@@ -119,9 +119,9 @@ namespace HeliCam
                 }
             }
 
-            foreach (Blip b in markers)
+            foreach (Blip mark in markers)
             {
-                World.DrawMarker(MarkerType.HorizontalCircleSkinny, b.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
+                World.DrawMarker(MarkerType.HorizontalCircleSkinny, mark.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
             }
             await Task.FromResult(0);
         }
@@ -184,10 +184,10 @@ namespace HeliCam
                     heli = heli.Model.IsHelicopter,
                     plane = !heli.Model.IsHelicopter
                 }));
+
                 Screen.Hud.IsVisible = false;
                 Screen.Hud.IsRadarVisible = heli.Driver == player;
                 Entity lockedEntity = null;
-                float zoomValue = (1.0f / (config.FovMax - config.FovMin)) * (_fov - config.FovMin);
                 int lastLosTime = Game.GameTime;
                 Vector3 hitPos = Vector3.Zero;
                 Vector3 endPos = Vector3.Zero;
@@ -198,6 +198,8 @@ namespace HeliCam
 
                 while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli)
                 {
+                    float zoomValue = (1.0f / (config.FovMax - config.FovMin)) * (_fov - config.FovMin);
+
                     Game.DisableControlThisFrame(0, Control.NextCamera);
                     Game.DisableControlThisFrame(0, Control.VehicleSelectNextWeapon);
                     Game.DisableControlThisFrame(0, Control.VehicleCinCam);
@@ -248,9 +250,9 @@ namespace HeliCam
 
                             RenderInfo(lockedEntity);
                             hitPos = endPos = lockedEntity.Position;
-                            TimeSpan timeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
-                            string answer = string.Format("{0:D1}m:{1:D2}s", timeDiff.Minutes, timeDiff.Seconds);
-                            RenderText(0.45f, 0.4f, $"~g~Locked ~w~{answer}");
+                            TimeSpan lockedTimeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
+                            string lockedTimeString = string.Format("{0:D1}m:{1:D2}s", lockedTimeDiff.Minutes, lockedTimeDiff.Seconds);
+                            RenderText(0.45f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
 
                             if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
                             {
@@ -304,12 +306,11 @@ namespace HeliCam
                             _calculateSpeed = !_calculateSpeed;
                             if (_calculateSpeed)
                             {
-                                speedBlip = new Blip(AddBlipForCoord(hitPos.X, hitPos.Y, hitPos.Z + 0.1f))
-                                {
-                                    Color = BlipColor.MichaelBlue,
-                                    Sprite = BlipSprite.PoliceCar,
-                                    Name = $"Speed Marker {DateTime.Now.ToString("HH:MM:SS")}"
-                                };
+                                hitPos.Z += 0.1f;
+                                speedBlip = World.CreateBlip(hitPos);
+                                speedBlip.Color = BlipColor.MichaelBlue;
+                                speedBlip.Sprite = BlipSprite.PoliceCar;
+                                speedBlip.Name = $"Speed Marker {DateTime.Now.ToString("HH:MM:SS")}";
                                 SetBlipDisplay(speedBlip.Handle, 2);
                                 _speedMarker = new Tuple<int, Vector3>(Game.GameTime, speedBlip.Position);
                             }
@@ -325,28 +326,26 @@ namespace HeliCam
                         }
                     }
 
-                    int timeInCam = (Game.GameTime - enterTime) / 1000;
-                    TimeSpan time = TimeSpan.FromSeconds(timeInCam);
-                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.9f, time.ToString(@"hh\:mm\:ss"), 0.3f);
+                    TimeSpan timeInCam = TimeSpan.FromSeconds(((Game.GameTime - enterTime) / 1000));
+                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.9f, $"~y~{timeInCam.ToString(@"hh\:mm\:ss")}", 0.3f);
                     RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.1f, DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ"), 0.3f);
-                    float ns = heli.Position.Y;
-                    float ew = heli.Position.X;
-                    string sn = "N";
-                    string we = "E";
-                    if (ns < 0f)
+
+                    float latPos = heli.Position.Y;
+                    float lonPos = heli.Position.X;
+                    string latText = "N";
+                    string lonText = "E";
+                    if (latPos < 0f)
                     {
-                        sn = "S";
-                        ns = Math.Abs(ns);
+                        latText = "S";
+                        latPos = Math.Abs(latPos);
                     }
-                    if (ew < 0f)
+                    if (lonPos < 0f)
                     {
-                        we = "W";
-                        ew = Math.Abs(ew);
+                        lonText = "W";
+                        lonPos = Math.Abs(lonPos);
                     }
-                    RenderText(_playerMap.RightX + 0.1f, config.TextY - 0.5f, $"{sn}{Math.Round(ns, 2)}\n{we}{Math.Round(ew, 2)}", 0.3f);
-
-
-
+                    double aircraftHdg = 360 - Math.Round(heli.Heading);
+                    RenderText(_playerMap.RightX + 0.1f, config.TextY - 0.1f, $"Aircraft:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}\n{aircraftHdg}°  {Math.Ceiling(heli.HeightAboveGround * 3.2808f)}FT", 0.3f);
 
                     HandleZoom(cam);
                     RenderTargetPosInfo(hitPos);
@@ -392,17 +391,17 @@ namespace HeliCam
                             _spotlightSize -= 1f;
                         }
 
-                        Vector3 dest;
+                        Vector3 spotlightDest;
                         if (Entity.Exists(lockedEntity))
                         {
-                            dest = lockedEntity.Position - cam.Position;
+                            spotlightDest = lockedEntity.Position - cam.Position;
                         }
                         else
                         {
-                            dest = endPos - cam.Position;
+                            spotlightDest = endPos - cam.Position;
                         }
-                        dest.Normalize();
-                        TriggerServerEvent("helicam:spotlight:draw", heli.NetworkId, cam.Position, dest, _spotlightSize);
+                        spotlightDest.Normalize();
+                        TriggerServerEvent("helicam:spotlight:draw", heli.NetworkId, cam.Position, spotlightDest, _spotlightSize);
                     }
 
                     scaleform.CallFunction("SET_ALT_FOV_HEADING", heli.Position.Z, zoomValue, cam.Rotation.Z);
@@ -473,12 +472,7 @@ namespace HeliCam
         [EventHandler("helicam:deleteAllMarkers")]
         internal void DeleteAllMarkers(int src, int vehId)
         {
-            if (src == Game.Player.ServerId)
-            {
-                return;
-            }
-
-            if (!Game.PlayerPed.IsSittingInVehicle() || Game.PlayerPed.CurrentVehicle.NetworkId != vehId)
+            if (src == Game.Player.ServerId || !Game.PlayerPed.IsSittingInVehicle() || Game.PlayerPed.CurrentVehicle.NetworkId != vehId)
             {
                 return;
             }
@@ -504,14 +498,13 @@ namespace HeliCam
                 return;
             }
 
-            Blip b = new Blip(AddBlipForCoord(pos.X, pos.Y, pos.Z))
-            {
-                Sprite = (BlipSprite)123,
-                Name = name,
-                Color = (BlipColor)27,
-                Rotation = 0
-            };
-            markers.Add(b);
+            Blip mark = World.CreateBlip(pos);
+            mark.Sprite = (BlipSprite)123;
+            mark.Name = name;
+            mark.Color = (BlipColor)27;
+            mark.Rotation = 0;
+
+            markers.Add(mark);
         }
 
         [EventHandler("helicam:drawSpotlight")]
@@ -611,16 +604,16 @@ namespace HeliCam
 
         private void HandleMarkers(Vector3 cam)
         {
-            RenderText(_playerMap.RightX + 0.1f, config.TextY - 0.1f, $"Markers:  {markers.Count}", 0.3f);
+            RenderText(_playerMap.RightX + 0.15f, config.TextY - 0.1f, $"Markers:  {markers.Count}", 0.3f);
             if (Game.IsControlJustPressed(0, Control.ReplayHidehud))
             {
                 if (markers.Count > 0)
                 {
                     // Delete most recent
-                    Blip b = markers.LastOrDefault();
-                    TriggerServerEvent("helicam:removeMarker", b.Position);
-                    markers.Remove(b);
-                    b.Delete();
+                    Blip mark = markers.LastOrDefault();
+                    TriggerServerEvent("helicam:removeMarker", mark.Position);
+                    markers.Remove(mark);
+                    mark.Delete();
                 }
 
                 if (markers.Count == 0)
@@ -651,45 +644,45 @@ namespace HeliCam
                 }
 
                 string name = $"Marker #{markers.Count} - {DateTime.Now.ToString("H:mm")}";
-                Blip b = new Blip(AddBlipForCoord(cam.X, cam.Y, cam.Z + 0.1f))
-                {
-                    Sprite = (BlipSprite)123,
-                    Name = name,
-                    Color = (BlipColor)27,
-                    Rotation = 0
-                };
-                SetBlipDisplay(b.Handle, 2);
-                markers.Add(b);
-                TriggerServerEvent("helicam:createMarker", Game.PlayerPed.CurrentVehicle.NetworkId, b.Position, name);
+                cam.Z += 0.01f;
+                Blip mark = World.CreateBlip(cam);
+                mark.Sprite = (BlipSprite)123;
+                mark.Name = name;
+                mark.Color = (BlipColor)27;
+                mark.Rotation = 0;
+
+                SetBlipDisplay(mark.Handle, 2);
+                markers.Add(mark);
+                TriggerServerEvent("helicam:createMarker", Game.PlayerPed.CurrentVehicle.NetworkId, mark.Position, name);
             }
         }
 
         private void RenderStreetNames(Vector3 pos)
         {
-            foreach (KeyValuePair<string, List<Vector3>> st in _streetOverlay)
+            foreach (KeyValuePair<string, List<Vector3>> street in _streetOverlay)
             {
                 Dictionary<Vector3, double> dists = new Dictionary<Vector3, double>();
-                foreach (Vector3 val in st.Value)
+                foreach (Vector3 mark in street.Value)
                 {
-                    dists.Add(val, DistanceTo(pos, val));
+                    dists.Add(mark, DistanceTo(pos, mark));
                 }
                 List<KeyValuePair<Vector3, double>> marks = dists.ToList();
                 marks.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
 
                 int count = 0;
 
-                foreach (KeyValuePair<Vector3, double> dot in marks)
+                foreach (KeyValuePair<Vector3, double> mark in marks)
                 {
-                    if (dot.Value < 300)
+                    if (mark.Value < 300)
                     {
-                        RenderText3D(dot.Key, st.Key);
+                        RenderText3D(mark.Key, street.Key);
                         count++;
                     }
                 }
 
                 if (count == 0 && marks.First().Value < 500f)
                 {
-                    RenderText3D(marks.First().Key, st.Key);
+                    RenderText3D(marks.First().Key, street.Key);
                 }
             }
         }
@@ -734,10 +727,10 @@ namespace HeliCam
 
         private void RenderRotation(Vehicle veh, Vector3 target, Vector3 camRotation)
         {
-            double n = 270 - (Math.Atan2(veh.Position.Y - target.Y, veh.Position.X - target.X)) * 180 / Math.PI;
-            double heading = Math.Round(n % 360, 0);
+            double rawHdg = 270 - (Math.Atan2(veh.Position.Y - target.Y, veh.Position.X - target.X)) * 180 / Math.PI;
+            double heading = Math.Round(rawHdg % 360, 0);
 
-            heading += Math.Round(veh.Heading, 0);
+            heading += Math.Round(veh.Heading);
 
             if (heading > 360)
             {
@@ -753,7 +746,8 @@ namespace HeliCam
                 _lastCamHeading = heading;
             }
 
-            double tilt = Math.Round(-camRotation.X + 90f, 0);
+
+            double tilt = Math.Round(camRotation.X, 0);
             if (_lastCamTilt != tilt)
             {
                 _lastCamTilt = tilt;
@@ -763,20 +757,30 @@ namespace HeliCam
                 }));
             }
 
-            double t = 270 - (Math.Atan2(veh.Position.Y - 7000f, 0f)) * 180 / Math.PI;
+            /*double t = 450 - (Math.Atan2(target.Y, 0f - target.X)) * 180 / Math.PI;
             double north = Math.Round(t % 360, 0);
-
-            north += Math.Round(veh.Heading, 0);
-
-            if (north > 360)
-            {
-                north -= 360;
-            }
 
             SendNuiMessage(JsonConvert.SerializeObject(new
             {
                 northheading = north
             }));
+            */
+            float latPos = target.Y;
+            float lonPos = target.X;
+            string latText = "N";
+            string lonText = "E";
+            if (latPos < 0f)
+            {
+                latText = "S";
+                latPos = Math.Abs(latPos);
+            }
+            if (lonPos < 0f)
+            {
+                lonText = "W";
+                lonPos = Math.Abs(lonPos);
+            }
+            RenderText(0.72f, config.TextY - 0.1f, $"Map TGT:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}", 0.3f);
+            
         }
 
         private void RenderTargetPosInfo(Vector3 pos)

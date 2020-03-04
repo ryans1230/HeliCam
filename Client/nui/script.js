@@ -35,12 +35,12 @@ $(function() {
             $('#headingNum').text(text.slice(text.length - 3));
         }
         else if (item.hasOwnProperty('camtilt')) {
-            $('#tilt').removeClass().addClass('rotate-' + item.camtilt);
+            $('#tilt').removeClass().addClass('rotate-' + (-item.camtilt + 90));
             let text;
-            if (item.camtilt < 91) {
-                $('#tiltNum').text((item.camtilt - 90));
+            if (item.camtilt < 0) {
+                $('#tiltNum').text(item.camtilt);
             } else {
-                text = '00' + (item.camtilt - 90);
+                text = '00' + item.camtilt;
                 $('#tiltNum').text(text.slice(text.length - 3));
             }
         } else if (item.hasOwnProperty('northheading')) {
