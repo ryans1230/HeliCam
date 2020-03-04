@@ -1,4 +1,4 @@
-using CitizenFX.Core;
+﻿using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -19,6 +19,13 @@ namespace HeliCam
         public float SpeedUD { get; set; }
         public float TextY { get; set; }
         public float MaxDist { get; set; }
+        public bool AllowCamera { get; set; }
+        public bool AllowMarkers { get; set; }
+        public bool AllowPedLocking { get; set; }
+        public bool AllowRappel { get; set; }
+        public bool AllowSpeedCalculations { get; set; }
+        public bool AllowSpotlights { get; set; }
+        public bool UseRealisticFLIR { get; set; }
         public List<string> AircraftHashes { get; set; }
         public List<string> HelicopterHashes { get; set; }
 
@@ -30,7 +37,14 @@ namespace HeliCam
             SpeedLR = 5.0f;
             SpeedUD = 5.0f;
             TextY = 1.5f;
-            MaxDist = 300f;
+            MaxDist = 400f;
+            AllowCamera = true;
+            AllowMarkers = true;
+            AllowPedLocking = true;
+            AllowRappel = true;
+            AllowSpeedCalculations = true;
+            AllowSpotlights = true;
+            UseRealisticFLIR = true;
             AircraftHashes = new List<string> { "mammatus", "dodo" };
             HelicopterHashes = new List<string>();
             Debug.WriteLine("loaded backup configuration successfully!");
@@ -62,7 +76,7 @@ namespace HeliCam
         private const Control REPEL = Control.ParachuteSmoke;
         private const Control TOGGLE_ENTITY_LOCK = Control.CreatorAccept;
         private const Control TOGGLE_SPOTLIGHT = Control.VehicleExit;
-        private readonly HashSet<Blip> markers = new HashSet<Blip>();
+        private readonly HashSet<Blip> _markers = new HashSet<Blip>();
         private readonly Config config;
 
         private bool _helicam, _calculateSpeed, _roadOverlay, _spotlightActive;
@@ -103,6 +117,7 @@ namespace HeliCam
                 Debug.WriteLine(ex.Message);
                 Debug.WriteLine(ex.StackTrace);
                 Debug.WriteLine("Using safe configuration");
+                config = new Config();
                 config.LoadBackupConfig();
             }
         }
@@ -128,13 +143,13 @@ namespace HeliCam
                 {
                     Game.SetControlNormal(0, Control.ReplaySnapmaticPhoto, 200f);
                 }
-                if (markers.Count != 0)
+                if (_markers.Count != 0)
                 {
-                    foreach(Blip blip in markers)
+                    foreach(Blip blip in _markers)
                     {
                         blip.Delete();
                     }
-                    markers.Clear();
+                    _markers.Clear();
                 }
                 TriggerServerEvent("helicam:removeAllMarkers", Game.PlayerPed.IsSittingInVehicle() ? Game.PlayerPed.CurrentVehicle.NetworkId : 0);
             } else if (arg == "reset")
@@ -159,7 +174,7 @@ namespace HeliCam
                 }
             }
 
-            foreach (Blip mark in markers)
+            foreach (Blip mark in _markers)
             {
                 World.DrawMarker(MarkerType.HorizontalCircleSkinny, mark.Position, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(175, 59, 231));
             }
@@ -183,13 +198,13 @@ namespace HeliCam
             {
                 Vehicle heli = player.CurrentVehicle;
 
-                if (Game.IsControlJustPressed(0, CAM_TOGGLE))
+                if (Game.IsControlJustPressed(0, CAM_TOGGLE) && config.AllowCamera)
                 {
                     Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                     _helicam = true;
                 }
 
-                if (Game.IsControlJustPressed(0, REPEL))
+                if (Game.IsControlJustPressed(0, REPEL) && config.AllowRappel)
                 {
                     if (heli.GetPedOnSeat(VehicleSeat.LeftRear) == player || heli.GetPedOnSeat(VehicleSeat.RightRear) == player)
                     {
@@ -283,24 +298,31 @@ namespace HeliCam
                     {
                         if (Entity.Exists(lockedEntity))
                         {
-                            if (HasEntityClearLosToEntity(heli.Handle, lockedEntity.Handle, 17))
+                            if (lockedEntity.Model.IsPed && !config.AllowPedLocking)
                             {
-                                lastLosTime = Game.GameTime;
-                            }
-
-                            RenderInfo(lockedEntity);
-                            hitPos = endPos = lockedEntity.Position;
-                            TimeSpan lockedTimeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
-                            string lockedTimeString = string.Format("{0:D1}m:{1:D2}s", lockedTimeDiff.Minutes, lockedTimeDiff.Seconds);
-                            RenderText(0.35f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
-
-                            if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
-                            {
-                                Debug.WriteLine($"LOS: {(Game.GameTime - lastLosTime) > 5000}");
                                 lockedEntity = null;
-                                lockedTime = 0;
-                                cam.StopPointing();
-                                Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
+                            }
+                            else
+                            {
+                                if (HasEntityClearLosToEntity(heli.Handle, lockedEntity.Handle, 17))
+                                {
+                                    lastLosTime = Game.GameTime;
+                                }
+
+                                RenderInfo(lockedEntity);
+                                hitPos = endPos = lockedEntity.Position;
+                                TimeSpan lockedTimeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
+                                string lockedTimeString = string.Format("{0:D1}m:{1:D2}s", lockedTimeDiff.Minutes, lockedTimeDiff.Seconds);
+                                RenderText(0.35f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
+
+                                if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
+                                {
+                                    Debug.WriteLine($"LOS: {(Game.GameTime - lastLosTime) > 5000}");
+                                    lockedEntity = null;
+                                    lockedTime = 0;
+                                    cam.StopPointing();
+                                    Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
+                                }
                             }
                         }
                         else
@@ -331,7 +353,7 @@ namespace HeliCam
                         }
                     }
 
-                    if (Game.IsControlJustPressed(0, Control.ReplaySnapmaticPhoto))
+                    if (Game.IsControlJustPressed(0, Control.ReplaySnapmaticPhoto) && config.AllowSpeedCalculations)
                     {
                         if (hitPos.IsZero)
                         {
@@ -389,7 +411,10 @@ namespace HeliCam
 
                     HandleZoom(cam);
                     RenderTargetPosInfo(hitPos);
-                    HandleMarkers(hitPos);
+                    if (config.AllowMarkers)
+                    {
+                        HandleMarkers(hitPos);
+                    }
                     RenderRotation(heli, endPos, cam.Rotation);
 
                     if (_roadOverlay && _streetOverlay.Count > 0)
@@ -397,7 +422,7 @@ namespace HeliCam
                         RenderStreetNames(hitPos == Vector3.Zero ? heli.Position : hitPos);
                     }
 
-                    if (Game.IsDisabledControlJustPressed(0, TOGGLE_SPOTLIGHT))
+                    if (Game.IsDisabledControlJustPressed(0, TOGGLE_SPOTLIGHT) && config.AllowSpotlights)
                     {
                         _spotlightActive = !_spotlightActive;
 
@@ -415,10 +440,13 @@ namespace HeliCam
                         }
                     }
 
-                    SeethroughSetHeatscale(2, 0.5f);
-                    SeethroughSetHiLightIntensity(-1f);
+                    if (config.UseRealisticFLIR)
+                    {
+                        SeethroughSetHeatscale(2, 0.5f);
+                        SeethroughSetHiLightIntensity(-1f);
+                    }
 
-                    if (_spotlightActive)
+                    if (_spotlightActive && config.AllowSpotlights)
                     {
                         Game.DisableControlThisFrame(0, Control.VehicleFlyYawLeft);
                         Game.DisableControlThisFrame(0, Control.VehicleFlyYawRight);
@@ -504,11 +532,11 @@ namespace HeliCam
                 return;
             }
 
-            foreach (Blip b in markers)
+            foreach (Blip b in _markers)
             {
                 if (b.Position == pos)
                 {
-                    markers.Remove(b);
+                    _markers.Remove(b);
                     b.Delete();
                     break;
                 }
@@ -523,17 +551,17 @@ namespace HeliCam
                 return;
             }
 
-            if (markers.Count == 0)
+            if (_markers.Count == 0)
             {
                 Debug.WriteLine("ERROR: our marker list is different from the one who sent the event");
                 return;
             }
 
-            foreach (Blip b in markers)
+            foreach (Blip b in _markers)
             {
                 b.Delete();
             }
-            markers.Clear();
+            _markers.Clear();
         }
 
         [EventHandler("helicam:addMarker")]
@@ -550,7 +578,7 @@ namespace HeliCam
             mark.Color = (BlipColor)27;
             mark.Rotation = 0;
 
-            markers.Add(mark);
+            _markers.Add(mark);
         }
 
         [EventHandler("helicam:drawSpotlight")]
@@ -650,26 +678,26 @@ namespace HeliCam
 
         private void HandleMarkers(Vector3 cam)
         {
-            RenderText(_playerMap.RightX + 0.15f, config.TextY - 0.1f, $"Markers:  {markers.Count}", 0.3f);
+            RenderText(_playerMap.RightX + 0.15f, config.TextY - 0.1f, $"Markers:  {_markers.Count}", 0.3f);
             if (Game.IsControlJustPressed(0, Control.ReplayHidehud))
             {
-                if (markers.Count > 0)
+                if (_markers.Count > 0)
                 {
                     // Delete most recent
-                    Blip mark = markers.LastOrDefault();
+                    Blip mark = _markers.LastOrDefault();
                     TriggerServerEvent("helicam:removeMarker", mark.Position);
-                    markers.Remove(mark);
+                    _markers.Remove(mark);
                     mark.Delete();
                 }
 
-                if (markers.Count == 0)
+                if (_markers.Count == 0)
                 {
                     TriggerServerEvent("helicam:removeAllMarkers", Game.PlayerPed.CurrentVehicle.NetworkId);
                 }
             }
             if (Game.IsControlJustPressed(0, Control.VehicleFlyUnderCarriage))
             {
-                if (markers.Count > 9)
+                if (_markers.Count > 9)
                 {
                     SendNuiMessage(JsonConvert.SerializeObject(new
                     {
@@ -689,7 +717,7 @@ namespace HeliCam
                     return;
                 }
 
-                string name = $"Marker #{markers.Count} - {DateTime.Now.ToString("H:mm")}";
+                string name = $"Marker #{_markers.Count} - {DateTime.Now.ToString("H:mm")}";
                 cam.Z += 0.01f;
                 Blip mark = World.CreateBlip(cam);
                 mark.Sprite = (BlipSprite)123;
@@ -698,7 +726,7 @@ namespace HeliCam
                 mark.Rotation = 0;
 
                 SetBlipDisplay(mark.Handle, 2);
-                markers.Add(mark);
+                _markers.Add(mark);
                 TriggerServerEvent("helicam:createMarker", Game.PlayerPed.CurrentVehicle.NetworkId, mark.Position, name);
             }
         }

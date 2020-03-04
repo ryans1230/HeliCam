@@ -36,4 +36,23 @@ HeliCam is an advanced aerial support camera for FiveM servers. It aims to creat
 - `/heli clear` - Clears all markers, and the speed marker/calculation.
 
 
+### Config
+- `FovMax` - the widest the camera can go
+- `FovMin` - the tightest the camera can go
+- `ZoomSpeed` - how much the camera zooms in each time
+- `SpeedLR` - how fast the camera will move left and right
+- `SpeedUD` - how fast the camera will move up and down
+- `TextY` - the upper limit of text to be drawn in the box at the bottom of the camera
+- `MaxDist` - the maximum distance a lock can be acquired/held
+- `AllowCamera` - whether or not to allow entering/using the camera
+- `AllowMarkers` - whether or not to allow the setting of custom markers while using the camera
+- `AllowPedLocking` - whether or not to allow locking onto peds
+- `AllowRappel` - whether or not to allow rappelling from the rear seats
+- `AllowSpeedCalculations` - whether or not to allow estimated speed calculations
+- `AllowSpotlights` - whether or not to allow the use of the spotlight from the helicopter
+- `UseRealisticFLIR` - whether or not to use a more realistic FLIR/thermal camera
+- `AircraftHashes` - List of custom aircraft models to support
+- `HelicopterHashes` - List of custom helicopter models to support
+
+
 ### PR's Welcome

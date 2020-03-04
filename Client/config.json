@@ -1,16 +1,18 @@
 {
-   "FovMax":80.0,
-   "FovMin":5.0,
-   "ZoomSpeed":3.0,
-   "SpeedLR":3.0,
-   "SpeedUD":3.0,
-   "TextY":1.5,
-   "MaxDist":300.0,
-   "AircraftHashes":[
-      "mammatus",
-      "dodo"
-   ],
-   "HelicopterHashes":[
-
-   ]
+  "FovMax": 80.0,
+  "FovMin": 5.0,
+  "ZoomSpeed": 3.0,
+  "SpeedLR": 5.0,
+  "SpeedUD": 5.0,
+  "TextY": 1.5,
+  "MaxDist": 400.0,
+  "AllowCamera": true,
+  "AllowMarkers": true,
+  "AllowPedLocking": true,
+  "AllowRappel": true,
+  "AllowSpeedCalculations": true,
+  "AllowSpotlights": true,
+  "UseRealisticFLIR": true,
+  "AircraftHashes": [ "mammatus", "dodo" ],
+  "HelicopterHashes": []
 }
