@@ -1,4 +1,4 @@
-using CitizenFX.Core;
+﻿using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -319,7 +319,7 @@ namespace HeliCam
                                 hitPos = endPos = lockedEntity.Position;
                                 TimeSpan lockedTimeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
                                 string lockedTimeString = string.Format("{0:D1}m:{1:D2}s", lockedTimeDiff.Minutes, lockedTimeDiff.Seconds);
-                                RenderText(0.35f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
+                                RenderText(0.2f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
 
                                 if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
                                 {
@@ -405,8 +405,8 @@ namespace HeliCam
                     }
 
                     TimeSpan timeInCam = TimeSpan.FromSeconds(((Game.GameTime - enterTime) / 1000));
-                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.9f, $"~y~{timeInCam.ToString(@"hh\:mm\:ss")}", 0.3f);
-                    RenderText(_playerMap.RightX + 0.025f, config.TextY - 0.1f, DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ"), 0.3f);
+                    RenderText(0.01f, config.TextY - 0.9f, $"~y~{timeInCam.ToString(@"hh\:mm\:ss")}", 0.3f);
+                    RenderText(0.01f, config.TextY - 0.1f, DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ"), 0.3f);
 
                     float latPos = heli.Position.Y;
                     float lonPos = heli.Position.X;
@@ -423,7 +423,7 @@ namespace HeliCam
                         lonPos = Math.Abs(lonPos);
                     }
                     double aircraftHdg = 360 - Math.Round(heli.Heading);
-                    RenderText(_playerMap.RightX + 0.1f, config.TextY - 0.1f, $"Aircraft:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}\n{aircraftHdg}°  {Math.Ceiling(heli.HeightAboveGround * 3.2808f)}FT", 0.3f);
+                    RenderText(0.075f, config.TextY - 0.1f, $"Aircraft:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}\n{aircraftHdg}°  {Math.Ceiling(heli.HeightAboveGround * 3.2808f)}ft", 0.3f);
 
                     HandleZoom(cam);
                     RenderTargetPosInfo(hitPos);
@@ -695,7 +695,7 @@ namespace HeliCam
 
         private void HandleMarkers(Vector3 cam)
         {
-            RenderText(_playerMap.RightX + 0.15f, config.TextY - 0.1f, $"Markers:  {_markers.Count}", 0.3f);
+            RenderText(0.125f, config.TextY - 0.1f, $"Markers:  {_markers.Count}", 0.3f);
             if (Game.IsControlJustPressed(0, Control.ReplayHidehud))
             {
                 if (_markers.Count > 0)
@@ -788,7 +788,7 @@ namespace HeliCam
                 string model = veh.LocalizedName;
                 string plate = veh.Mods.LicensePlate;
 
-                RenderText(0.35f, config.TextY, $"Model: {model}\nPlate: {plate}");
+                RenderText(0.2f, config.TextY, $"Model: {model}\nPlate: {plate}");
 
                 string heading;
                 if (veh.Heading < 45)
@@ -812,7 +812,7 @@ namespace HeliCam
                     heading = "NB";
                 }
 
-                RenderText(0.77f, config.TextY, heading);
+                RenderText(0.6f, config.TextY, heading);
             }
         }
 
@@ -875,7 +875,12 @@ namespace HeliCam
                 lonText = "W";
                 lonPos = Math.Abs(lonPos);
             }
-            RenderText(0.72f, config.TextY - 0.1f, $"Map TGT:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}", 0.3f);
+            double cameraHdg = 360 - Math.Round(camRotation.Z);
+            if (cameraHdg > 360)
+            {
+                cameraHdg -= 360;
+            }
+            RenderText(0.55f, config.TextY - 0.1f, $"Map TGT:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}\n{cameraHdg}°", 0.3f);
             
         }
 
@@ -894,7 +899,7 @@ namespace HeliCam
             string crossingName = GetStreetNameFromHashKey(crossing);
             string suffix = (crossingName != "" && crossingName != "NULL" && crossingName != null) ? "~t~ / " + crossingName : "";
 
-            RenderText(0.8f, config.TextY, $"{World.GetStreetName(pos)}\n{suffix}");
+            RenderText(0.625f, config.TextY, $"{World.GetStreetName(pos)}\n{suffix}");
 
             if (_calculateSpeed)
             {
@@ -907,11 +912,11 @@ namespace HeliCam
 
                 if (double.IsInfinity(estSpeed) || double.IsNaN(estSpeed))
                 {
-                    RenderText(0.59f, config.TextY, $"Est. Speed: Measuring\nTime: {timeDiff}s", 0.4f);
+                    RenderText(0.4f, config.TextY, $"Est. Speed: Measuring\nTime: {timeDiff}s", 0.4f);
                 }
                 else
                 {
-                    RenderText(0.59f, config.TextY, $"Est. Speed: {Math.Round(estSpeed, 0)}mph\nTime: {timeDiff}s", 0.4f);
+                    RenderText(0.4f, config.TextY, $"Est. Speed: {Math.Round(estSpeed, 0)}mph\nTime: {timeDiff}s", 0.4f);
                 }
 
                 World.DrawMarker(MarkerType.HorizontalCircleSkinny, _speedMarker.Item2, Vector3.Zero, Vector3.Zero, new Vector3(10f), Color.FromArgb(109, 184, 215));
@@ -921,8 +926,6 @@ namespace HeliCam
 
         private void RenderText(float x, float y, string text, float scale = 0.5f)
         {
-            float safeZoneSizeX = (1 / _safeZone / 3.0f) - 0.358f;
-
             SetTextFont(0);
             SetTextProportional(false);
             SetTextScale(0f, scale);
@@ -933,7 +936,7 @@ namespace HeliCam
             SetTextOutline();
             SetTextEntry("STRING");
             AddTextComponentString(text);
-            DrawText(safeZoneSizeX + x, _safeZone - GetTextScaleHeight(y, 0));
+            DrawText(_playerMap.RightX + x, _playerMap.BottomY - GetTextScaleHeight(y, 0) - 0.005f);
         }
 
         private void RenderText3D(Vector3 pos, string text)
