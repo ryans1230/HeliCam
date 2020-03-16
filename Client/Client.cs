@@ -268,6 +268,8 @@ namespace HeliCam
                     Game.DisableControlThisFrame(0, REPEL);
                     Game.DisableControlThisFrame(0, TOGGLE_SPOTLIGHT);
                     Game.DisableControlThisFrame(0, Control.Phone);
+                    heli.IsRadioEnabled = false;
+
 
                     if (Game.IsControlJustPressed(0, CAM_TOGGLE))
                     {
