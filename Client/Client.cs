@@ -81,8 +81,6 @@ namespace HeliCam
 
         private bool _helicam, _calculateSpeed, _roadOverlay, _spotlightActive;
         private float _fov = 80f;
-        private float _safeZone;
-        private float _spotlightSize = 5f;
         private int _visionState = 0; // 0 normal, 1 nightmode, 2 thermal
         private Minimap _playerMap;
         private readonly Dictionary<string, List<Vector3>> _streetOverlay;
@@ -185,7 +183,6 @@ namespace HeliCam
         internal async Task UpdateCache()
         {
             _playerMap = MinimapAnchor.GetMinimapAnchor();
-            _safeZone = GetSafeZoneSize();
             await Delay(2500);
         }
 
@@ -466,17 +463,6 @@ namespace HeliCam
 
                     if (_spotlightActive && config.AllowSpotlights)
                     {
-                        Game.DisableControlThisFrame(0, Control.VehicleFlyYawLeft);
-                        Game.DisableControlThisFrame(0, Control.VehicleFlyYawRight);
-                        if (Game.IsControlJustPressed(0, Control.VehicleFlySelectTargetRight) && _spotlightSize < 10)
-                        {
-                            _spotlightSize += 1f;
-                        }
-                        else if (Game.IsControlJustPressed(0, Control.VehicleFlySelectTargetLeft) && _spotlightSize > 1)
-                        {
-                            _spotlightSize -= 1f;
-                        }
-
                         Vector3 spotlightDest;
                         if (Entity.Exists(lockedEntity))
                         {
@@ -487,7 +473,7 @@ namespace HeliCam
                             spotlightDest = endPos - cam.Position;
                         }
                         spotlightDest.Normalize();
-                        TriggerServerEvent("helicam:spotlight:draw", heli.NetworkId, cam.Position, spotlightDest, _spotlightSize);
+                        TriggerServerEvent("helicam:spotlight:draw", heli.NetworkId, cam.Position, spotlightDest, 5f);
                     }
 
                     scaleform.CallFunction("SET_ALT_FOV_HEADING", heli.Position.Z, zoomValue, cam.Rotation.Z);
