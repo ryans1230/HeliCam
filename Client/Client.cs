@@ -1,4 +1,4 @@
-﻿using CitizenFX.Core;
+using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -247,6 +247,12 @@ namespace HeliCam
                 Vector3 hitPos = Vector3.Zero;
                 Vector3 endPos = Vector3.Zero;
                 Blip speedBlip = null;
+                Blip crosshairs = World.CreateBlip(heli.Position);
+                crosshairs.Sprite = (BlipSprite)123;
+                crosshairs.Color = BlipColor.Red;
+                crosshairs.Scale = 0.5f;
+                crosshairs.Name = "Current Crosshair Position";
+                crosshairs.Rotation = 0;
                 int lockedTime = 0;
                 int enterTime = Game.GameTime;
                 SetNetworkIdExistsOnAllMachines(heli.NetworkId, true);
@@ -351,6 +357,16 @@ namespace HeliCam
                         {
                             hitPos = detected.Item2;
                         }
+                    }
+
+                    if (hitPos.IsZero)
+                    {
+                        crosshairs.Alpha = 0;
+                    }
+                    else
+                    {
+                        crosshairs.Alpha = 255;
+                        crosshairs.Position = hitPos;
                     }
 
                     if (Game.IsControlJustPressed(0, Control.ReplaySnapmaticPhoto) && config.AllowSpeedCalculations)
@@ -498,6 +514,7 @@ namespace HeliCam
                 {
                     speedBlip.Delete();
                 }
+                crosshairs.Delete();
                 _speedMarker = null;
                 _calculateSpeed = false;
                 ClearTimecycleModifier();
