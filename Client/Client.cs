@@ -1,4 +1,4 @@
-﻿using CitizenFX.Core;
+using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using Newtonsoft.Json;
 using System;
@@ -457,8 +457,11 @@ namespace HeliCam
 
                     if (config.UseRealisticFLIR)
                     {
-                        SeethroughSetHeatscale(2, 0.5f);
-                        SeethroughSetHiLightIntensity(-1f);
+                        SeethroughSetHeatscale(2, 0f);
+                        SeethroughSetHiLightIntensity(2f);
+                        SeethroughSetNoiseAmountMax(0f);
+                        SeethroughSetNoiseAmountMin(0f);
+                        SeethroughSetColorNear(255, 255, 255);
                     }
 
                     if (_spotlightActive && config.AllowSpotlights)
@@ -467,6 +470,10 @@ namespace HeliCam
                         if (Entity.Exists(lockedEntity))
                         {
                             spotlightDest = lockedEntity.Position - cam.Position;
+                        }
+                        else if (!hitPos.IsZero)
+                        {
+                            spotlightDest = hitPos - cam.Position;
                         }
                         else
                         {
@@ -887,7 +894,7 @@ namespace HeliCam
             string crossingName = GetStreetNameFromHashKey(crossing);
             string suffix = (crossingName != "" && crossingName != "NULL" && crossingName != null) ? "~t~ / " + crossingName : "";
 
-            RenderText(0.625f, config.TextY, $"{World.GetStreetName(pos)}\n{suffix}");
+            RenderText(0.63f, config.TextY, $"{World.GetStreetName(pos)}\n{suffix}");
 
             if (_calculateSpeed)
             {

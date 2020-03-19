@@ -26,8 +26,6 @@ HeliCam is an advanced aerial support camera for FiveM servers. It aims to creat
 - `Q` - reset camera position
 - `TAB` - toggle speed calculations
 - `F` - toggle spotlight
-- `Num9` - increase spotlight size
-- `Num7` - decrease spotlight size
 
 
 ### Commands
