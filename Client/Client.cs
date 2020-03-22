@@ -240,7 +240,6 @@ namespace HeliCam
                 Screen.Hud.IsVisible = false;
                 Screen.Hud.IsRadarVisible = heli.Driver == player;
                 Entity lockedEntity = null;
-                int lastLosTime = Game.GameTime;
                 Vector3 hitPos = Vector3.Zero;
                 Vector3 endPos = Vector3.Zero;
                 Blip speedBlip = null;
@@ -250,8 +249,9 @@ namespace HeliCam
                 crosshairs.Scale = 0.5f;
                 crosshairs.Name = "Current Crosshair Position";
                 crosshairs.Rotation = 0;
-                int lockedTime = 0;
-                int enterTime = Game.GameTime;
+                DateTime lastLosTime = DateTime.Now;
+                DateTime lockedTime = new DateTime();
+                DateTime enterTime = DateTime.Now;
                 SetNetworkIdExistsOnAllMachines(heli.NetworkId, true);
 
                 while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli)
@@ -311,20 +311,19 @@ namespace HeliCam
                             {
                                 if (HasEntityClearLosToEntity(heli.Handle, lockedEntity.Handle, 17))
                                 {
-                                    lastLosTime = Game.GameTime;
+                                    lastLosTime = DateTime.Now;
                                 }
 
                                 RenderInfo(lockedEntity);
                                 hitPos = endPos = lockedEntity.Position;
-                                TimeSpan lockedTimeDiff = TimeSpan.FromMilliseconds(Game.GameTime - lockedTime);
-                                string lockedTimeString = string.Format("{0:D1}m:{1:D2}s", lockedTimeDiff.Minutes, lockedTimeDiff.Seconds);
+                                string lockedTimeString = DateTime.Now.Subtract(lockedTime).ToString(@"mm\:ss");
                                 RenderText(0.2f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
 
-                                if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || (Game.GameTime - lastLosTime) > 5000)
+                                if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || DateTime.Now.Subtract(lastLosTime).Seconds > 5)
                                 {
-                                    Debug.WriteLine($"LOS: {(Game.GameTime - lastLosTime) > 5000}");
+                                    Debug.WriteLine($"LOS: {DateTime.Now.Subtract(lastLosTime).Seconds}. Dist: {Math.Round(DistanceTo(lockedEntity.Position, heli.Position))}");
                                     lockedEntity = null;
-                                    lockedTime = 0;
+                                    lockedTime = new DateTime();
                                     cam.StopPointing();
                                     Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
                                 }
@@ -337,6 +336,7 @@ namespace HeliCam
                     }
                     else
                     {
+                        RenderText(0.2f, 0.4f, $"~r~Unlocked");
                         CheckInputRotation(cam, zoomValue);
                         Tuple<Entity, Vector3, Vector3> detected = GetEntityInView(cam);
                         endPos = detected.Item3;
@@ -347,9 +347,9 @@ namespace HeliCam
                             {
                                 Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                                 lockedEntity = detected.Item1;
-                                lockedTime = Game.GameTime;
+                                lockedTime = DateTime.Now;
                                 cam.PointAt(lockedEntity);
-                                lastLosTime = Game.GameTime;
+                                lastLosTime = DateTime.Now;
                             }
                         }
                         if (!detected.Item2.IsZero)
@@ -403,9 +403,8 @@ namespace HeliCam
                         }
                     }
 
-                    TimeSpan timeInCam = TimeSpan.FromSeconds(((Game.GameTime - enterTime) / 1000));
-                    RenderText(0.01f, config.TextY - 0.9f, $"~y~{timeInCam.ToString(@"hh\:mm\:ss")}", 0.3f);
-                    RenderText(0.01f, config.TextY - 0.1f, DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ"), 0.3f);
+                    TimeSpan timeInCam = DateTime.Now.Subtract(enterTime);
+                    RenderText(0.01f, config.TextY - 0.1f, $"{DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ")}\n~y~{timeInCam.ToString(@"mm\:ss")}");
 
                     float latPos = heli.Position.Y;
                     float lonPos = heli.Position.X;
