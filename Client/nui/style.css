@@ -37,20 +37,27 @@
     display: none;
     position: absolute;
     color: white;
-    background-color: rgba(0,0,0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-#instructions {
-    text-align: right;
+#instructions-container {
+    position: absolute;
     right: 20px;
     top: 15%;
 }
 
-#key {
+#instruction td:nth-child(1) {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#instruction td:nth-child(2) {
+    text-align: center;
+    padding-right: 10px;
     color: green;
     text-shadow: none;
     font-weight: bolder;
@@ -59,7 +66,9 @@
     -webkit-text-stroke: 1px green;
 }
 
-#xbox {
+#instruction td:nth-child(3) {
+    text-align: center;
+    padding-right: 10px;
     color: lightblue;
     text-shadow: none;
     font-weight: bolder;
@@ -122,4 +131,5 @@
 #credit {
     color: gray;
     font-size: 12px;
+    text-align: right;
 }

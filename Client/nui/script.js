@@ -9,9 +9,9 @@ $(function() {
 
         if (item.shown === true) {
             $('#content').show();
-            $('#instructions').fadeIn();
+            $('#instructions-container').fadeIn();
             setTimeout(() => {
-                $('#instructions').fadeOut();
+                $('#instructions-container').fadeOut();
             }, 7500);
         }
         else if (item.shown === false) {
@@ -60,9 +60,9 @@ $(function() {
             }
         }
 		else if (item.type == "help") {
-			$('#instructions').fadeIn();
+			$('#instructions-container').fadeIn();
             setTimeout(() => {
-                $('#instructions').fadeOut();
+                $('#instructions-container').fadeOut();
             }, 7500);
 		}
     });

@@ -1,11 +1,11 @@
-using CitizenFX.Core;
-using CitizenFX.Core.UI;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
+using CitizenFX.Core;
+using CitizenFX.Core.UI;
+using Newtonsoft.Json;
 using static CitizenFX.Core.Native.API;
 
 namespace HeliCam
@@ -79,7 +79,7 @@ namespace HeliCam
         private readonly HashSet<Blip> _markers = new HashSet<Blip>();
         private readonly Config config;
 
-        private bool _helicam, _calculateSpeed, _roadOverlay, _spotlightActive;
+        private bool _helicam, _calculateSpeed, _roadOverlay, _spotlightActive, _shouldRappel;
         private float _fov = 80f;
         private int _visionState = 0; // 0 normal, 1 nightmode, 2 thermal
         private Minimap _playerMap;
@@ -87,6 +87,24 @@ namespace HeliCam
         private readonly Dictionary<int, Spotlight> _drawnSpotlights = new Dictionary<int, Spotlight>();
         private double _lastCamHeading, _lastCamTilt;
         private Tuple<int, Vector3> _speedMarker;
+
+        private readonly List<ThermalBone> _thermalBones = new List<ThermalBone>
+        {
+            new ThermalBone("BONETAG_SPINE1", new Vector3(-0.25f), new Vector3(0.19f, 0.15f, 0.49f)),
+            //new ThermalBone("BONETAG_PELVIS", new Vector3(-0.2f, -0.2f, 0.2f), new Vector3(0.2f, 0.2f, 0.6f)),
+            //new ThermalBone("BONETAG_HEAD", new Vector3(-0.1f), new Vector3(0.1f, 0.2f, 0.2f)),
+            //new ThermalBone("BONETAG_L_UPPERARM", new Vector3(-0.15f, -0.15f, -0.2f), new Vector3(0.15f, 0.15f, 0.2f)),
+            //new ThermalBone("BONETAG_R_UPPERARM", new Vector3(-0.15f, -0.15f, -0.2f), new Vector3(0.15f, 0.15f, 0.2f)),
+            //new ThermalBone("BONETAG_L_FOREARM", new Vector3(-0.08f, -0.08f, -0.2f), new Vector3(0.08f, 0.08f, 0.1f)),
+            //new ThermalBone("BONETAG_R_FOREARM", new Vector3(-0.08f, -0.08f, -0.2f), new Vector3(0.08f, 0.08f, 0.1f)),
+            new ThermalBone("wheel_lf", new Vector3(-0.3f), new Vector3(0.3f), ThermalType.WHEEL),
+            new ThermalBone("wheel_rf", new Vector3(-0.3f), new Vector3(0.3f), ThermalType.WHEEL),
+            new ThermalBone("wheel_lr", new Vector3(-0.3f), new Vector3(0.3f), ThermalType.WHEEL),
+            new ThermalBone("wheel_rr", new Vector3(-0.3f), new Vector3(0.3f), ThermalType.WHEEL),
+            //new ThermalBone("engine", new Vector3(-0.7f, -0.7f, -0.3f), new Vector3(0.7f, 0.7f, 0.4f), ThermalType.ENGINE),
+            new ThermalBone("exhaust", new Vector3(-0.3f, -0.3f, -0.05f), new Vector3(0.3f, 0.3f, 0.2f), ThermalType.ENGINE)
+        };
+        private Vector3 _dummy = new Vector3(-0.3f);
         #endregion
 
         public Client()
@@ -125,36 +143,43 @@ namespace HeliCam
         {
             if (args.Count == 0)
             {
+                TriggerEvent("chat:addMessage", new
+                {
+                    args = new[] { "[^1HeliCam^7] Usage: /heli [option]. Available options: clear, reset, help." }
+                });
                 return;
             }
 
-            string arg = args[0].ToString();
+            string arg = args[0].ToString().ToLower();
             if (arg == "help")
             {
                 SendNuiMessage(JsonConvert.SerializeObject(new
                 {
                     type = "help"
                 }));
-            } else if (arg == "clear")
+            }
+            else if (arg == "clear")
             {
                 if (_calculateSpeed)
                 {
                     Game.SetControlNormal(0, Control.ReplaySnapmaticPhoto, 200f);
                 }
+
                 if (_markers.Count != 0)
                 {
-                    foreach(Blip blip in _markers)
+                    foreach (Blip blip in _markers)
                     {
                         blip.Delete();
                     }
                     _markers.Clear();
                 }
                 TriggerServerEvent("helicam:removeAllMarkers", Game.PlayerPed.IsSittingInVehicle() ? Game.PlayerPed.CurrentVehicle.NetworkId : 0);
-            } else if (arg == "reset")
+            }
+            else if (arg == "reset")
             {
                 if (_helicam)
                 {
-                    Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                    PlayManagedSoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                 }
                 _helicam = false;
             }
@@ -164,11 +189,17 @@ namespace HeliCam
         [Tick]
         internal async Task EveryTick()
         {
-            foreach (Spotlight spotlight in _drawnSpotlights.Values)
+            foreach (KeyValuePair<int, Spotlight> spotlight in _drawnSpotlights.ToArray())
             {
-                if (DistanceTo(Game.PlayerPed.Position, spotlight.Start) < 1000f)
+                if (Players[spotlight.Key] == null)
                 {
-                    DrawSpotLightWithShadow(spotlight.Start.X, spotlight.Start.Y, spotlight.Start.Z, spotlight.End.X, spotlight.End.Y, spotlight.End.Z, 255, 175, 110, 1000f, 10f, 0f, spotlight.Radius, 1f, spotlight.VehicleId);
+                    _drawnSpotlights.Remove(spotlight.Key);
+                    return;
+                }
+
+                if (World.GetDistance(Game.PlayerPed.Position, spotlight.Value.Start) < 1000f)
+                {
+                    DrawSpotLightWithShadow(spotlight.Value.Start.X, spotlight.Value.Start.Y, spotlight.Value.Start.Z, spotlight.Value.End.X, spotlight.Value.End.Y, spotlight.Value.End.Z, 255, 175, 110, 1000f, 10f, 0f, spotlight.Value.Radius, 1f, spotlight.Value.VehicleId);
                 }
             }
 
@@ -187,17 +218,58 @@ namespace HeliCam
         }
 
         [Tick]
+        internal async Task ThermalTick()
+        {
+            if (_visionState == 2)
+            {
+                World.GetAllVehicles().Where(v => v != Game.PlayerPed.CurrentVehicle && v.IsEngineRunning).ToList().ForEach(v =>
+                {
+                    foreach (ThermalBone bone in _thermalBones)
+                    {
+                        if (bone.Type == ThermalType.ENGINE || (bone.Type == ThermalType.WHEEL && !v.IsStopped))
+                        {
+                            Vector3 bonePos = v.Bones[bone.BoneName].Position;
+                            if (!bonePos.IsZero)
+                            {
+                                DrawThermal(bonePos.X + bone.StartPos.X, bonePos.Y + bone.StartPos.Y, bonePos.Z + bone.StartPos.Z, bonePos.X + bone.EndPos.X, bonePos.Y + bone.EndPos.Y, bonePos.Z + bone.EndPos.Z);
+                            }
+                        }
+                    }
+                });
+
+                World.GetAllPeds().Where(p => p != Game.PlayerPed && (!p.IsSittingInVehicle() || p.CurrentVehicle.Model.IsBike || p.CurrentVehicle.Model.IsQuadbike || p.CurrentVehicle.Model.IsBoat || p.CurrentVehicle.Model.IsBicycle) && p.IsHuman).ToList().ForEach(p =>
+                {
+                    DrawThermal(p.Position.X - 0.3f, p.Position.Y - 0.3f, p.Position.Z - 0.8f, p.Position.X + 0.3f, p.Position.Y + 0.3f, p.Position.Z + 0.8f);
+
+                    // ALTERNATE PED THERMAL - TAKES MORE FRAMES
+                    /*foreach (ThermalBone bone in _thermalBones)
+                    {
+                        Vector3 bonePos = p.Bones[bone.BoneName].Position;
+                        if (!bonePos.IsZero)
+                        {
+                            DrawThermal(bonePos.X + bone.StartPos.X, bonePos.Y + bone.StartPos.Y, bonePos.Z + bone.StartPos.Z, bonePos.X + bone.EndPos.X, bonePos.Y + bone.EndPos.Y, bonePos.Z + bone.EndPos.Z);
+                        }
+                    }*/
+                });
+            }
+            else
+            {
+                await Delay(250);
+            }
+        }
+
+        [Tick]
         internal async Task MainTick()
         {
             Ped player = Game.PlayerPed;
 
-            if (IsPlayerInHeli() && player.CurrentVehicle.HeightAboveGround > 1.5f)
+            if (IsPlayerInHeli() && player.CurrentVehicle.HeightAboveGround > 2.5f)
             {
                 Vehicle heli = player.CurrentVehicle;
 
-                if (Game.IsControlJustPressed(0, CAM_TOGGLE) && config.AllowCamera)
+                if (Game.IsControlJustPressed(0, CAM_TOGGLE) && config.AllowCamera && !Game.IsControlPressed(0, Control.Aim))
                 {
-                    Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                    PlayManagedSoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                     _helicam = true;
                 }
 
@@ -205,15 +277,27 @@ namespace HeliCam
                 {
                     if (heli.GetPedOnSeat(VehicleSeat.LeftRear) == player || heli.GetPedOnSeat(VehicleSeat.RightRear) == player)
                     {
-                        Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
-                        TaskRappelFromHeli(player.Handle, 1);
+                        if (_shouldRappel)
+                        {
+                            PlayManagedSoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                            TaskRappelFromHeli(player.Handle, 1);
+                        }
+                        else
+                        {
+                            Screen.ShowNotification("Press again to rappel from helicopter.");
+                            _shouldRappel = true;
+                        }
                     }
                     else
                     {
                         Screen.ShowNotification("~r~Can't rappel from this seat!", true);
-                        Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
+                        PlayManagedSoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
                     }
                 }
+            }
+            else
+            {
+                _shouldRappel = false;
             }
 
             if (_helicam)
@@ -221,8 +305,11 @@ namespace HeliCam
                 SetTimecycleModifier("heliGunCam");
                 SetTimecycleModifierStrength(0.3f);
                 Scaleform scaleform = new Scaleform("HELI_CAM");
-                while (!scaleform.IsLoaded) await Delay(1);
-                
+                while (!scaleform.IsLoaded)
+                {
+                    await Delay(1);
+                }
+
                 Vehicle heli = player.CurrentVehicle;
                 Camera cam = new Camera(CreateCam("DEFAULT_SCRIPTED_FLY_CAMERA", true));
                 cam.AttachTo(heli, new Vector3(0f, 0f, -1.5f));
@@ -237,11 +324,12 @@ namespace HeliCam
                     plane = !heli.Model.IsHelicopter
                 }));
 
-                Screen.Hud.IsVisible = false;
-                Screen.Hud.IsRadarVisible = heli.Driver == player;
+                TriggerEvent("HideHud");
                 Entity lockedEntity = null;
+
                 Vector3 hitPos = Vector3.Zero;
                 Vector3 endPos = Vector3.Zero;
+
                 Blip speedBlip = null;
                 Blip crosshairs = World.CreateBlip(heli.Position);
                 crosshairs.Sprite = (BlipSprite)123;
@@ -249,14 +337,16 @@ namespace HeliCam
                 crosshairs.Scale = 0.5f;
                 crosshairs.Name = "Current Crosshair Position";
                 crosshairs.Rotation = 0;
+
                 DateTime lastLosTime = DateTime.Now;
-                DateTime lockedTime = new DateTime();
+                DateTime lockedTime = DateTime.Now;
                 DateTime enterTime = DateTime.Now;
+
                 SetNetworkIdExistsOnAllMachines(heli.NetworkId, true);
 
-                while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli)
+                while (_helicam && player.IsAlive && player.IsSittingInVehicle() && player.CurrentVehicle == heli && player.CurrentVehicle.HeightAboveGround > 2.5f)
                 {
-                    float zoomValue = (1.0f / (config.FovMax - config.FovMin)) * (_fov - config.FovMin);
+                    float zoomValue = 1.0f / (config.FovMax - config.FovMin) * (_fov - config.FovMin);
 
                     Game.DisableControlThisFrame(0, Control.NextCamera);
                     Game.DisableControlThisFrame(0, Control.VehicleSelectNextWeapon);
@@ -270,13 +360,13 @@ namespace HeliCam
 
                     if (Game.IsControlJustPressed(0, CAM_TOGGLE))
                     {
-                        Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                        PlayManagedSoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                         _helicam = false;
                     }
 
                     if (Game.IsControlJustPressed(0, VISION_TOGGLE))
                     {
-                        Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                        PlayManagedSoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                         ChangeVision();
                     }
 
@@ -303,7 +393,7 @@ namespace HeliCam
                     {
                         if (Entity.Exists(lockedEntity))
                         {
-                            if (lockedEntity.Model.IsPed && !config.AllowPedLocking)
+                            if ((lockedEntity.Model.IsPed && !config.AllowPedLocking) || lockedEntity.IsInWater)
                             {
                                 lockedEntity = null;
                             }
@@ -319,13 +409,13 @@ namespace HeliCam
                                 string lockedTimeString = DateTime.Now.Subtract(lockedTime).ToString(@"mm\:ss");
                                 RenderText(0.2f, 0.4f, $"~g~Locked ~w~{lockedTimeString}");
 
-                                if (DistanceTo(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || DateTime.Now.Subtract(lastLosTime).Seconds > 5)
+                                if (World.GetDistance(lockedEntity.Position, heli.Position) > config.MaxDist || Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK) || DateTime.Now.Subtract(lastLosTime).Seconds > 5)
                                 {
-                                    Debug.WriteLine($"LOS: {DateTime.Now.Subtract(lastLosTime).Seconds}. Dist: {Math.Round(DistanceTo(lockedEntity.Position, heli.Position))}");
+                                    Debug.WriteLine($"LOS: {DateTime.Now.Subtract(lastLosTime).Seconds}. Dist: {Math.Round(World.GetDistance(lockedEntity.Position, heli.Position))}");
                                     lockedEntity = null;
                                     lockedTime = new DateTime();
                                     cam.StopPointing();
-                                    Audio.PlaySoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
+                                    PlayManagedSoundFrontend("5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS");
                                 }
                             }
                         }
@@ -345,7 +435,7 @@ namespace HeliCam
                             RenderInfo(detected.Item1);
                             if (Game.IsControlJustPressed(0, TOGGLE_ENTITY_LOCK))
                             {
-                                Audio.PlaySoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
+                                PlayManagedSoundFrontend("SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET");
                                 lockedEntity = detected.Item1;
                                 lockedTime = DateTime.Now;
                                 cam.PointAt(lockedEntity);
@@ -404,7 +494,7 @@ namespace HeliCam
                     }
 
                     TimeSpan timeInCam = DateTime.Now.Subtract(enterTime);
-                    RenderText(0.01f, config.TextY - 0.1f, $"{DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ")}\n~y~{timeInCam.ToString(@"mm\:ss")}");
+                    RenderText(0.01f, config.TextY - 0.1f, $"{DateTime.UtcNow.ToString($"MM/dd/yyyy\nHH:mm:ssZ")}\n~y~{timeInCam.ToString(@"mm\:ss")}", 0.3f);
 
                     float latPos = heli.Position.Y;
                     float lonPos = heli.Position.X;
@@ -429,7 +519,7 @@ namespace HeliCam
                     {
                         HandleMarkers(hitPos);
                     }
-                    RenderRotation(heli, endPos, cam.Rotation);
+                    RenderRotation(heli, hitPos.IsZero ? endPos : hitPos, cam.Rotation);
 
                     if (_roadOverlay && _streetOverlay.Count > 0)
                     {
@@ -454,30 +544,11 @@ namespace HeliCam
                         }
                     }
 
-                    if (config.UseRealisticFLIR)
-                    {
-                        SeethroughSetHeatscale(2, 0f);
-                        SeethroughSetHiLightIntensity(2f);
-                        SeethroughSetNoiseAmountMax(0f);
-                        SeethroughSetNoiseAmountMin(0f);
-                        SeethroughSetColorNear(255, 255, 255);
-                    }
-
                     if (_spotlightActive && config.AllowSpotlights)
                     {
-                        Vector3 spotlightDest;
-                        if (Entity.Exists(lockedEntity))
-                        {
-                            spotlightDest = lockedEntity.Position - cam.Position;
-                        }
-                        else if (!hitPos.IsZero)
-                        {
-                            spotlightDest = hitPos - cam.Position;
-                        }
-                        else
-                        {
-                            spotlightDest = endPos - cam.Position;
-                        }
+                        Vector3 spotlightDest = Entity.Exists(lockedEntity)
+                            ? lockedEntity.Position - cam.Position
+                            : (!hitPos.IsZero ? hitPos - cam.Position : endPos - cam.Position);
                         spotlightDest.Normalize();
                         TriggerServerEvent("helicam:spotlight:draw", heli.NetworkId, cam.Position, spotlightDest, 5f);
                     }
@@ -501,9 +572,8 @@ namespace HeliCam
                     shown = false
                 }));
 
+                TriggerEvent("ShowHud");
                 _helicam = false;
-                Screen.Hud.IsVisible = true;
-                Screen.Hud.IsRadarVisible = true;
                 if (speedBlip != null)
                 {
                     speedBlip.Delete();
@@ -512,12 +582,12 @@ namespace HeliCam
                 _speedMarker = null;
                 _calculateSpeed = false;
                 ClearTimecycleModifier();
+                _visionState = 0;
                 _fov = (config.FovMax + config.FovMin) * 0.5f; // Reset to default zoom level
                 RenderScriptCams(false, false, 0, true, false);
                 scaleform.Dispose();
                 cam.Delete();
                 Game.Nightvision = false;
-                Game.ThermalVision = false;
             }
         }
         #endregion
@@ -532,6 +602,7 @@ namespace HeliCam
                 ClearTimecycleModifier();
                 Game.Nightvision = false;
                 Game.ThermalVision = false;
+                TriggerEvent("ShowHud");
             }
         }
 
@@ -652,18 +723,24 @@ namespace HeliCam
         {
             if (_visionState == 0)
             {
+                ClearTimecycleModifier();
+                SetTimecycleModifier("heliGunCam");
+                SetTimecycleModifierStrength(0.3f);
                 Game.Nightvision = true;
                 _visionState = 1;
             }
             else if (_visionState == 1)
             {
                 Game.Nightvision = false;
-                Game.ThermalVision = true;
+                SetTimecycleModifier("NG_blackout");
+                SetTimecycleModifierStrength(0.992f);
                 _visionState = 2;
             }
             else
             {
-                Game.ThermalVision = false;
+                ClearTimecycleModifier();
+                SetTimecycleModifier("heliGunCam");
+                SetTimecycleModifierStrength(0.3f);
                 _visionState = 0;
             }
         }
@@ -684,7 +761,7 @@ namespace HeliCam
                 // Prevent unneeded zooming
                 _fov = currentFov;
             }
-            cam.FieldOfView = (currentFov + (_fov - currentFov) * 0.05f);
+            cam.FieldOfView = currentFov + ((_fov - currentFov) * 0.05f);
         }
 
         private void HandleMarkers(Vector3 cam)
@@ -706,7 +783,7 @@ namespace HeliCam
                     TriggerServerEvent("helicam:removeAllMarkers", Game.PlayerPed.CurrentVehicle.NetworkId);
                 }
             }
-            if (Game.IsControlJustPressed(0, Control.VehicleFlyUnderCarriage))
+            if (Game.IsControlJustPressed(0, Control.PhoneCameraExpression))
             {
                 if (_markers.Count > 9)
                 {
@@ -749,7 +826,7 @@ namespace HeliCam
                 Dictionary<Vector3, double> dists = new Dictionary<Vector3, double>();
                 foreach (Vector3 mark in street.Value)
                 {
-                    dists.Add(mark, DistanceTo(pos, mark));
+                    dists.Add(mark, World.GetDistance(pos, mark));
                 }
                 List<KeyValuePair<Vector3, double>> marks = dists.ToList();
                 marks.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
@@ -784,35 +861,14 @@ namespace HeliCam
 
                 RenderText(0.2f, config.TextY, $"Model: {model}\nPlate: {plate}");
 
-                string heading;
-                if (veh.Heading < 45)
-                {
-                    heading = "NB";
-                }
-                else if (veh.Heading < 135)
-                {
-                    heading = "WB";
-                }
-                else if (veh.Heading < 225)
-                {
-                    heading = "SB";
-                }
-                else if (veh.Heading < 315)
-                {
-                    heading = "EB";
-                }
-                else
-                {
-                    heading = "NB";
-                }
-
-                RenderText(0.6f, config.TextY, heading);
+                string heading = veh.Heading < 45 ? "NB" : veh.Heading < 135 ? "WB" : veh.Heading < 225 ? "SB" : veh.Heading < 315 ? "EB" : "NB";
+                RenderText(0.61f, config.TextY, heading);
             }
         }
 
         private void RenderRotation(Vehicle veh, Vector3 target, Vector3 camRotation)
         {
-            double rawHdg = 270 - (Math.Atan2(veh.Position.Y - target.Y, veh.Position.X - target.X)) * 180 / Math.PI;
+            double rawHdg = 270 - (Math.Atan2(veh.Position.Y - target.Y, veh.Position.X - target.X) * 180 / Math.PI);
             double heading = Math.Round(rawHdg % 360, 0);
 
             heading += Math.Round(veh.Heading);
@@ -843,18 +899,13 @@ namespace HeliCam
             }
 
             double camHeading = Math.Round(camRotation.Z);
-            if (camHeading > 0) { 
-                camHeading = 180 + (180 - camHeading);
-            } else
-            {
-                camHeading = Math.Abs(camHeading);
-            }
+            camHeading = camHeading > 0 ? 180 + (180 - camHeading) : Math.Abs(camHeading);
 
             SendNuiMessage(JsonConvert.SerializeObject(new
             {
                 northheading = camHeading
             }));
-            
+
             float latPos = target.Y;
             float lonPos = target.X;
             string latText = "N";
@@ -874,8 +925,8 @@ namespace HeliCam
             {
                 cameraHdg -= 360;
             }
+
             RenderText(0.55f, config.TextY - 0.1f, $"Map TGT:\n{latText} {Math.Round(latPos, 2)}\n{lonText} {Math.Round(lonPos, 2)}\n{cameraHdg}°", 0.3f);
-            
         }
 
         private void RenderTargetPosInfo(Vector3 pos)
@@ -893,11 +944,11 @@ namespace HeliCam
             string crossingName = GetStreetNameFromHashKey(crossing);
             string suffix = (crossingName != "" && crossingName != "NULL" && crossingName != null) ? "~t~ / " + crossingName : "";
 
-            RenderText(0.63f, config.TextY, $"{World.GetStreetName(pos)}\n{suffix}");
+            RenderText(0.64f, config.TextY, $"{World.GetStreetName(pos)}\n{suffix}");
 
             if (_calculateSpeed)
             {
-                double distTravelled = DistanceTo(pos, _speedMarker.Item2);
+                double distTravelled = World.GetDistance(pos, _speedMarker.Item2);
 
                 int timeDiff = (Game.GameTime - _speedMarker.Item1) / 1000;
                 double estSpeed = distTravelled / timeDiff;
@@ -955,8 +1006,8 @@ namespace HeliCam
         #region Helper Functions
         private Vector3 RotAnglesToVec(Vector3 rot)
         {
-            double x = (Math.PI * rot.X / 180.0f);
-            double z = (Math.PI * rot.Z / 180.0f);
+            double x = Math.PI * rot.X / 180.0f;
+            double z = Math.PI * rot.Z / 180.0f;
             double num = Math.Abs(Math.Cos(x));
             return new Vector3((float)(-Math.Sin(z) * num), (float)(Math.Cos(z) * num), (float)Math.Sin(x));
         }
@@ -968,11 +1019,27 @@ namespace HeliCam
             Vector3 rot = cam.Rotation;
             if (rightAxisX != 0f || rightAxisY != 0f)
             {
-                float newZ = rot.Z + rightAxisX * -1.0f * config.SpeedUD * (zoom + 0.1f);
-                float newX = (float)Math.Max(Math.Min(20.0f, rot.X + rightAxisY * -1.0 * (config.SpeedLR) * (zoom + 0.1)), -89.5f); // Clamping at top and bottom
+                float newZ = rot.Z + (rightAxisX * -1.0f * config.SpeedUD * (zoom + 0.1f));
+                float newX = (float)Math.Max(Math.Min(20.0f, rot.X + (rightAxisY * -1.0 * config.SpeedLR * (zoom + 0.1))), -89.5f); // Clamping at top and bottom
                 cam.Rotation = new Vector3(newX, 0f, newZ);
             }
         }
+
+        /// <summary>
+        /// This function plays a game sound, before releasing the soundId when the sound has finished.
+        /// </summary>
+        private async void PlayManagedSoundFrontend(string soundName, string soundSet = null)
+        {
+            int soundId = Audio.PlaySoundFrontend(soundName, soundSet);
+
+            while (!Audio.HasSoundFinished(soundId))
+            {
+                await Delay(200);
+            }
+
+            Audio.ReleaseSound(soundId);
+        }
+
 
         private bool IsPlayerInHeli()
         {
@@ -981,10 +1048,30 @@ namespace HeliCam
             return Entity.Exists(heli) && (Game.PlayerPed.IsInHeli || config.AircraftHashes.Contains(heli.DisplayName.ToLower()) || config.HelicopterHashes.Contains(heli.DisplayName.ToLower()));
         }
 
-        private double DistanceTo(Vector3 origin, Vector3 target)
-        {
-            return Math.Sqrt(origin.DistanceToSquared2D(target));
-        }
+        private void DrawThermal(float x1, float y1, float z1, float x2, float y2, float z2) => DrawBox(x1, y1, z1, x2, y2, z2, 255, 255, 255, 90);
         #endregion
+    }
+
+    internal class ThermalBone
+    {
+        internal string BoneName;
+        internal Vector3 StartPos;
+        internal Vector3 EndPos;
+        internal ThermalType Type;
+
+        internal ThermalBone(string name, Vector3 v1, Vector3 v2, ThermalType type = ThermalType.PED)
+        {
+            BoneName = name;
+            StartPos = v1;
+            EndPos = v2;
+            Type = type;
+        }
+    }
+
+    internal enum ThermalType
+    {
+        ENGINE,
+        WHEEL,
+        PED
     }
 }

@@ -22,17 +22,62 @@
         <img src="images/arrow.png" id="arrow" class="rotate-0" />
         <span id="hdg">N</span>
     </div>
-    <div class="text" id="instructions">
-        <p>Press <span id="key">E</span> or <span id="xbox">Dpad Right</span> to toggle camera</p>
-        <p>Press <span id="key">RMB</span> or <span id="xbox">B</span> to cycle camera modes</p>
-        <p>Press <span id="key">SPACE</span> or <span id="xbox">A</span> to lock on current entity</p>
-        <p>Press <span id="key">Q</span> or <span id="xbox">Dpad Left</span> to reset camera position</p>
-        <p>Press <span id="key">G</span> or <span id="xbox">L3</span> to place markers</p>
-        <p>Press <span id="key">H</span> or <span id="xbox">R3</span> to remove last marker</p>
-        <p>Press <span id="key">TAB</span> or <span id="xbox">X</span> to toggle speed calculation</p>
-        <p>Press <span id="key">V</span> or <span id="xbox">Back</span> to toggle road overlay</p>
-        <p>Press <span id="key">F</span> or <span id="xbox">Y</span> to toggle spotlight</p>
-        <span id="credit">Created by Ryan#5269.</span>
+    <div class="text" id="instructions-container">
+        <table id="instruction">
+            <tr>
+                <th>Action</th>
+                <th>K&M</th>
+                <th>XBox</th>
+            </tr>
+            <tr>
+                <td>Toggles camera</td>
+                <td>E</td>
+                <td>Dpad Right</td>
+            </tr>
+            <tr>
+                <td>Cycle camera modes</td>
+                <td>RMB</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Toggle entity lock</td>
+                <td>Spacebar</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Reset camera position</td>
+                <td>Q</td>
+                <td>Dpad Left</td>
+            </tr>
+            <tr>
+                <td>Place marker</td>
+                <td>X</td>
+                <td>L3</td>
+            </tr>
+            <tr>
+                <td>Remove last marker</td>
+                <td>H</td>
+                <td>R3</td>
+            </tr>
+            <tr>
+                <td>Toggle speed calculation</td>
+                <td>Tab</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td>Toggle road overlay</td>
+                <td>V</td>
+                <td>Back</td>
+            </tr>
+            <tr>
+                <td>Toggle spotlight</td>
+                <td>F</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td colspan="3" id="credit">Created by Ryan#5269.</td>
+            </tr>
+        </table>
     </div>
     <div class="alert text">
         <p id="alert-text"></p>
@@ -40,7 +85,6 @@
     <div class="info text">
         <p id="info-text"></p>
     </div>
-
 
     <script src="script.js" type="text/javascript"></script>
 </body>
